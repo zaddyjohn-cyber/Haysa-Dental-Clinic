@@ -381,6 +381,98 @@ function initContactForm() {
   });
 }
 
+// ── HERO VIDEO ORBIT ──
+// Uses CSS animation-play-state (not RAF) so it works in all tab states.
+function initHeroOrbit() {
+  var video = document.getElementById('hero-video');
+  var orbit = document.getElementById('hero-orbit');
+  if (!orbit) return;
+
+  // ring index → [ css-var, dur(s), direction ]
+  var rings = [
+    ['--orbit-r1', 360/22, 'cw' ],   // inner:  ~16.36s, clockwise
+    ['--orbit-r2', 360/14, 'ccw'],   // middle: ~25.71s, counter-clockwise
+    ['--orbit-r3', 360/9,  'cw' ],   // outer:  ~40s,    clockwise
+  ];
+
+  var imgData = [
+    // ring 0 — inner (3 images, 120° apart, CW)
+    { src: 'DPkJQpwkSpM-02.jpg', ring: 0, a:   0, w:  88, h: 110 },
+    { src: 'DGwxJEJIN9Y-02.jpg', ring: 0, a: 120, w:  88, h: 110 },
+    { src: 'DPkJQpwkSpM-03.jpg', ring: 0, a: 240, w:  88, h: 110 },
+    // ring 1 — middle (4 images, 90° apart, CCW)
+    { src: 'DPkJQpwkSpM-01.jpg', ring: 1, a:   0, w: 112, h: 140 },
+    { src: 'DJPSTwOId51.jpg',     ring: 1, a:  90, w: 112, h: 140 },
+    { src: 'DTe8XjADEUU.webp',    ring: 1, a: 180, w: 112, h: 140 },
+    { src: 'DZ3J4CJx2XF.webp',    ring: 1, a: 270, w: 112, h: 140 },
+    // ring 2 — outer (5 images, 72° apart, CW)
+    { src: 'DZ3XBHFMQHT.webp',   ring: 2, a:   0, w: 132, h: 165 },
+    { src: 'unnamed.jpg',          ring: 2, a:  72, w: 132, h: 165 },
+    { src: 'unnamed (1).jpg',      ring: 2, a: 144, w: 132, h: 165 },
+    { src: 'DGwxJEJIN9Y-01.jpg',  ring: 2, a: 216, w: 132, h: 165 },
+    { src: 'DPkJQpwkSpM-04.jpg',  ring: 2, a: 288, w: 132, h: 165 },
+  ];
+
+  imgData.forEach(function(d) {
+    var rDef = rings[d.ring];
+    var dur  = rDef[1];
+    var dir  = rDef[2];
+    // Negative animation-delay places the image at its starting angle.
+    // delay = -(dur * angle/360)  →  begins mid-animation at the right position
+    var delay = -(dur * d.a / 360);
+
+    // Arm: sits at center and spins around it
+    var arm = document.createElement('div');
+    arm.className = 'orbit-arm';
+    arm.style.animationName     = 'orbit-' + dir;
+    arm.style.animationDuration = dur.toFixed(4) + 's';
+    arm.style.animationDelay    = delay.toFixed(4) + 's';
+
+    // Pos: translates to radius using CSS custom property
+    var pos = document.createElement('div');
+    pos.className = 'orbit-img-pos';
+    pos.style.top  = (-d.h / 2) + 'px';
+    pos.style.left = 'calc(var(' + rDef[0] + ') - ' + (d.w / 2) + 'px)';
+
+    // Counter: counter-rotates the image so it stays upright
+    var counter = document.createElement('div');
+    counter.className = 'orbit-img-counter';
+    counter.style.animationName     = dir === 'cw' ? 'orbit-ccw' : 'orbit-cw';
+    counter.style.animationDuration = dur.toFixed(4) + 's';
+    counter.style.animationDelay    = delay.toFixed(4) + 's';
+
+    var img = document.createElement('img');
+    img.src    = d.src;
+    img.alt    = '';
+    img.width  = d.w;
+    img.height = d.h;
+
+    counter.appendChild(img);
+    pos.appendChild(counter);
+    arm.appendChild(pos);
+    orbit.appendChild(arm);
+  });
+
+  var orbitRunning = false;
+  window.startHeroOrbit = function() {
+    if (orbitRunning) return;
+    orbitRunning = true;
+    orbit.classList.add('active');  // triggers animation-play-state: running via CSS
+  };
+
+  if (video) {
+    video.addEventListener('ended', window.startHeroOrbit);
+    video.addEventListener('error', window.startHeroOrbit);
+    video.addEventListener('loadedmetadata', function() {
+      var dur = isFinite(video.duration) ? video.duration : 12;
+      setTimeout(window.startHeroOrbit, (dur + 0.5) * 1000);
+    });
+  }
+
+  // Hard fallback: 30s
+  setTimeout(window.startHeroOrbit, 30000);
+}
+
 // ── INIT ALL ──
 document.addEventListener('DOMContentLoaded', () => {
   // Loader must run first — before anything else that could throw
@@ -394,4 +486,5 @@ document.addEventListener('DOMContentLoaded', () => {
   try { initLightbox(); } catch(e) {}
   try { initFilters(); } catch(e) {}
   try { initContactForm(); } catch(e) {}
+  try { initHeroOrbit(); } catch(e) { console.warn('Orbit:', e); }
 });

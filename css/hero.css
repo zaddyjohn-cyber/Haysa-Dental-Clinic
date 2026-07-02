@@ -3,7 +3,7 @@
    Three.js Canvas + Hero Section Styles
    ============================================ */
 
-/* ── THREE.JS HERO ── */
+/* ── VIDEO HERO ── */
 .hero-section {
   position: relative;
   width: 100%;
@@ -16,22 +16,39 @@
   justify-content: center;
 }
 
-#three-canvas {
+/* Full-bleed hero video */
+#hero-video {
   position: absolute;
   inset: 0;
-  width: 100% !important;
-  height: 100% !important;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: 0;
+  display: block;
 }
 
-/* Mobile hero gradient (replaces Three.js) */
+/* Subtle overlay so text stays readable during video */
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(12,12,12,0.35) 0%,
+    rgba(12,12,12,0.10) 45%,
+    rgba(12,12,12,0.55) 100%
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Fallback gradient for mobile / no-video */
 .hero-gradient-bg {
   display: none;
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(74, 144, 217, 0.12) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 50% at 30% 70%, rgba(201, 150, 58, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(74,144,217,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 30% 70%, rgba(201,150,58,0.08) 0%, transparent 60%),
     var(--bg-dark);
   animation: hero-breathe 6s ease-in-out infinite;
 }
@@ -39,6 +56,118 @@
 @keyframes hero-breathe {
   0%, 100% { opacity: 1; }
   50% { opacity: 0.85; }
+}
+
+/* ── ORBIT SYSTEM (activates after video ends) ── */
+
+/* CSS custom properties for orbit radii — responsive */
+:root {
+  --orbit-r1: 17vmin;   /* inner ring */
+  --orbit-r2: 32vmin;   /* middle ring */
+  --orbit-r3: 42vmax;   /* outer ring — fills the screen */
+}
+
+#hero-orbit {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 1;
+  transition: opacity 1.8s ease;
+  background: var(--bg-dark);
+}
+#hero-orbit.active { opacity: 1; }
+
+/* ── Center glowing circle ── */
+.orbit-center-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: clamp(110px, 13vmin, 190px);
+  height: clamp(110px, 13vmin, 190px);
+  border-radius: 50%;
+  z-index: 10;
+  overflow: visible;
+  animation: glow-pulse 4s ease-in-out infinite;
+}
+
+.orbit-center-glow::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    #ffffff 0%, #fff8e5 38%, rgba(201,150,58,0.45) 68%, transparent 100%
+  );
+}
+
+.orbit-center-glow::after {
+  content: '';
+  position: absolute;
+  inset: -35%;
+  border-radius: 50%;
+  background: radial-gradient(circle at center,
+    rgba(255,255,255,0.12) 0%, rgba(201,150,58,0.22) 45%, transparent 70%
+  );
+  animation: glow-pulse 4s ease-in-out infinite reverse;
+}
+
+.orbit-center-glow svg {
+  position: absolute;
+  inset: -22%;
+  width: 144%;
+  height: 144%;
+  opacity: 0.38;
+  animation: spoke-spin 28s linear infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { filter: drop-shadow(0 0 18px rgba(255,255,255,0.9)) drop-shadow(0 0 55px rgba(201,150,58,0.55)); }
+  50%       { filter: drop-shadow(0 0 32px rgba(255,255,255,1.0)) drop-shadow(0 0 95px rgba(201,150,58,0.85)); }
+}
+
+@keyframes spoke-spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── CSS orbital animations ── */
+@keyframes orbit-cw  { to { transform: rotate(360deg);  } }
+@keyframes orbit-ccw { to { transform: rotate(-360deg); } }
+
+/* Each .orbit-arm sits at center and rotates — the animation name/duration/delay set inline by JS */
+.orbit-arm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;   /* starts paused, runs on .active */
+}
+#hero-orbit.active .orbit-arm { animation-play-state: running; }
+
+/* Image position holder — top/left set inline to place at radius */
+.orbit-img-pos {
+  position: absolute;
+}
+
+/* Counter-rotates so image stays upright */
+.orbit-img-counter {
+  transform-origin: center center;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-play-state: paused;
+}
+#hero-orbit.active .orbit-img-counter { animation-play-state: running; }
+
+.orbit-img-counter img {
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.65), 0 0 0 1.5px rgba(201,150,58,0.45);
+  transition: box-shadow 0.3s;
 }
 
 .hero-content {
@@ -227,8 +356,10 @@
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {
-  #three-canvas { display: none; }
+  #hero-video { display: none; }
   .hero-gradient-bg { display: block; }
+  /* Scale orbit images down on mobile */
+  .orbit-img-counter img { transform: scale(0.7); transform-origin: top left; }
 
   .inner-hero-split {
     grid-template-columns: 1fr;

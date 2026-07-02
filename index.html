@@ -82,8 +82,62 @@
 
 <!-- ══ HERO SECTION ══ -->
 <section class="hero-section" style="margin-top: 0;">
+
+  <!-- Full-screen hero video -->
+  <video id="hero-video" src="hero.mp4" autoplay muted playsinline preload="auto"></video>
+
+  <!-- Dark overlay keeps text readable -->
+  <div class="hero-video-overlay"></div>
+
+  <!-- Mobile fallback gradient -->
   <div class="hero-gradient-bg"></div>
-  <canvas id="three-canvas"></canvas>
+
+  <!-- Orbital image system — activates when video ends -->
+  <div id="hero-orbit">
+    <div class="orbit-center-glow">
+      <!-- Radial spoke SVG -->
+      <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(100,100)" stroke="rgba(201,150,58,0.7)" stroke-width="0.8">
+          <line x1="0" y1="-20" x2="0" y2="-98"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(10)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(20)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(30)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(40)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(50)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(60)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(70)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(80)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(90)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(100)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(110)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(120)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(130)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(140)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(150)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(160)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(170)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(180)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(190)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(200)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(210)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(220)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(230)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(240)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(250)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(260)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(270)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(280)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(290)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(300)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(310)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(320)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(330)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(340)"/>
+          <line x1="0" y1="-20" x2="0" y2="-98" transform="rotate(350)"/>
+        </g>
+      </svg>
+    </div>
+  </div>
 
   <div class="hero-content">
     <p class="hero-eyebrow">Expert Dental Care Since 2015</p>
