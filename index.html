@@ -218,11 +218,12 @@
       text-align: center; gap: 14px;
     }
     .trust-icon {
-      width: 64px; height: 64px; border-radius: 50%;
-      background: var(--teal-light);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem;
+      width: 80px; height: 80px; border-radius: 50%;
+      overflow: hidden; flex-shrink: 0;
+      border: 3px solid var(--teal-light);
+      box-shadow: 0 2px 12px rgba(26,92,82,0.15);
     }
+    .trust-icon img { width: 100%; height: 100%; object-fit: cover; }
     .trust-item h4 { font-size: 0.9rem; font-weight: 600; color: var(--teal-dark); }
     .trust-item p  { font-size: 0.78rem; color: var(--text-muted); line-height: 1.5; }
 
@@ -258,10 +259,10 @@
       transition: transform 0.25s, box-shadow 0.25s;
     }
     .service-card:hover { transform: translateY(-6px); box-shadow: 0 10px 40px rgba(26,92,82,0.15); }
-    .service-icon {
-      width: 52px; height: 52px; border-radius: 12px;
-      background: var(--teal-light); display: flex; align-items: center;
-      justify-content: center; font-size: 1.4rem; margin-bottom: 18px;
+    .service-img {
+      width: 100%; height: 180px; object-fit: cover;
+      border-radius: 10px; margin-bottom: 18px;
+      display: block;
     }
     .service-card h3 { font-size: 1rem; font-weight: 700; color: var(--teal-dark); margin-bottom: 8px; }
     .service-card p  { font-size: 0.83rem; color: var(--text-muted); line-height: 1.6; }
@@ -529,22 +530,22 @@
   <!-- TRUST STRIP -->
   <section class="trust-strip">
     <div class="trust-item">
-      <div class="trust-icon">🛡️</div>
+      <div class="trust-icon"><img src="unnamed.jpg" alt="Dental treatment room" /></div>
       <h4>Safe &amp; Painless</h4>
       <p>Gentle procedures with modern anaesthesia for a comfortable experience.</p>
     </div>
     <div class="trust-item">
-      <div class="trust-icon">👨‍⚕️</div>
+      <div class="trust-icon"><img src="DGwxJEJIN9Y-01.jpg" alt="Our dentists" /></div>
       <h4>Experienced Dentists</h4>
       <p>Qualified professionals with over a decade of combined clinical expertise.</p>
     </div>
     <div class="trust-item">
-      <div class="trust-icon">🔬</div>
+      <div class="trust-icon"><img src="unnamed (2).jpg" alt="Dental technology" /></div>
       <h4>Modern Technology</h4>
       <p>State-of-the-art digital X-rays and laser dental equipment.</p>
     </div>
     <div class="trust-item">
-      <div class="trust-icon">❤️</div>
+      <div class="trust-icon"><img src="unnamed (1).jpg" alt="Clinic reception" /></div>
       <h4>Patient Care &amp; Comfort</h4>
       <p>Every patient is treated with personalised attention and compassion.</p>
     </div>
@@ -582,32 +583,32 @@
     </div>
     <div class="services-grid">
       <div class="service-card">
-        <div class="service-icon">🦷</div>
+        <img class="service-img" src="DPkJQpwkSpM-02.jpg" alt="Teeth Whitening" />
         <h3>Teeth Whitening</h3>
         <p>Professional in-clinic whitening that delivers dramatically brighter results in a single visit.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">✨</div>
+        <img class="service-img" src="DZ3J4CJx2XF.webp" alt="Dental Implants" />
         <h3>Dental Implants</h3>
         <p>Permanent, natural-looking tooth replacements anchored directly to the jawbone.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">😁</div>
+        <img class="service-img" src="DPkJQpwkSpM-03.jpg" alt="Braces and Aligners" />
         <h3>Braces &amp; Aligners</h3>
         <p>Correct misaligned teeth discreetly with traditional braces or clear aligner therapy.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🔬</div>
+        <img class="service-img" src="DJPSTwOId51.jpg" alt="Root Canal Treatment" />
         <h3>Root Canal Treatment</h3>
         <p>Painless removal of infected pulp to save and restore your natural tooth.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">🛡️</div>
+        <img class="service-img" src="unnamed.jpg" alt="Preventive Care" />
         <h3>Preventive Care</h3>
         <p>Regular cleaning, scaling, polishing and fluoride treatments to keep your smile healthy.</p>
       </div>
       <div class="service-card">
-        <div class="service-icon">💎</div>
+        <img class="service-img" src="DGwxJEJIN9Y-02.jpg" alt="Smile Makeover" />
         <h3>Smile Makeover</h3>
         <p>A personalised combination of treatments designed to transform your smile completely.</p>
       </div>
