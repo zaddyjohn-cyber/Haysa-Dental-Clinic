@@ -3,27 +3,27 @@
    CSS Custom Properties, Reset, Typography
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Dancing+Script:wght@500;600;700&display=swap');
 
 /* ── DESIGN TOKENS ── */
 :root {
-  --bg-dark: #100C07;          /* deep warm espresso brown */
-  --bg-light: #F0E4D8;         /* warm nude/blush beige */
-  --primary: #2C1A0E;          /* dark warm brown */
+  --bg-dark: #0F3D35;          /* deep teal — dark sections */
+  --bg-light: #F5F1EA;         /* warm cream — main background */
+  --primary: #1A5C52;          /* deep teal — primary brand */
+  --primary-dark: #0F3D35;     /* darker teal */
+  --teal: #2A9D8F;             /* medium teal accent */
+  --teal-light: #E8F5F3;       /* very light teal tint */
   --gold: #C9963A;
   --gold-light: #E0B05A;
-  --nude: #C8986A;             /* warm caramel/sand accent */
-  --nude-dark: #8B5E3A;        /* warm terracotta/sienna */
-  --nude-light: #FAF0E6;       /* warm cream — light section tint */
-  --blue: #4A90D9;
-  --white: #FFFAF6;            /* warm white */
-  --text-dark: #2C1A0C;        /* dark warm brown */
-  --text-muted: #7A5840;       /* warm mid-brown taupe */
-  --text-muted-light: #A8805E; /* warm sand */
+  --white: #FFFFFF;
+  --text-dark: #1A3D38;        /* dark teal text */
+  --text-muted: #4A7A72;       /* medium teal-gray */
+  --text-muted-light: #7AADA8; /* light teal-gray */
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-script: 'Dancing Script', cursive;
 
   --section-pad: clamp(80px, 10vw, 140px);
   --container: 1320px;
@@ -49,7 +49,7 @@ body {
   font-size: 16px;
   line-height: 1.7;
   color: var(--text-dark);
-  background: var(--bg-dark);
+  background: var(--bg-light);
   overflow-x: hidden;
 }
 
@@ -182,9 +182,10 @@ ul { list-style: none; }
 }
 
 #navbar.scrolled {
-  background: rgba(12, 12, 12, 0.92);
+  background: rgba(255, 255, 255, 0.97);
   backdrop-filter: blur(16px);
-  border-bottom: 1px solid rgba(201, 150, 58, 0.15);
+  border-bottom: 1px solid rgba(26, 92, 82, 0.15);
+  box-shadow: 0 2px 20px rgba(26, 92, 82, 0.08);
 }
 
 .nav-logo {
@@ -221,10 +222,14 @@ ul { list-style: none; }
   font-weight: 500;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.75);
+  color: rgba(255,255,255,0.85);
   position: relative;
   transition: color var(--transition-fast);
 }
+#navbar.scrolled .nav-links a { color: var(--text-dark); }
+#navbar.scrolled .nav-logo-text { color: var(--primary); }
+#navbar.scrolled .nav-logo-text span { color: var(--gold); }
+#navbar.scrolled .hamburger span { background: var(--primary); }
 
 .nav-links a::after {
   content: '';
@@ -247,17 +252,19 @@ ul { list-style: none; }
 .nav-cta {
   padding: 10px 24px;
   background: var(--gold);
-  color: var(--bg-dark) !important;
+  color: #fff !important;
   font-weight: 600 !important;
   border-radius: var(--radius);
   transition: background var(--transition-fast), transform 0.2s ease !important;
 }
 .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+#navbar.scrolled .nav-cta { background: var(--primary); color: #fff !important; }
+#navbar.scrolled .nav-cta:hover { background: var(--teal); }
 .nav-cta::after { display: none !important; }
 
 /* Utility bar */
 #nav-utility {
-  background: linear-gradient(90deg, var(--primary) 0%, #2A1608 50%, var(--primary) 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--teal) 50%, var(--primary) 100%);
   padding: 8px clamp(20px, 5vw, 60px);
   display: flex;
   align-items: center;
@@ -303,7 +310,7 @@ ul { list-style: none; }
 #mobile-nav {
   position: fixed;
   inset: 0;
-  background: var(--bg-dark);
+  background: var(--primary);
   z-index: 10000;
   display: flex;
   flex-direction: column;
@@ -388,7 +395,7 @@ ul { list-style: none; }
 
 /* ── MARQUEE STRIP ── */
 .marquee-strip {
-  background: linear-gradient(90deg, var(--nude-dark) 0%, var(--gold) 50%, var(--nude-dark) 100%);
+  background: linear-gradient(90deg, var(--primary) 0%, var(--teal) 50%, var(--primary) 100%);
   padding: 16px 0;
   overflow: hidden;
   white-space: nowrap;
@@ -438,7 +445,7 @@ ul { list-style: none; }
 .gold-divider {
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, var(--gold), var(--nude));
+  background: linear-gradient(90deg, var(--primary), var(--gold));
   margin: 24px 0;
 }
 
@@ -446,9 +453,9 @@ ul { list-style: none; }
 
 /* ── FOOTER ── */
 #footer {
-  background: linear-gradient(180deg, #1A1008 0%, #100C07 100%);
+  background: linear-gradient(180deg, var(--primary) 0%, var(--primary-dark) 100%);
   padding: 80px 0 0;
-  border-top: 1px solid rgba(200, 152, 106, 0.2);
+  border-top: 1px solid rgba(42, 157, 143, 0.25);
 }
 
 .footer-grid {
@@ -505,7 +512,7 @@ ul { list-style: none; }
 }
 
 .footer-bottom {
-  border-top: 1px solid rgba(201, 150, 58, 0.15);
+  border-top: 1px solid rgba(42, 157, 143, 0.2);
   padding: 24px 0;
   display: flex;
   align-items: center;
@@ -635,10 +642,10 @@ ul { list-style: none; }
 
 /* ── STATS BAR ── */
 .stats-bar {
-  background: linear-gradient(135deg, var(--primary) 0%, #2E1A08 50%, var(--primary) 100%);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--teal) 50%, var(--primary) 100%);
   padding: 60px 0;
-  border-top: 1px solid rgba(200,152,106,0.18);
-  border-bottom: 1px solid rgba(200,152,106,0.18);
+  border-top: 1px solid rgba(42,157,143,0.25);
+  border-bottom: 1px solid rgba(42,157,143,0.25);
 }
 
 .stats-grid {
@@ -660,14 +667,14 @@ ul { list-style: none; }
   top: 25%;
   height: 50%;
   width: 1px;
-  background: linear-gradient(to bottom, rgba(200,152,106,0.25), rgba(201,150,58,0.25));
+  background: linear-gradient(to bottom, rgba(42,157,143,0.3), rgba(201,150,58,0.3));
 }
 
 .stat-number {
   font-family: var(--font-display);
   font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 300;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--nude) 100%);
+  background: linear-gradient(135deg, var(--teal) 0%, var(--gold) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
