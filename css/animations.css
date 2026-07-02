@@ -1,0 +1,243 @@
+/* ============================================
+   SMILE BEST DENTAL — ANIMATIONS CSS
+   GSAP keyframes, entrance animations, micro-interactions
+   ============================================ */
+
+/* ── GSAP INITIAL STATES ── */
+/* Set by GSAP — these are defaults before animation */
+.gsap-fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+}
+
+.gsap-fade-left {
+  opacity: 0;
+  transform: translateX(-40px);
+}
+
+.gsap-fade-right {
+  opacity: 0;
+  transform: translateX(40px);
+}
+
+.gsap-scale-in {
+  opacity: 0;
+  transform: scale(0.9);
+}
+
+.gsap-clip-reveal {
+  clip-path: inset(0 100% 0 0);
+}
+
+/* ── TEXT REVEAL ── */
+.text-reveal-wrap {
+  overflow: hidden;
+}
+
+.text-reveal-line {
+  display: block;
+  transform: translateY(100%);
+}
+
+/* ── MAGNETIC BUTTON ── */
+.magnetic {
+  position: relative;
+  display: inline-block;
+}
+
+/* ── FLOATING PARALLAX ELEMENTS ── */
+.parallax-element {
+  will-change: transform;
+}
+
+/* ── IMAGE CLIP REVEAL ── */
+.clip-container {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.clip-image {
+  transform: scale(1.15);
+  transform-origin: center;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── SECTION ENTRANCE ── */
+.section-enter {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.section-enter.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── STAGGER CHILDREN ── */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.1s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.2s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.3s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.4s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.5s; }
+.stagger-children.visible > *:nth-child(7) { transition-delay: 0.6s; }
+.stagger-children.visible > *:nth-child(8) { transition-delay: 0.7s; }
+.stagger-children.visible > *:nth-child(9) { transition-delay: 0.8s; }
+
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── GOLD LINE ANIMATION ── */
+.gold-line-draw {
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.gold-line-draw.visible { width: 60px; }
+.gold-line-draw.full.visible { width: 100%; }
+
+/* ── COUNTER ANIMATION ── */
+.counter-number {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/* ── HOVER GLOW ── */
+.hover-glow {
+  transition: box-shadow 0.4s ease;
+}
+
+.hover-glow:hover {
+  box-shadow: 0 0 40px rgba(201, 150, 58, 0.3);
+}
+
+/* ── PAGE LOADER ANIMATION ── */
+@keyframes loader-fade-out {
+  from { opacity: 1; }
+  to { opacity: 0; pointer-events: none; }
+}
+
+.loader-exit {
+  animation: loader-fade-out 0.6s ease forwards;
+}
+
+/* ── PARTICLE DRIFT ── */
+@keyframes particle-drift {
+  0% { transform: translate(0, 0) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translate(var(--drift-x, 20px), var(--drift-y, -30px)) rotate(180deg); opacity: 0; }
+}
+
+/* ── SHIMMER EFFECT ── */
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to { background-position: 200% center; }
+}
+
+.shimmer-text {
+  background: linear-gradient(90deg,
+    var(--gold) 0%,
+    var(--gold-light) 30%,
+    #fff 50%,
+    var(--gold-light) 70%,
+    var(--gold) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+/* ── FLOAT ANIMATION ── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-16px); }
+}
+
+.float-animate { animation: float 5s ease-in-out infinite; }
+
+/* ── ROTATE SLOW ── */
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.rotate-slow { animation: rotate-slow 20s linear infinite; }
+
+/* ── BARBA TRANSITIONS ── */
+.barba-leave {
+  animation: page-leave 0.5s ease forwards;
+}
+
+.barba-enter {
+  animation: page-enter 0.5s ease forwards;
+}
+
+@keyframes page-leave {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-20px); }
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── VanillaTilt glare fix ── */
+.js-tilt-glare-inner {
+  background: linear-gradient(135deg, rgba(201,150,58,0.15) 0%, transparent 70%) !important;
+}
+
+/* ── SCROLL-TRIGGERED IMAGE PARALLAX ── */
+.parallax-img-wrap {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.parallax-img-wrap img {
+  transform: scale(1.2);
+  will-change: transform;
+}
+
+/* ── SCROLL INDICATOR BOUNCE ── */
+@keyframes scroll-bounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50% { transform: translateX(-50%) translateY(8px); }
+}
+
+.scroll-bounce {
+  animation: scroll-bounce 1.8s ease-in-out infinite;
+}
+
+/* ── GOLD BORDER ANIMATE ── */
+@keyframes border-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(201,150,58,0); }
+  50% { box-shadow: 0 0 20px 2px rgba(201,150,58,0.3); }
+}
+
+.border-glow-animate {
+  animation: border-glow 3s ease-in-out infinite;
+}
+
+/* ── DEVICE PARALLAX (mobile) ── */
+.device-parallax {
+  transition: transform 0.1s linear;
+  will-change: transform;
+}
+
+/* ── SPLITTING.JS WORD/CHAR STYLES ── */
+.word { display: inline-block; overflow: hidden; }
+.char { display: inline-block; }

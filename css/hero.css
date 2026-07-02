@@ -1,0 +1,241 @@
+/* ============================================
+   SMILE BEST DENTAL — HERO CSS
+   Three.js Canvas + Hero Section Styles
+   ============================================ */
+
+/* ── THREE.JS HERO ── */
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 700px;
+  overflow: hidden;
+  background: var(--bg-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#three-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: 0;
+}
+
+/* Mobile hero gradient (replaces Three.js) */
+.hero-gradient-bg {
+  display: none;
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 60% at 50% 40%, rgba(74, 144, 217, 0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 50% at 30% 70%, rgba(201, 150, 58, 0.08) 0%, transparent 60%),
+    var(--bg-dark);
+  animation: hero-breathe 6s ease-in-out infinite;
+}
+
+@keyframes hero-breathe {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.85; }
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  padding: 0 clamp(20px, 5vw, 60px);
+  max-width: 1100px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  opacity: 0;
+}
+
+.hero-eyebrow::before,
+.hero-eyebrow::after {
+  content: '';
+  width: 40px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 10vw, 12rem);
+  font-weight: 300;
+  line-height: 0.88;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin-bottom: 32px;
+}
+
+/* Splitting.js chars */
+.hero-headline .char {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(80px) rotate(3deg);
+  will-change: transform, opacity;
+}
+
+.hero-subline {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+  color: rgba(255,255,255,0.55);
+  letter-spacing: 0.05em;
+  margin-bottom: 48px;
+  opacity: 0;
+}
+
+.hero-ctas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  opacity: 0;
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 2;
+  opacity: 0;
+}
+
+.scroll-indicator span {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.scroll-line {
+  width: 1px;
+  height: 60px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0), var(--gold));
+  animation: scroll-pulse 2s ease-in-out infinite;
+}
+
+@keyframes scroll-pulse {
+  0%, 100% { transform: scaleY(1); opacity: 1; }
+  50% { transform: scaleY(0.5); opacity: 0.4; }
+}
+
+/* ── ABOUT / INNER PAGE HEROES ── */
+.inner-hero {
+  position: relative;
+  padding: calc(var(--section-pad) + 120px) 0 var(--section-pad);
+  overflow: hidden;
+  background: var(--bg-dark);
+}
+
+.inner-hero-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 22rem);
+  font-weight: 700;
+  color: rgba(255,255,255,0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+.inner-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.inner-hero-split {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 60px;
+  align-items: center;
+}
+
+.inner-hero-image {
+  position: relative;
+  height: clamp(400px, 60vh, 700px);
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+.inner-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.inner-hero-image:hover img { transform: scale(1.03); }
+
+.inner-hero-image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(26,26,46,0.3) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ── TRANSFORMATION HERO ── */
+.transformation-hero-headline {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 12vw, 14rem);
+  font-weight: 300;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--white);
+  text-align: center;
+}
+
+.transformation-hero-headline .line-2 {
+  display: block;
+  text-align: right;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.transformation-hero-headline .line-3 {
+  display: block;
+  text-align: center;
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  #three-canvas { display: none; }
+  .hero-gradient-bg { display: block; }
+
+  .inner-hero-split {
+    grid-template-columns: 1fr;
+  }
+
+  .inner-hero-image {
+    height: 300px;
+    order: -1;
+  }
+}
