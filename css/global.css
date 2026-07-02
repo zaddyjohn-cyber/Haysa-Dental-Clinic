@@ -7,16 +7,19 @@
 
 /* ── DESIGN TOKENS ── */
 :root {
-  --bg-dark: #0C0C0C;
-  --bg-light: #F9F6F2;
-  --primary: #1A1A2E;
+  --bg-dark: #0C0808;          /* deep near-black with the faintest warm rose tint */
+  --bg-light: #FDF0F5;         /* blush pink — replaces the old cream */
+  --primary: #1E0D16;          /* dark mauve (replaces dark navy) */
   --gold: #C9963A;
   --gold-light: #E0B05A;
+  --pink: #E8A4B8;             /* soft rose pink */
+  --pink-dark: #B5607A;        /* deeper dusty rose */
+  --pink-light: #FBE8F0;       /* very pale blush — light section tint */
   --blue: #4A90D9;
   --white: #FFFFFF;
-  --text-dark: #111111;
-  --text-muted: #666666;
-  --text-muted-light: #999999;
+  --text-dark: #1A0D14;        /* very dark mauve instead of pure black */
+  --text-muted: #7A5060;       /* warm muted — hint of rose */
+  --text-muted-light: #AA8898; /* light warm muted */
 
   --font-display: 'Cormorant Garamond', Georgia, serif;
   --font-heading: 'Playfair Display', Georgia, serif;
@@ -287,7 +290,7 @@ body:hover #cursor-ring { opacity: 0.7; }
 
 /* Utility bar */
 #nav-utility {
-  background: var(--primary);
+  background: linear-gradient(90deg, var(--primary) 0%, #2A0D1A 50%, var(--primary) 100%);
   padding: 8px clamp(20px, 5vw, 60px);
   display: flex;
   align-items: center;
@@ -418,7 +421,7 @@ body:hover #cursor-ring { opacity: 0.7; }
 
 /* ── MARQUEE STRIP ── */
 .marquee-strip {
-  background: var(--gold);
+  background: linear-gradient(90deg, var(--pink-dark) 0%, var(--gold) 50%, var(--pink-dark) 100%);
   padding: 16px 0;
   overflow: hidden;
   white-space: nowrap;
@@ -468,7 +471,7 @@ body:hover #cursor-ring { opacity: 0.7; }
 .gold-divider {
   width: 60px;
   height: 2px;
-  background: var(--gold);
+  background: linear-gradient(90deg, var(--gold), var(--pink));
   margin: 24px 0;
 }
 
@@ -476,9 +479,9 @@ body:hover #cursor-ring { opacity: 0.7; }
 
 /* ── FOOTER ── */
 #footer {
-  background: var(--bg-dark);
+  background: linear-gradient(180deg, #1A0A10 0%, #0C0808 100%);
   padding: 80px 0 0;
-  border-top: 1px solid rgba(201, 150, 58, 0.2);
+  border-top: 1px solid rgba(232, 164, 184, 0.2);
 }
 
 .footer-grid {
@@ -665,8 +668,10 @@ body:hover #cursor-ring { opacity: 0.7; }
 
 /* ── STATS BAR ── */
 .stats-bar {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 0%, #2E0E20 50%, var(--primary) 100%);
   padding: 60px 0;
+  border-top: 1px solid rgba(232,164,184,0.18);
+  border-bottom: 1px solid rgba(232,164,184,0.18);
 }
 
 .stats-grid {
@@ -688,14 +693,17 @@ body:hover #cursor-ring { opacity: 0.7; }
   top: 25%;
   height: 50%;
   width: 1px;
-  background: rgba(201, 150, 58, 0.2);
+  background: linear-gradient(to bottom, rgba(232,164,184,0.25), rgba(201,150,58,0.25));
 }
 
 .stat-number {
   font-family: var(--font-display);
   font-size: clamp(3rem, 5vw, 5rem);
   font-weight: 300;
-  color: var(--gold);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--pink) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   line-height: 1;
   letter-spacing: -0.02em;
 }
