@@ -3,278 +3,323 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Smile Transformations | Before &amp; After | Smile Best Dental Clinic Ikeja</title>
-  <meta name="description" content="Real before and after smile transformations from Smile Best Dental Clinic Ikeja Lagos. Braces, teeth whitening, veneers and more. Real patients. Real results." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>" />
+  <meta name="theme-color" content="#0B3830" />
+  <title>Transformations | Smile Best Dental Clinic — Real Patient Results Lagos</title>
+  <meta name="description" content="See real patient transformations at Smile Best Dental Clinic — teeth whitening, veneers, braces, implants and more. Real results from real Lagos patients." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-<div id="scroll-progress"></div>
-
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <svg viewBox="0 0 36 36" fill="none"><path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/></svg>
-    <span class="nav-logo-text">Smile <span>Best</span></span>
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon">🦷</div>
+    <div class="nav-logo-text">Smile<span>Best</span></div>
   </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="transformations.html" class="active">Transformations</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html" class="nav-cta">Book Now</a>
-  </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="transformations.html" class="active">Transformations</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-burger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div id="nav-utility">
-  <strong>Same-Day Appointments Available</strong>
-  <a href="tel:+2347038057170">+234 703 805 7170</a>
-  <span>Mon–Sat 8am–6pm · Ogba, Ikeja</span>
-</div>
-<div id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="transformations.html">Transformations</a>
-  <a href="testimonials.html">Testimonials</a>
-  <a href="contact.html">Book Now</a>
+
+<div class="mobile-menu">
+  <button class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">✕</button>
+  <a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
+  <a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
+  <a href="transformations.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Transformations</a>
+  <a href="testimonials.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Testimonials</a>
+  <a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Book Now</a>
 </div>
 
-<!-- ══ HERO ══ -->
-<section class="hero-section" style="background:var(--bg-dark);">
-  <div class="hero-gradient-bg" style="display:block;"></div>
-  <!-- Extra decorative elements -->
-  <div style="position:absolute;top:20%;right:10%;width:300px;height:300px;border-radius:50%;border:1px solid rgba(201,150,58,0.08);pointer-events:none;" class="float-layer-1"></div>
-  <div style="position:absolute;bottom:20%;left:8%;width:200px;height:200px;border-radius:50%;border:1px solid rgba(74,144,217,0.08);pointer-events:none;" class="float-layer-2"></div>
-
-  <div class="hero-content">
-    <div class="hero-eyebrow" style="opacity:1;">Real Patients · Real Results · No Filters</div>
-    <div class="transformation-hero-headline" data-split="chars">
-      BEFORE.<br>
-      <span class="line-2">AFTER.</span><br>
-      <span class="line-3">FOREVER.</span>
-    </div>
-    <p class="hero-subline" style="opacity:1;margin-top:32px;">Every smile tells a transformation story. Here are some of ours.</p>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label">Real Results</div>
+    <h1>Patient<br>Transformations</h1>
+    <p class="page-hero-sub">Every smile here belongs to a real patient. See what's possible when expert care meets modern technology.</p>
   </div>
 </section>
 
-<!-- ══ FILTER TABS ══ -->
-<section style="background:var(--bg-dark);padding:40px 0 0;">
-  <div class="container">
-    <div class="filter-tabs">
-      <button class="filter-tab active" data-filter="all">All Transformations</button>
-      <button class="filter-tab" data-filter="braces">Braces</button>
-      <button class="filter-tab" data-filter="whitening">Teeth Whitening</button>
-      <button class="filter-tab" data-filter="implants">Implants</button>
-      <button class="filter-tab" data-filter="veneers">Veneers</button>
-      <button class="filter-tab" data-filter="cosmetic">Cosmetic</button>
+<!-- RESULTS GRID -->
+<section class="ba-slider-section" style="background:var(--cream);">
+  <div class="section-header">
+    <div class="section-label fade-up">Real Patient Results</div>
+    <h2 class="section-title fade-up">Our <em>Transformations</em></h2>
+    <p style="font-size:14px;color:var(--text-muted);margin-top:12px;max-width:500px;margin-left:auto;margin-right:auto;" class="fade-up">Every result below was achieved right here in Ogba, Ikeja — by real patients with real goals.</p>
+  </div>
+  <div class="ba-sliders-grid" style="grid-template-columns:repeat(3,1fr);">
+    <div class="ba-slider-card fade-up">
+      <div class="result-photo">
+        <img src="DGwxJEJIN9Y-01.jpg" alt="Teeth Whitening Result" />
+        <span class="result-badge">After</span>
+      </div>
+      <div class="ba-slider-info">
+        <div class="ba-treatment">Teeth Whitening</div>
+        <div class="ba-desc">3 sessions · Professional LED bleaching · Shades 6–10 lighter</div>
+        <span class="ba-tag">Whitening</span>
+      </div>
     </div>
+    <div class="ba-slider-card fade-up delay-1">
+      <div class="result-photo">
+        <img src="DPkJQpwkSpM-04.jpg" alt="Porcelain Veneers Result" />
+        <span class="result-badge">After</span>
+      </div>
+      <div class="ba-slider-info">
+        <div class="ba-treatment">Porcelain Veneers</div>
+        <div class="ba-desc">8 veneers · Full smile design · Natural look &amp; feel</div>
+        <span class="ba-tag">Veneers</span>
+      </div>
+    </div>
+    <div class="ba-slider-card fade-up delay-2">
+      <div class="result-photo">
+        <img src="DPkJQpwkSpM-01.jpg" alt="Braces Result" />
+        <span class="result-badge">After</span>
+      </div>
+      <div class="ba-slider-info">
+        <div class="ba-treatment">Braces &amp; Aligners</div>
+        <div class="ba-desc">14 months · Clear aligners · Perfectly aligned teeth</div>
+        <span class="ba-tag">Orthodontics</span>
+      </div>
+    </div>
+    <div class="ba-slider-card fade-up">
+      <div class="result-photo">
+        <img src="DGwxJEJIN9Y-02.jpg" alt="Orthodontics Result" />
+        <span class="result-badge">After</span>
+      </div>
+      <div class="ba-slider-info">
+        <div class="ba-treatment">Orthodontics</div>
+        <div class="ba-desc">Traditional braces · 18 months · Full bite correction</div>
+        <span class="ba-tag">Braces</span>
+      </div>
+    </div>
+    <div class="ba-slider-card fade-up delay-1">
+      <div class="result-photo">
+        <img src="DPkJQpwkSpM-02.jpg" alt="Implants Result" />
+        <span class="result-badge">After</span>
+      </div>
+      <div class="ba-slider-info">
+        <div class="ba-treatment">Dental Implants</div>
+        <div class="ba-desc">2 titanium implants · Permanent · Natural function restored</div>
+        <span class="ba-tag">Implants</span>
+      </div>
+    </div>
+    <div class="ba-slider-card fade-up delay-2">
+      <div class="result-photo">
+        <img src="DPkJQpwkSpM-03.jpg" alt="Root Canal Result" />
+        <span class="result-badge">After</span>
+      </div>
+      <div class="ba-slider-info">
+        <div class="ba-treatment">Root Canal Treatment</div>
+        <div class="ba-desc">Pain-free procedure · Tooth saved · Same-day relief</div>
+        <span class="ba-tag">Root Canal</span>
+      </div>
+    </div>
+  </div>
+  <div class="view-all-wrap fade-up">
+    <a href="contact.html" class="view-all-link">Book Your Transformation →</a>
   </div>
 </section>
 
-<!-- ══ TRANSFORMATION GRID ══ -->
-<section style="background:var(--bg-dark);padding:40px 0 var(--section-pad);">
-  <div class="container">
-    <div class="masonry-grid" id="transformation-grid">
-
-      <!-- Braces transformations -->
-      <div class="ba-card" data-lightbox data-category="braces" data-treatment="Braces · Orthodontics" data-duration="18 months" data-name="Success O.">
-        <div class="ba-images" style="height:240px;">
-          <div class="ba-before" style="background-image:url('DGwxJEJIN9Y-01.jpg');background-size:cover;background-position:center;"></div>
-          <div class="ba-divider"></div>
-          <div class="ba-after" style="background-image:url('DGwxJEJIN9Y-02.jpg');background-size:cover;background-position:center;"></div>
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Braces</span>
-          <span class="ba-duration">18 months</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="whitening" data-treatment="Teeth Whitening" data-duration="1 session" data-name="Samuel K.">
-        <div class="ba-images" style="height:200px;">
-          <div class="ba-before" style="background-image:url('DTe8XjADEUU.webp');background-size:cover;background-position:top center;"></div>
-          <div class="ba-divider"></div>
-          <div class="ba-after" style="background-image:url('DTe8XjADEUU.webp');background-size:cover;background-position:bottom center;"></div>
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Teeth Whitening</span>
-          <span class="ba-duration">1 session</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="veneers" data-treatment="Porcelain Veneers" data-duration="2 visits" data-name="Tunde B.">
-        <div class="ba-images" style="height:280px;position:relative;">
-          <img src="DZ3J4CJx2XF.webp" alt="Porcelain veneers before and after" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Veneers</span>
-          <span class="ba-duration">2 visits</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="braces" data-treatment="Ceramic Braces" data-duration="14 months" data-name="Frances A.">
-        <div class="ba-images" style="height:220px;position:relative;">
-          <img src="DJPSTwOId51.jpg" alt="Smile Best Dental 2020 before 2021 after" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Ceramic Braces</span>
-          <span class="ba-duration">14 months</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="cosmetic" data-treatment="Smile Makeover" data-duration="3 visits" data-name="Harrison A.">
-        <div class="ba-images" style="height:260px;">
-          <div class="ba-before" style="background-image:url('DPkJQpwkSpM-04.jpg');background-size:cover;background-position:top center;"></div>
-          <div class="ba-divider"></div>
-          <div class="ba-after" style="background-image:url('DPkJQpwkSpM-03.jpg');background-size:cover;background-position:top center;"></div>
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Smile Makeover</span>
-          <span class="ba-duration">3 visits</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="implants" data-treatment="Dental Implants" data-duration="3 months" data-name="Kemi A.">
-        <div class="ba-images" style="height:200px;">
-          <div class="ba-before" style="background-image:url('unnamed (2).jpg');background-size:cover;background-position:center;"></div>
-          <div class="ba-divider"></div>
-          <div class="ba-after" style="background-image:url('DPkJQpwkSpM-02.jpg');background-size:cover;background-position:top center;"></div>
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Dental Implants</span>
-          <span class="ba-duration">3 months</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="braces" data-treatment="Gold-Plated Braces" data-duration="22 months" data-name="Emeka O.">
-        <div class="ba-images" style="height:250px;">
-          <div class="ba-before" style="background-image:url('DGwxJEJIN9Y-01.jpg');background-size:cover;background-position:center;"></div>
-          <div class="ba-divider"></div>
-          <div class="ba-after" style="background-image:url('DPkJQpwkSpM-01.jpg');background-size:cover;background-position:center;"></div>
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Gold-Plated Braces</span>
-          <span class="ba-duration">22 months</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="whitening" data-treatment="Teeth Whitening" data-duration="1 session" data-name="Amara N.">
-        <div class="ba-images" style="height:220px;position:relative;">
-          <img src="DTe8XjADEUU.webp" alt="Teeth whitening dramatic result" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Teeth Whitening</span>
-          <span class="ba-duration">1 session</span>
-        </div>
-      </div>
-
-      <div class="ba-card" data-lightbox data-category="veneers" data-treatment="Composite Veneers" data-duration="1 visit" data-name="Bola F.">
-        <div class="ba-images" style="height:240px;">
-          <div class="ba-before" style="background-image:url('DPkJQpwkSpM-04.jpg');background-size:cover;background-position:top center;"></div>
-          <div class="ba-divider"></div>
-          <div class="ba-after" style="background-image:url('DPkJQpwkSpM-03.jpg');background-size:cover;background-position:top center;"></div>
-          <div class="ba-labels"><span class="ba-label">Before</span><span class="ba-label">After</span></div>
-        </div>
-        <div class="ba-info">
-          <span class="ba-treatment">Composite Veneers</span>
-          <span class="ba-duration">1 visit</span>
-        </div>
-      </div>
-
-    </div>
+<!-- VIDEO REEL -->
+<section class="reel-section">
+  <div class="reel-header">
+    <div class="section-label fade-up">Clinic Highlights</div>
+    <h2 class="section-title fade-up">Watch Our <em>Work</em></h2>
+  </div>
+  <div class="reel-scroll">
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="C9R3gY-uyQz.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Smile Transformation</div></div>
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="DMN3nVQClIb.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Whitening Session</div></div>
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="DMcdpxwsS-g.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Veneer Fitting</div></div>
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="DMh3YiKixKO.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Braces &amp; Aligners</div></div>
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="DNavT-Os-U4.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Implant Procedure</div></div>
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="DNlfQqUMrid.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Patient Care</div></div>
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="DOUgejGiF09.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Cosmetic Dentistry</div></div>
+    <div class="reel-item"><video autoplay muted loop playsinline><source src="DQv5F7PjIZa.mp4" type="video/mp4"/></video><div class="reel-item-overlay"></div><div class="reel-item-label">Root Canal</div></div>
   </div>
 </section>
 
-<!-- ══ INSTAGRAM CTA ══ -->
-<section style="background:var(--primary);padding:var(--section-pad) 0;text-align:center;">
-  <div class="container">
-    <div class="section-label gsap-fade-up" style="justify-content:center;"><span class="label-tag" style="color:rgba(255,255,255,0.4);">Follow Our Journey</span></div>
-    <h2 class="display-large text-white gsap-fade-up" style="margin-bottom:16px;" data-split="words">28,000+ Followers.<br>Thousands of Stories.</h2>
-    <p class="body-lg gsap-fade-up" style="color:rgba(255,255,255,0.5);max-width:500px;margin:0 auto 40px;">Follow <span style="color:var(--gold);">@smilebestdental</span> on Instagram for daily before/afters, transformation journeys, and behind-the-scenes clinic moments.</p>
-    <a href="https://www.instagram.com/smilebestdental" target="_blank" rel="noopener" class="btn btn-gold magnetic"><span>Follow @smilebestdental</span></a>
+<!-- GALLERY GRID -->
+<section class="gallery-section">
+  <div class="section-header">
+    <div class="section-label fade-up">Our Clinic &amp; Work</div>
+    <h2 class="section-title fade-up">A Glimpse of <em>Smiles</em></h2>
+  </div>
+  <div class="gallery-grid">
+    <div class="gallery-item tall fade-up"><img src="unnamed (1).jpg" alt="Clinic interior" /></div>
+    <div class="gallery-item fade-up delay-1"><img src="DPkJQpwkSpM-01.jpg" alt="Whitening result" /></div>
+    <div class="gallery-item fade-up delay-2"><img src="DGwxJEJIN9Y-01.jpg" alt="Smile result" /></div>
+    <div class="gallery-item fade-up delay-3"><img src="unnamed (3).jpg" alt="Patient care" /></div>
+    <div class="gallery-item wide fade-up delay-1"><img src="DZ3J4CJx2XF.webp" alt="Clinic equipment" /></div>
+    <div class="gallery-item fade-up delay-2"><img src="DPkJQpwkSpM-04.jpg" alt="Veneers" /></div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:1100px;margin:12px auto 0;">
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="unnamed.jpg" alt="Patient" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="unnamed (2).jpg" alt="Clinic" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="DZ3XBHFMQHT.webp" alt="Team" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="DTe8XjADEUU.webp" alt="Result" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="DJPSTwOId51.jpg" alt="Patient care" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="thumbnail (1).jpg" alt="Smile result" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="DPkJQpwkSpM-02.jpg" alt="Root canal" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
+    <div class="gallery-item" style="height:180px;border-radius:var(--r);overflow:hidden;"><img src="DPkJQpwkSpM-03.jpg" alt="Implants" style="width:100%;height:100%;object-fit:cover;max-width:none;" /></div>
   </div>
 </section>
 
-<!-- ══ PULL QUOTE ══ -->
-<section class="pull-quote-section">
-  <div class="container">
-    <blockquote class="pull-quote">
-      "I got my braces here. Very good. It is working very well. Highly recommended."
-    </blockquote>
-    <div class="pull-quote-attr">
-      <span>Oke Success · Braces Patient</span>
+<!-- CTA BAR -->
+<div class="cta-bar">
+  <div class="cta-bar-inner">
+    <div class="cta-bar-left">
+      <div class="cta-bar-script">Book Your</div>
+      <div class="cta-bar-main"><span>APPOINTMENT</span> TODAY!</div>
     </div>
-  </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <svg viewBox="0 0 36 36" fill="none" style="width:40px;height:40px;"><path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/></svg>
-          <span class="nav-logo-text">Smile <span>Best</span></span>
-        </a>
-        <p>Expert dental care since 2015. Transforming smiles across Ikeja and Lagos.</p>
+    <div class="cta-bar-contacts">
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">📞</div>
+        +234 801 234 5678
       </div>
-      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="transformations.html">Transformations</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Book Appointment</a></li></ul></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="services.html">Teeth Whitening</a></li><li><a href="services.html">Braces</a></li><li><a href="services.html">Implants</a></li><li><a href="services.html">Veneers</a></li><li><a href="services.html">Cosmetic Dentistry</a></li></ul></div>
-      <div class="footer-col footer-contact"><h4>Contact</h4><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>34 Ijaiye Road, Top Dental Building, Ogba, Ikeja, Lagos</p><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.93 6.93l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+2347038057170">+234 703 805 7170</a></p><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon–Sat: 8:00am – 6:00pm</p></div>
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">📍</div>
+        Ogba, Ikeja, Lagos
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">🕐</div>
+        Mon – Sat: 8am – 6pm
+      </div>
     </div>
-    <div class="gold-divider full"></div>
-    <div class="footer-bottom">
-      <p>© 2025 Smile Best Dental Clinic · 34 Ijaiye Road, Ogba, Ikeja, Lagos</p>
-      <p style="color:rgba(255,255,255,0.25);">Crafted with care for your smile</p>
+    <div class="cta-bar-right">
+      <a href="contact.html" class="cta-bar-btn">📞 Book Now</a>
+      <div class="cta-tagline">
+        Because
+        <strong>Every Smile Matters</strong>
+      </div>
     </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Smile<span>Best</span> Dental</div>
+      <p class="footer-desc">Expert dental care in Ogba, Ikeja, Lagos. Transforming smiles since 2012.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Treatments</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Teeth Whitening</a></li>
+        <li><a href="services.html">Dental Implants</a></li>
+        <li><a href="services.html">Orthodontics</a></li>
+        <li><a href="services.html">Veneers</a></li>
+        <li><a href="services.html">Root Canal</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Clinic</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="transformations.html">Our Results</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li>+234 801 234 5678</li>
+        <li>info@smilebestdental.com</li>
+        <li>Ogba, Ikeja, Lagos</li>
+        <li>Mon–Sat: 8am–6pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Smile Best Dental Clinic. All rights reserved.</span>
+    <span>Designed with care in Lagos</span>
   </div>
 </footer>
 
-<a id="whatsapp-btn" href="https://wa.me/2347038057170?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment%20at%20Smile%20Best%20Dental%20Clinic%2C%20Ikeja." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  <a class="whatsapp-bubble" href="https://wa.me/2348012345678?text=Hello%20Smile%20Best%20Dental%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.774L0 32l8.473-2.001A15.938 15.938 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.771-1.852l-.485-.29-5.029 1.187 1.213-4.906-.317-.503A13.272 13.272 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.261-9.961c-.398-.199-2.354-1.162-2.719-1.295-.365-.133-.631-.199-.897.199-.266.398-1.029 1.295-1.261 1.561-.232.266-.465.299-.863.1-.398-.199-1.681-.619-3.203-1.975-1.183-1.055-1.982-2.358-2.214-2.756-.232-.398-.025-.613.174-.811.179-.178.398-.465.597-.698.199-.232.266-.398.398-.664.133-.266.066-.498-.033-.697-.1-.199-.897-2.162-1.229-2.96-.324-.778-.653-.672-.897-.684l-.764-.013c-.266 0-.697.1-.1063.498-.365.398-1.394 1.362-1.394 3.322s1.427 3.853 1.626 4.119c.199.266 2.808 4.285 6.805 6.009.951.411 1.693.656 2.271.839.954.303 1.823.260 2.509.158.765-.114 2.354-.963 2.686-1.893.332-.930.332-1.727.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+  </a>
+</div>
 
-<!-- Lightbox -->
-<div id="lightbox">
-  <div class="lightbox-inner">
-    <button class="lightbox-close" aria-label="Close">✕</button>
-    <div class="lightbox-images">
-      <img class="lb-before" src="" alt="Before" />
-      <img class="lb-after" src="" alt="After" />
-    </div>
-    <div class="lightbox-divider"></div>
-    <div class="lightbox-meta">
-      <div><span class="ba-treatment lb-treatment"></span><span style="font-size:12px;color:rgba(255,255,255,0.4);margin-left:12px;" class="lb-duration"></span></div>
-      <span style="font-size:0.9rem;color:rgba(255,255,255,0.6);" class="lb-name"></span>
-    </div>
-    <button class="lightbox-nav prev" aria-label="Previous">←</button>
-    <button class="lightbox-nav next" aria-label="Next">→</button>
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">Book an Appointment</div>
+    <div class="modal-sub">Fill in your details and we'll confirm within 1 hour</div>
+    <form class="modal-form" onsubmit="submitBooking(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="e.g. Amaka" required />
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="e.g. Okonkwo" required />
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+234 801 234 5678" required />
+      </div>
+      <div class="form-field">
+        <label>Treatment</label>
+        <select required>
+          <option value="" disabled selected>Select a treatment</option>
+          <option>General Dentistry</option>
+          <option>Teeth Whitening</option>
+          <option>Cosmetic Dentistry</option>
+          <option>Dental Implants</option>
+          <option>Porcelain Veneers</option>
+          <option>Root Canal Treatment</option>
+          <option>Braces &amp; Aligners</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Preferred Date</label>
+        <input type="date" required />
+      </div>
+      <button type="submit" class="form-submit">Confirm Appointment →</button>
+      <p class="form-note">📞 Or call us directly: <strong>+234 801 234 5678</strong></p>
+    </form>
   </div>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/main.js"></script>
+<script>
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => revealObs.observe(el));
+
+  function openModal(e) { e && e.preventDefault(); document.getElementById('bookingModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('bookingModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  function submitBooking(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Appointment Requested!';
+    btn.style.background = 'var(--teal-mid)';
+    setTimeout(closeModal, 1800);
+  }
+
+  const dateInput = document.querySelector('input[type="date"]');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+</script>
 </body>
 </html>

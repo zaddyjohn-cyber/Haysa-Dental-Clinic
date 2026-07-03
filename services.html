@@ -3,292 +3,330 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dental Services | Smile Best Dental Clinic Ikeja Lagos</title>
-  <meta name="description" content="Teeth whitening, braces, implants, veneers, root canal, crowns, cosmetic dentistry and more. Expert dental services in Ogba, Ikeja, Lagos." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>" />
+  <meta name="theme-color" content="#0B3830" />
+  <title>Services | Smile Best Dental Clinic — Teeth Whitening, Implants, Braces Lagos</title>
+  <meta name="description" content="Expert dental services at Smile Best Dental Clinic: teeth whitening, implants, veneers, root canal, braces and general dentistry in Ogba, Ikeja, Lagos." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-<div id="scroll-progress"></div>
-
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <svg viewBox="0 0 36 36" fill="none"><path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/></svg>
-    <span class="nav-logo-text">Smile <span>Best</span></span>
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon">🦷</div>
+    <div class="nav-logo-text">Smile<span>Best</span></div>
   </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html" class="active">Services</a>
-    <a href="transformations.html">Transformations</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html" class="nav-cta">Book Now</a>
-  </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html" class="active">Services</a></li>
+    <li><a href="transformations.html">Transformations</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-burger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div id="nav-utility">
-  <strong>Same-Day Appointments Available</strong>
-  <a href="tel:+2347038057170">+234 703 805 7170</a>
-  <span>Mon–Sat 8am–6pm · Ogba, Ikeja</span>
-</div>
-<div id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="transformations.html">Transformations</a>
-  <a href="testimonials.html">Testimonials</a>
-  <a href="contact.html">Book Now</a>
+
+<div class="mobile-menu">
+  <button class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">✕</button>
+  <a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
+  <a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
+  <a href="transformations.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Transformations</a>
+  <a href="testimonials.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Testimonials</a>
+  <a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Book Now</a>
 </div>
 
-<!-- ══ SERVICES HERO ══ -->
-<section class="inner-hero">
-  <div class="inner-hero-bg-text">SERVICES</div>
-  <div class="container inner-hero-content" style="text-align:center;padding-top:calc(var(--section-pad) + 80px);padding-bottom:var(--section-pad);">
-    <div class="section-label gsap-fade-up" style="justify-content:center;"><span class="label-tag gold">What We Offer</span></div>
-    <h1 class="display-large text-white gsap-fade-up" style="margin-bottom:20px;" data-split="words">Everything Your Smile Needs.<br>One Address.</h1>
-    <p class="body-lg gsap-fade-up" style="color:rgba(255,255,255,0.5);max-width:500px;margin:0 auto 40px;">34 Ijaiye Road, Top Dental Building, Ogba, Ikeja — your complete dental home.</p>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label">Our Services</div>
+    <h1>Expert Dental Care<br>for Every Need</h1>
+    <p class="page-hero-sub">From routine checkups to complete smile makeovers — we have you covered. All treatments performed by qualified specialist dentists.</p>
   </div>
 </section>
 
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span>Teeth Whitening</span><span>Dental Implants</span><span>Braces</span><span>Orthodontics</span><span>Root Canal</span><span>Crowns &amp; Bridges</span><span>Veneers</span><span>Family Dentistry</span><span>Scaling &amp; Polishing</span><span>Cosmetic Dentistry</span>
-    <span>Teeth Whitening</span><span>Dental Implants</span><span>Braces</span><span>Orthodontics</span><span>Root Canal</span><span>Crowns &amp; Bridges</span><span>Veneers</span><span>Family Dentistry</span><span>Scaling &amp; Polishing</span><span>Cosmetic Dentistry</span>
+<!-- SERVICES GRID -->
+<section style="padding:100px 60px;background:var(--cream);" id="services">
+  <div class="section-header">
+    <div class="section-label fade-up">All Treatments</div>
+    <h2 class="section-title fade-up">What We <em>Offer</em></h2>
   </div>
-</div>
-
-<!-- ══ SERVICES LAYOUT ══ -->
-<section style="background:var(--bg-dark);">
-  <div class="container" style="padding-top:0;">
-    <div class="services-page-layout">
-
-      <!-- Sticky Sidebar -->
-      <aside class="services-sidebar">
-        <a class="service-nav-item active" href="#whitening">01 · Teeth Whitening</a>
-        <a class="service-nav-item" href="#implants">02 · Dental Implants</a>
-        <a class="service-nav-item" href="#braces">03 · Braces &amp; Orthodontics</a>
-        <a class="service-nav-item" href="#rootcanal">04 · Root Canal</a>
-        <a class="service-nav-item" href="#crowns">05 · Crowns &amp; Bridges</a>
-        <a class="service-nav-item" href="#scaling">06 · Scaling &amp; Polishing</a>
-        <a class="service-nav-item" href="#veneers">07 · Veneers</a>
-        <a class="service-nav-item" href="#cosmetic">08 · Cosmetic Dentistry</a>
-        <a class="service-nav-item" href="#family">09 · Family Dentistry</a>
-      </aside>
-
-      <!-- Service Blocks -->
-      <div>
-
-        <div class="service-block" id="whitening">
-          <div class="service-block-number">01</div>
-          <div class="section-label"><span class="label-tag gold">Cosmetic</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Teeth Whitening</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Up to 8 shades brighter in a single session. Our professional-grade whitening treatment is safe, pain-free, and delivers results that last. Whether you're prepping for a special occasion or simply want a brighter everyday smile, we have the right treatment for you.</p>
-          <ul class="benefit-list">
-            <li>Up to 8 shades brighter in one session</li>
-            <li>Safe, professional-grade whitening gel</li>
-            <li>Pain-free with no lasting sensitivity</li>
-            <li>Results visible immediately after treatment</li>
-            <li>Long-lasting effects with proper maintenance</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Teeth Whitening</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="DTe8XjADEUU.webp" alt="Teeth whitening result" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </div>
-
-        <div class="service-block" id="implants">
-          <div class="service-block-number">02</div>
-          <div class="section-label"><span class="label-tag gold">Restorative</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Dental Implants</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Permanent teeth replacement that looks, feels, and functions exactly like your natural tooth. Dental implants are the gold standard for replacing missing teeth — titanium roots that fuse with your jawbone for a lifetime of confident smiling.</p>
-          <ul class="benefit-list">
-            <li>Permanent solution — built to last decades</li>
-            <li>Looks and feels exactly like a natural tooth</li>
-            <li>Prevents jawbone loss after extraction</li>
-            <li>No adhesives or removable parts</li>
-            <li>Improves overall bite function and speech</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Dental Implants</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="DPkJQpwkSpM-01.jpg" alt="Dental implants result" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </div>
-
-        <div class="service-block" id="braces">
-          <div class="service-block-number">03</div>
-          <div class="section-label"><span class="label-tag gold">Orthodontics</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Braces &amp; Orthodontics</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Silver, ceramic, or gold-plated braces tailored to your lifestyle and budget. We create customised orthodontic treatment plans for children, teens, and adults — straightening teeth and correcting bites with precision and care.</p>
-          <ul class="benefit-list">
-            <li>Silver, ceramic, and gold-plated brace options</li>
-            <li>Customised treatment plans for each patient</li>
-            <li>Suitable for all ages — children to adults</li>
-            <li>Regular progress checks throughout treatment</li>
-            <li>Retainers included post-treatment</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Braces Consultation</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="DGwxJEJIN9Y-01.jpg" alt="Braces being fitted" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </div>
-
-        <div class="service-block" id="rootcanal">
-          <div class="service-block-number">04</div>
-          <div class="section-label"><span class="label-tag gold">Endodontics</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Root Canal Treatment</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Save your natural tooth with our comfortable, precision endodontic treatment. Root canals have an unfair reputation — in our clinic, the procedure is typically no more uncomfortable than getting a filling. Modern techniques and local anaesthesia make the experience smooth.</p>
-          <ul class="benefit-list">
-            <li>Saves your natural tooth from extraction</li>
-            <li>Near-painless with modern anaesthetic</li>
-            <li>Single or multi-visit treatment options</li>
-            <li>Relieves severe tooth pain immediately</li>
-            <li>Followed by crown placement for full protection</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Root Canal Consultation</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="unnamed (2).jpg" alt="Dental procedure equipment" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </div>
-
-        <div class="service-block" id="crowns">
-          <div class="service-block-number">05</div>
-          <div class="section-label"><span class="label-tag gold">Restorative</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Crowns &amp; Bridges</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Restore damaged or missing teeth with natural-looking, durable restorations. Dental crowns cap damaged teeth to restore their shape, size, and strength. Bridges fill the gap left by missing teeth using the surrounding natural teeth as anchors.</p>
-          <ul class="benefit-list">
-            <li>Porcelain, ceramic, or metal-fused options</li>
-            <li>Matches the colour of your natural teeth</li>
-            <li>Restores full chewing function</li>
-            <li>Long-lasting with proper care — 10–15+ years</li>
-            <li>Bridges replace multiple missing teeth at once</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Crowns &amp; Bridges</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="DPkJQpwkSpM-02.jpg" alt="Crowns result" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;">
-          </div>
-        </div>
-
-        <div class="service-block" id="scaling">
-          <div class="service-block-number">06</div>
-          <div class="section-label"><span class="label-tag gold">Preventive</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Scaling &amp; Polishing</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Deep professional cleaning that removes tartar build-up and polishes your teeth to a bright finish. Recommended every 6 months to maintain healthy gums and prevent gum disease. The foundation of a healthy smile.</p>
-          <ul class="benefit-list">
-            <li>Removes hardened tartar a toothbrush can't reach</li>
-            <li>Prevents gum disease and cavities</li>
-            <li>Polishes teeth for a noticeably brighter finish</li>
-            <li>Fresh breath as an added benefit</li>
-            <li>Recommended every 6 months for maintenance</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Scaling &amp; Polishing</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="DJPSTwOId51.jpg" alt="Before and after scaling result" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </div>
-
-        <div class="service-block" id="veneers">
-          <div class="service-block-number">07</div>
-          <div class="section-label"><span class="label-tag gold">Cosmetic</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Veneers</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Thin porcelain shells that transform the shape, colour, and symmetry of your smile. Veneers are one of the most powerful cosmetic dental tools — covering chips, stains, gaps, and uneven teeth to create a flawless, natural-looking smile.</p>
-          <ul class="benefit-list">
-            <li>Transforms the entire look of your smile</li>
-            <li>Covers chips, stains, gaps, and uneven teeth</li>
-            <li>Minimal tooth preparation required</li>
-            <li>Porcelain that matches your natural tooth shade</li>
-            <li>Durable and stain-resistant — 10–20 years</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Veneers Consultation</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="DZ3J4CJx2XF.webp" alt="Teeth veneers before and after" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </div>
-
-        <div class="service-block" id="cosmetic">
-          <div class="service-block-number">08</div>
-          <div class="section-label"><span class="label-tag gold">Cosmetic</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Cosmetic Dentistry</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Smile makeovers designed around your face, your goals, and your confidence. Our cosmetic dentistry combines multiple treatments into a single cohesive plan — so your new smile doesn't just look beautiful, it looks like you.</p>
-          <ul class="benefit-list">
-            <li>Full smile makeover planning and design</li>
-            <li>Combination of whitening, veneers, and bonding</li>
-            <li>Digital smile preview before treatment begins</li>
-            <li>Treatment designed to complement your face</li>
-            <li>Natural results — no "overdone" look</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Smile Makeover</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="DPkJQpwkSpM-03.jpg" alt="Cosmetic dentistry result" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;">
-          </div>
-        </div>
-
-        <div class="service-block" id="family">
-          <div class="service-block-number">09</div>
-          <div class="section-label"><span class="label-tag gold">General</span></div>
-          <h2 class="heading-xl text-white" style="margin:16px 0 20px;">Family Dentistry</h2>
-          <p style="color:rgba(255,255,255,0.6);line-height:1.8;max-width:580px;">Comprehensive care for every age, from toddlers to grandparents. We create a welcoming, fear-free environment for children and adults alike. Routine check-ups, fillings, extractions, and preventive care — your family's oral health is in the right hands.</p>
-          <ul class="benefit-list">
-            <li>Care for all ages from children to seniors</li>
-            <li>Child-friendly environment and approach</li>
-            <li>Routine check-ups, cleaning, and fillings</li>
-            <li>Early orthodontic assessment for children</li>
-            <li>Emergency dental care when you need it</li>
-          </ul>
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Family Appointment</span></a>
-          <div class="service-block-image" style="overflow:hidden;">
-            <img src="unnamed (1).jpg" alt="Smile Best Dental waiting room" style="width:100%;height:100%;object-fit:cover;display:block;">
-          </div>
-        </div>
-
+  <div class="services-grid" style="max-width:1100px;margin:0 auto;">
+    <!-- General Dentistry -->
+    <div class="service-detail-card fade-up">
+      <div class="service-detail-photo">
+        <img src="unnamed (2).jpg" alt="General Dentistry" />
+      </div>
+      <div class="service-detail-body">
+        <div class="service-detail-name">General Dentistry</div>
+        <p class="service-detail-desc">Routine checkups, fillings, extractions and professional cleaning to keep your teeth healthy all year round. We recommend a visit every 6 months for best results. Our gentle approach ensures your comfort from first appointment to last.</p>
+        <div class="service-detail-price">From ₦10,000</div>
+        <button class="service-detail-btn" onclick="openModal(event)">Book This Service →</button>
+      </div>
+    </div>
+    <!-- Cosmetic Dentistry -->
+    <div class="service-detail-card fade-up delay-1">
+      <div class="service-detail-photo">
+        <img src="DPkJQpwkSpM-04.jpg" alt="Cosmetic Dentistry" />
+      </div>
+      <div class="service-detail-body">
+        <div class="service-detail-name">Cosmetic Dentistry</div>
+        <p class="service-detail-desc">Veneers, bonding and full smile design tailored to your face and goals. We work with you to create the exact result you've always imagined. Transform your confidence and change how the world sees your smile.</p>
+        <div class="service-detail-price">From ₦60,000 per tooth</div>
+        <button class="service-detail-btn" onclick="openModal(event)">Book This Service →</button>
+      </div>
+    </div>
+    <!-- Teeth Whitening -->
+    <div class="service-detail-card fade-up delay-2">
+      <div class="service-detail-photo">
+        <img src="DGwxJEJIN9Y-01.jpg" alt="Teeth Whitening" />
+      </div>
+      <div class="service-detail-body">
+        <div class="service-detail-name">Teeth Whitening</div>
+        <p class="service-detail-desc">Professional LED whitening that brightens your smile 6–10 shades in a single session. Safe, fast and long-lasting — most results hold beautifully for 12 months or more. A protective gel keeps gums comfortable throughout.</p>
+        <div class="service-detail-price">From ₦35,000</div>
+        <button class="service-detail-btn" onclick="openModal(event)">Book This Service →</button>
+      </div>
+    </div>
+    <!-- Dental Implants -->
+    <div class="service-detail-card fade-up">
+      <div class="service-detail-photo">
+        <img src="DPkJQpwkSpM-03.jpg" alt="Dental Implants" />
+      </div>
+      <div class="service-detail-body">
+        <div class="service-detail-name">Dental Implants</div>
+        <p class="service-detail-desc">Permanent titanium tooth replacements that look and feel completely natural. The implant fuses with your jawbone for an unmatched level of strength and stability. Built to last a lifetime with proper care and regular checkups.</p>
+        <div class="service-detail-price">From ₦250,000</div>
+        <button class="service-detail-btn" onclick="openModal(event)">Book This Service →</button>
+      </div>
+    </div>
+    <!-- Root Canal -->
+    <div class="service-detail-card fade-up delay-1">
+      <div class="service-detail-photo">
+        <img src="DPkJQpwkSpM-02.jpg" alt="Root Canal" />
+      </div>
+      <div class="service-detail-body">
+        <div class="service-detail-name">Root Canal Treatment</div>
+        <p class="service-detail-desc">Pain-free nerve treatment that saves your natural tooth from extraction. Modern techniques mean most patients feel significant relief immediately after the procedure. We use the latest rotary instruments for precision and speed.</p>
+        <div class="service-detail-price">From ₦45,000</div>
+        <button class="service-detail-btn" onclick="openModal(event)">Book This Service →</button>
+      </div>
+    </div>
+    <!-- Braces -->
+    <div class="service-detail-card fade-up delay-2">
+      <div class="service-detail-photo">
+        <img src="DGwxJEJIN9Y-02.jpg" alt="Braces &amp; Aligners" />
+      </div>
+      <div class="service-detail-body">
+        <div class="service-detail-name">Braces &amp; Aligners</div>
+        <p class="service-detail-desc">Clear and traditional braces for teens and adults — discreet options available. Precise, beautiful alignment typically achieved in 12–24 months depending on your case. We provide a detailed timeline at your free consultation.</p>
+        <div class="service-detail-price">From ₦150,000</div>
+        <button class="service-detail-btn" onclick="openModal(event)">Book This Service →</button>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ FOOTER ══ -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <svg viewBox="0 0 36 36" fill="none" style="width:40px;height:40px;"><path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/></svg>
-          <span class="nav-logo-text">Smile <span>Best</span></span>
-        </a>
-        <p>Expert dental care since 2015. Transforming smiles across Ikeja and Lagos.</p>
+<!-- FAQ -->
+<section class="faq-section">
+  <div style="max-width:750px;margin:0 auto;">
+    <div class="section-header" style="text-align:left;margin-bottom:48px;">
+      <div class="section-label fade-up">Common Questions</div>
+      <h2 class="section-title fade-up">Frequently Asked <em>Questions</em></h2>
+    </div>
+    <div class="faq-list">
+      <div class="faq-item fade-up">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Is teeth whitening painful? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Our professional LED whitening is completely safe and virtually painless. Some patients experience mild sensitivity for 24 hours after treatment, which passes quickly. We use a protective gel on your gums to keep you comfortable throughout.</div>
       </div>
-      <div class="footer-col"><h4>Navigate</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="services.html">Services</a></li><li><a href="transformations.html">Transformations</a></li><li><a href="testimonials.html">Testimonials</a></li><li><a href="contact.html">Book Appointment</a></li></ul></div>
-      <div class="footer-col"><h4>Services</h4><ul><li><a href="#whitening">Teeth Whitening</a></li><li><a href="#implants">Dental Implants</a></li><li><a href="#braces">Braces</a></li><li><a href="#rootcanal">Root Canal</a></li><li><a href="#veneers">Veneers</a></li><li><a href="#cosmetic">Cosmetic</a></li></ul></div>
-      <div class="footer-col footer-contact"><h4>Contact</h4><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>34 Ijaiye Road, Top Dental Building, Ogba, Ikeja, Lagos</p><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.93 6.93l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+2347038057170">+234 703 805 7170</a></p><p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon–Sat: 8:00am – 6:00pm</p></div>
+      <div class="faq-item fade-up delay-1">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How long do dental implants last? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">With proper care, dental implants can last a lifetime. The titanium post fuses permanently with your jawbone, making it the most durable tooth replacement option available. Regular checkups and good oral hygiene are all you need.</div>
+      </div>
+      <div class="faq-item fade-up delay-2">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How much does treatment cost at Smile Best? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Our pricing is transparent and competitive for Lagos. Costs vary by treatment — teeth whitening starts from ₦35,000, veneers from ₦60,000 per tooth, and implants from ₦250,000. We offer flexible payment plans so cost is never a barrier to your smile.</div>
+      </div>
+      <div class="faq-item fade-up delay-3">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          How long do braces or aligners take? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Treatment time depends on the complexity of your case. Most patients complete their orthodontic journey in 12–24 months. Clear aligners can sometimes be faster for mild to moderate cases. We'll give you a precise timeline at your free consultation.</div>
+      </div>
+      <div class="faq-item fade-up">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Do you accept walk-ins? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Yes! We welcome walk-ins Monday to Saturday, 8am–6pm, though we recommend booking ahead to guarantee your preferred time slot. You can book instantly via our website, WhatsApp, or phone call.</div>
+      </div>
     </div>
-    <div class="gold-divider full"></div>
-    <div class="footer-bottom">
-      <p>© 2025 Smile Best Dental Clinic · 34 Ijaiye Road, Ogba, Ikeja, Lagos</p>
-      <p style="color:rgba(255,255,255,0.25);">Crafted with care for your smile</p>
+  </div>
+</section>
+
+<!-- CTA BAR -->
+<div class="cta-bar">
+  <div class="cta-bar-inner">
+    <div class="cta-bar-left">
+      <div class="cta-bar-script">Book Your</div>
+      <div class="cta-bar-main"><span>APPOINTMENT</span> TODAY!</div>
     </div>
+    <div class="cta-bar-contacts">
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">📞</div>
+        +234 801 234 5678
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">📍</div>
+        Ogba, Ikeja, Lagos
+      </div>
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">🕐</div>
+        Mon – Sat: 8am – 6pm
+      </div>
+    </div>
+    <div class="cta-bar-right">
+      <a href="contact.html" class="cta-bar-btn">📞 Book Now</a>
+      <div class="cta-tagline">
+        Because
+        <strong>Every Smile Matters</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Smile<span>Best</span> Dental</div>
+      <p class="footer-desc">Expert dental care in Ogba, Ikeja, Lagos. Transforming smiles since 2012.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Treatments</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Teeth Whitening</a></li>
+        <li><a href="services.html">Dental Implants</a></li>
+        <li><a href="services.html">Orthodontics</a></li>
+        <li><a href="services.html">Veneers</a></li>
+        <li><a href="services.html">Root Canal</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Clinic</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="transformations.html">Our Results</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li>+234 801 234 5678</li>
+        <li>info@smilebestdental.com</li>
+        <li>Ogba, Ikeja, Lagos</li>
+        <li>Mon–Sat: 8am–6pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Smile Best Dental Clinic. All rights reserved.</span>
+    <span>Designed with care in Lagos</span>
   </div>
 </footer>
 
-<a id="whatsapp-btn" href="https://wa.me/2347038057170?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment%20at%20Smile%20Best%20Dental%20Clinic%2C%20Ikeja." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  <a class="whatsapp-bubble" href="https://wa.me/2348012345678?text=Hello%20Smile%20Best%20Dental%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.774L0 32l8.473-2.001A15.938 15.938 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.771-1.852l-.485-.29-5.029 1.187 1.213-4.906-.317-.503A13.272 13.272 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.261-9.961c-.398-.199-2.354-1.162-2.719-1.295-.365-.133-.631-.199-.897.199-.266.398-1.029 1.295-1.261 1.561-.232.266-.465.299-.863.1-.398-.199-1.681-.619-3.203-1.975-1.183-1.055-1.982-2.358-2.214-2.756-.232-.398-.025-.613.174-.811.179-.178.398-.465.597-.698.199-.232.266-.398.398-.664.133-.266.066-.498-.033-.697-.1-.199-.897-2.162-1.229-2.96-.324-.778-.653-.672-.897-.684l-.764-.013c-.266 0-.697.1-.1063.498-.365.398-1.394 1.362-1.394 3.322s1.427 3.853 1.626 4.119c.199.266 2.808 4.285 6.805 6.009.951.411 1.693.656 2.271.839.954.303 1.823.260 2.509.158.765-.114 2.354-.963 2.686-1.893.332-.930.332-1.727.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+  </a>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
-<script src="js/counter.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/main.js"></script>
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">Book an Appointment</div>
+    <div class="modal-sub">Fill in your details and we'll confirm within 1 hour</div>
+    <form class="modal-form" onsubmit="submitBooking(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="e.g. Amaka" required />
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="e.g. Okonkwo" required />
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+234 801 234 5678" required />
+      </div>
+      <div class="form-field">
+        <label>Treatment</label>
+        <select required>
+          <option value="" disabled selected>Select a treatment</option>
+          <option>General Dentistry</option>
+          <option>Teeth Whitening</option>
+          <option>Cosmetic Dentistry</option>
+          <option>Dental Implants</option>
+          <option>Porcelain Veneers</option>
+          <option>Root Canal Treatment</option>
+          <option>Braces &amp; Aligners</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Preferred Date</label>
+        <input type="date" required />
+      </div>
+      <button type="submit" class="form-submit">Confirm Appointment →</button>
+      <p class="form-note">📞 Or call us directly: <strong>+234 801 234 5678</strong></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => revealObs.observe(el));
+
+  function openModal(e) { e && e.preventDefault && e.preventDefault(); document.getElementById('bookingModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('bookingModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  function submitBooking(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Appointment Requested!';
+    btn.style.background = 'var(--teal-mid)';
+    setTimeout(closeModal, 1800);
+  }
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  const dateInput = document.querySelector('input[type="date"]');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+</script>
 </body>
 </html>

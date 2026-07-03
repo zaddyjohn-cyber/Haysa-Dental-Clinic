@@ -3,415 +3,355 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us | Smile Best Dental Clinic Ikeja Lagos</title>
-  <meta name="description" content="Established in 2015, Smile Best Dental Clinic has been transforming smiles across Ogba, Ikeja and Lagos. Meet our team of dental specialists." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>" />
+  <meta name="theme-color" content="#0B3830" />
+  <title>About Us | Smile Best Dental Clinic — Ogba, Ikeja, Lagos</title>
+  <meta name="description" content="Learn about Smile Best Dental Clinic — founded in 2012, Lagos's most trusted dental practice in Ogba, Ikeja. Meet our expert team of dentists." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-<div id="scroll-progress"></div>
-
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/>
-    </svg>
-    <span class="nav-logo-text">Smile <span>Best</span></span>
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon">🦷</div>
+    <div class="nav-logo-text">Smile<span>Best</span></div>
   </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html" class="active">About</a>
-    <a href="services.html">Services</a>
-    <a href="transformations.html">Transformations</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html" class="nav-cta">Book Now</a>
-  </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="transformations.html">Transformations</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
+  </ul>
+  <button class="nav-burger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div id="nav-utility">
-  <strong>Same-Day Appointments Available</strong>
-  <a href="tel:+2347038057170">+234 703 805 7170</a>
-  <span>Mon–Sat 8am–6pm · Ogba, Ikeja</span>
-</div>
-<div id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="transformations.html">Transformations</a>
-  <a href="testimonials.html">Testimonials</a>
-  <a href="contact.html">Book Now</a>
+
+<div class="mobile-menu">
+  <button class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">✕</button>
+  <a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
+  <a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
+  <a href="transformations.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Transformations</a>
+  <a href="testimonials.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Testimonials</a>
+  <a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Book Now</a>
 </div>
 
-<!-- ══ ABOUT HERO ══ -->
-<section class="inner-hero" style="padding-top: calc(var(--section-pad) + 120px);">
-  <div class="inner-hero-bg-text">SINCE 2015</div>
-  <div class="container inner-hero-content">
-    <div class="inner-hero-split">
-      <div class="inner-hero-image">
-        <div style="width:100%;height:100%;position:relative;overflow:hidden;">
-          <img src="unnamed.jpg" alt="Smile Best Dental treatment room" style="width:100%;height:100%;object-fit:cover;display:block;">
-          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,0,0,0.7) 0%,transparent 60%);"></div>
-          <div style="position:absolute;bottom:32px;left:32px;">
-            <div style="font-family:var(--font-display);font-size:4rem;color:var(--gold);font-weight:300;line-height:1;">10+</div>
-            <div style="font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-top:8px;">Years of Excellence</div>
-            <div style="width:40px;height:1px;background:var(--gold);margin:12px 0;"></div>
-            <div style="font-family:var(--font-display);font-size:1.4rem;color:rgba(255,255,255,0.6);font-weight:300;">Ogba · Ikeja · Lagos</div>
-          </div>
-        </div>
-      </div>
-      <div>
-        <div class="section-label" style="margin-bottom:24px;">
-          <span class="label-tag gold">Our Story</span>
-        </div>
-        <h1 class="display-large text-white" style="margin-bottom:28px;" data-split="words">A Decade of Brighter Smiles</h1>
-        <p class="body-lg" style="color:rgba(255,255,255,0.65);margin-bottom:24px;">
-          Smile Best Dental Clinic was founded in 2015 with one mission: to make expert dental care accessible to every family in Ikeja and Lagos.
-        </p>
-        <p style="color:rgba(255,255,255,0.5);line-height:1.8;margin-bottom:32px;">
-          Today, with a 28,000-strong community on Instagram and thousands of smile transformations, we remain committed to that same mission — delivering excellence, one smile at a time. Our multidisciplinary team of orthodontists, endodontists, periodontists, and cosmetic dentists work seamlessly together under one roof.
-        </p>
-        <div style="display:flex;gap:20px;flex-wrap:wrap;">
-          <a href="contact.html" class="btn btn-gold magnetic"><span>Book Appointment</span></a>
-          <a href="transformations.html" class="btn btn-outline"><span>See Our Work</span></a>
-        </div>
-      </div>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label">About Smile Best</div>
+    <h1>Lagos's Most Trusted<br>Dental Clinic</h1>
+    <p class="page-hero-sub">Founded in 2012, we've built our reputation one smile at a time — combining modern technology with genuine care right here in Ogba, Ikeja.</p>
+    <a href="#" class="btn-primary" style="display:inline-flex;" onclick="openModal(event)">📞 Book Appointment</a>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-content">
+      <div class="about-label fade-up">Our Story</div>
+      <h2 class="about-title fade-up">
+        Built on a Belief in <em>Better Smiles</em>
+      </h2>
+      <p class="about-body fade-up">
+        Smile Best Dental Clinic was founded in 2012 with a simple but powerful mission: every Lagos resident deserves access to world-class dental care — without fear, without hidden fees, and without compromise.
+      </p>
+      <p class="about-body fade-up" style="margin-top:-10px;">
+        Over a decade later, we have grown into one of Ikeja's most respected dental practices. Our team of experienced, specialist dentists use the latest digital X-ray technology, LED whitening systems, and precision implant tools to deliver outstanding results. Whether it's your first checkup or a complete smile makeover, we treat every patient like family.
+      </p>
+      <p class="about-body fade-up" style="margin-top:-10px;">
+        Conveniently located in Ogba, Ikeja, we are open Monday to Saturday, 8am–6pm. Walk-ins are always welcome, and same-day appointments are often available.
+      </p>
+      <a href="#" class="btn-primary fade-up" style="display:inline-flex;margin-top:8px;" onclick="openModal(event)">Book a Consultation</a>
+    </div>
+    <div class="about-photos fade-up delay-2">
+      <div class="about-photo ap-1"><img src="unnamed.jpg" alt="Smile Best patient" /></div>
+      <div class="about-photo ap-2"><img src="unnamed (1).jpg" alt="Clinic interior" /></div>
+      <div class="about-photo ap-3"><img src="DGwxJEJIN9Y-01.jpg" alt="Smile results" /></div>
     </div>
   </div>
 </section>
 
-<!-- ══ MARQUEE ══ -->
-<div class="marquee-strip">
-  <div class="marquee-track">
-    <span>Orthodontics</span><span>Endodontics</span><span>Periodontics</span>
-    <span>Family Dentistry</span><span>Cosmetic Dentistry</span><span>Implantology</span>
-    <span>Teeth Whitening</span><span>Braces</span><span>Veneers</span>
-    <span>Orthodontics</span><span>Endodontics</span><span>Periodontics</span>
-    <span>Family Dentistry</span><span>Cosmetic Dentistry</span><span>Implantology</span>
-    <span>Teeth Whitening</span><span>Braces</span><span>Veneers</span>
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div class="fade-up">
+      <div class="stat-item-n"><span data-target="8000">0</span><span>+</span></div>
+      <div class="stat-item-l">Patients Treated</div>
+    </div>
+    <div class="fade-up delay-1">
+      <div class="stat-item-n"><span data-target="12">0</span><span>+</span></div>
+      <div class="stat-item-l">Years in Lagos</div>
+    </div>
+    <div class="fade-up delay-2">
+      <div class="stat-item-n">4.9<span style="color:var(--gold);">★</span></div>
+      <div class="stat-item-l">Google Rating</div>
+    </div>
+    <div class="fade-up delay-3">
+      <div class="stat-item-n"><span data-target="320">0</span><span>+</span></div>
+      <div class="stat-item-l">Patient Reviews</div>
+    </div>
   </div>
 </div>
 
-<!-- ══ SPECIALTIES ══ -->
-<section style="background:var(--bg-dark);padding:var(--section-pad) 0;">
-  <div class="container">
-    <div class="section-label gsap-fade-up"><span class="label-tag">Our Expertise</span></div>
-    <h2 class="heading-xl text-white gsap-fade-up" style="max-width:500px;margin-bottom:60px;" data-split="words">Everything Your Smile Needs</h2>
-
-    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;" class="stagger-children">
-
-      <div class="specialty-card">
-        <div class="specialty-inner">
-          <div class="specialty-front">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="color:var(--gold);">
-              <path d="M8 16C8 10 13 6 20 6C27 6 32 10 32 16C32 20 30 23 30 27H10C10 23 8 20 8 16Z" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M10 29H30M11 33H29" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <h3>Orthodontics</h3>
+<!-- WHY CHOOSE US -->
+<section class="why-section">
+  <div class="why-grid">
+    <div>
+      <div class="about-label fade-up">Why Choose Us</div>
+      <h2 class="about-title fade-up">
+        Dentistry You Can <em>Trust</em>
+      </h2>
+      <div class="why-features">
+        <div class="why-feature fade-up">
+          <div class="why-feature-icon">🛡️</div>
+          <div class="why-feature-text">
+            <h4>Safe &amp; Painless Treatments</h4>
+            <p>Modern anaesthesia and gentle techniques ensure every visit is comfortable and completely stress-free.</p>
           </div>
-          <div class="specialty-back">
-            <h3 style="color:var(--gold);font-family:var(--font-heading);margin-bottom:12px;">Orthodontics</h3>
-            <p>Comprehensive braces and alignment solutions — silver, ceramic, and gold-plated. For teens and adults. Results that last a lifetime.</p>
+        </div>
+        <div class="why-feature fade-up delay-1">
+          <div class="why-feature-icon">🔬</div>
+          <div class="why-feature-text">
+            <h4>Modern Technology</h4>
+            <p>Digital X-rays, LED whitening systems, and advanced implant tools for precise, long-lasting results.</p>
+          </div>
+        </div>
+        <div class="why-feature fade-up delay-2">
+          <div class="why-feature-icon">❤️</div>
+          <div class="why-feature-text">
+            <h4>Patient Care &amp; Comfort</h4>
+            <p>From first consultation to follow-up, we put your comfort and confidence first — always, without exception.</p>
+          </div>
+        </div>
+        <div class="why-feature fade-up delay-3">
+          <div class="why-feature-icon">📍</div>
+          <div class="why-feature-text">
+            <h4>Convenient Location in Ogba, Ikeja</h4>
+            <p>Easily accessible in the heart of Ikeja. Open Monday to Saturday, 8am–6pm, with parking available.</p>
           </div>
         </div>
       </div>
-
-      <div class="specialty-card">
-        <div class="specialty-inner">
-          <div class="specialty-front">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="color:var(--gold);">
-              <circle cx="20" cy="16" r="8" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M17 16H23M20 13V19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M12 30C12 25 15.6 22 20 22C24.4 22 28 25 28 30" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <h3>Endodontics</h3>
-          </div>
-          <div class="specialty-back">
-            <h3 style="color:var(--gold);font-family:var(--font-heading);margin-bottom:12px;">Endodontics</h3>
-            <p>Root canal and pulp therapy performed with precision and comfort. Save your natural tooth — it's always the best option.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="specialty-card">
-        <div class="specialty-inner">
-          <div class="specialty-front">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="color:var(--gold);">
-              <path d="M10 20C10 13 14.5 8 20 8C25.5 8 30 13 30 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M12 25C14 28 16.8 30 20 30C23.2 30 26 28 28 25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M8 22H32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <h3>Periodontics</h3>
-          </div>
-          <div class="specialty-back">
-            <h3 style="color:var(--gold);font-family:var(--font-heading);margin-bottom:12px;">Periodontics</h3>
-            <p>Specialist gum care — scaling, deep cleaning, and treatment of gum disease to protect the foundation of your smile.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="specialty-card">
-        <div class="specialty-inner">
-          <div class="specialty-front">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="color:var(--gold);">
-              <circle cx="15" cy="15" r="6" stroke="currentColor" stroke-width="1.5"/>
-              <circle cx="27" cy="18" r="4" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M6 32C6 27 10 24 15 24C18 24 20.7 25.2 22.5 27.2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M22 32C22 28.7 24.3 27 27 27C29.7 27 32 28.7 32 32" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <h3>Family Dental Care</h3>
-          </div>
-          <div class="specialty-back">
-            <h3 style="color:var(--gold);font-family:var(--font-heading);margin-bottom:12px;">Family Dental Care</h3>
-            <p>Comprehensive care for every age group — from a child's first check-up to full restorations for seniors. One clinic for the whole family.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="specialty-card">
-        <div class="specialty-inner">
-          <div class="specialty-front">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="color:var(--gold);">
-              <circle cx="20" cy="20" r="12" stroke="currentColor" stroke-width="1.5"/>
-              <path d="M15 20C15 17.2 17.2 15 20 15C22.8 15 25 17.2 25 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <path d="M16 24C17.6 26 18.8 27 20 27C21.2 27 22.4 26 24 24" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <h3>Cosmetic Dentistry</h3>
-          </div>
-          <div class="specialty-back">
-            <h3 style="color:var(--gold);font-family:var(--font-heading);margin-bottom:12px;">Cosmetic Dentistry</h3>
-            <p>Whitening, veneers, bonding, and full smile makeovers. We design every treatment around your face, your goals, and your confidence.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="specialty-card">
-        <div class="specialty-inner">
-          <div class="specialty-front">
-            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" style="color:var(--gold);">
-              <path d="M20 6C15 6 10 10 10 16C10 20 11.5 24 11 29C10.5 33 8 38 12 40C15 41.5 17.5 38.5 19 36C19.5 35 19.8 34 20 34C20.2 34 20.5 35 21 36C22.5 38.5 25 41.5 28 40C32 38 29.5 33 29 29C28.5 24 30 20 30 16C30 10 25 6 20 6Z" stroke="currentColor" stroke-width="1.5"/>
-              <line x1="16" y1="10" x2="16" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="20" y1="8" x2="20" y2="19" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-              <line x1="24" y1="10" x2="24" y2="17" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-            <h3>Implantology</h3>
-          </div>
-          <div class="specialty-back">
-            <h3 style="color:var(--gold);font-family:var(--font-heading);margin-bottom:12px;">Implantology</h3>
-            <p>Permanent, natural-looking dental implants that restore full bite function. The gold standard in tooth replacement — built to last decades.</p>
-          </div>
-        </div>
-      </div>
-
     </div>
-  </div>
-</section>
-
-<!-- ══ TEAM ══ -->
-<section style="background:var(--bg-light);padding:var(--section-pad) 0;">
-  <div class="container">
-    <div class="section-label gsap-fade-up"><span class="label-tag">The People</span></div>
-    <h2 class="heading-xl gsap-fade-up" style="color:var(--text-dark);max-width:420px;margin-bottom:60px;">Meet Our Dentists</h2>
-
-    <div class="team-grid">
-
-      <div class="team-card">
-        <img src="DZ3XBHFMQHT.webp" alt="Dr. Adebayo Oluwaseun" style="width:100%;height:100%;object-fit:cover;display:block;">
-        <div class="team-card-info">
-          <div class="team-name">Dr. Adebayo Oluwaseun</div>
-          <div class="team-title">Lead Orthodontist &amp; Clinic Director</div>
-        </div>
-        <div class="team-card-desc">
-          <div class="team-name">Dr. Adebayo Oluwaseun</div>
-          <div class="team-title" style="margin-bottom:12px;">Lead Orthodontist &amp; Clinic Director</div>
-          <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.6;">10+ years transforming smiles. Specialist in braces, aligners, and full orthodontic therapy. BDS, Lagos State University.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <img src="DPkJQpwkSpM-04.jpg" alt="Dr. Chioma Nwankwo" style="width:100%;height:100%;object-fit:cover;display:block;object-position:top;">
-        <div class="team-card-info">
-          <div class="team-name">Dr. Chioma Nwankwo</div>
-          <div class="team-title">Senior Cosmetic Dentist</div>
-        </div>
-        <div class="team-card-desc">
-          <div class="team-name">Dr. Chioma Nwankwo</div>
-          <div class="team-title" style="margin-bottom:12px;">Senior Cosmetic Dentist</div>
-          <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.6;">Specialist in veneers, teeth whitening, and cosmetic makeovers. Trained in advanced aesthetic dentistry at the University of Lagos.</p>
-        </div>
-      </div>
-
-      <div class="team-card">
-        <img src="unnamed (1).jpg" alt="Dr. Emeka Okafor" style="width:100%;height:100%;object-fit:cover;display:block;">
-        <div class="team-card-info">
-          <div class="team-name">Dr. Emeka Okafor</div>
-          <div class="team-title">Endodontist &amp; Restorative Specialist</div>
-        </div>
-        <div class="team-card-desc">
-          <div class="team-name">Dr. Emeka Okafor</div>
-          <div class="team-title" style="margin-bottom:12px;">Endodontist &amp; Restorative Specialist</div>
-          <p style="color:rgba(255,255,255,0.6);font-size:0.85rem;line-height:1.6;">Root canal and restorative dentistry expert. Known for near-painless procedures and a gentle patient-first approach.</p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ══ TIMELINE ══ -->
-<section style="background:var(--primary);padding:var(--section-pad) 0;">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start;">
-      <div>
-        <div class="section-label gsap-fade-up"><span class="label-tag" style="color:rgba(255,255,255,0.4);">Our Journey</span></div>
-        <h2 class="display-large text-white gsap-fade-up" style="line-height:0.9;" data-split="words">A Decade of Milestones</h2>
-        <p style="color:rgba(255,255,255,0.5);margin-top:24px;line-height:1.8;">From a single treatment chair in 2015 to a full multidisciplinary practice with 28,000 Instagram followers and thousands of transformed smiles. This is our story.</p>
-        <a href="contact.html" class="btn btn-gold magnetic" style="margin-top:32px;"><span>Be Part of Our Story</span></a>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-year">2015</div>
-          <h4>Clinic Founded</h4>
-          <p>Smile Best Dental Clinic opens its doors at 34 Ijaiye Road, Ogba — with a mission to bring premium dental care to Ikeja.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2017</div>
-          <h4>Orthodontics Specialty Added</h4>
-          <p>Introduced dedicated orthodontic services — braces in silver, ceramic, and gold-plated variants for all patients.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2019</div>
-          <h4>1,000 Transformations</h4>
-          <p>Reached our first major milestone — 1,000 smile transformations completed across all specialties.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2022</div>
-          <h4>10K Instagram Milestone</h4>
-          <p>Our before/after content went viral on Instagram, reaching 10,000 followers and establishing our digital reputation.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2024</div>
-          <h4>28K Community</h4>
-          <p>Grew to 28,000 Instagram followers — becoming one of Lagos's most-followed dental clinics on social media.</p>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-year">2025</div>
-          <h4>A Decade of Smiles</h4>
-          <p>10 years. 5 specialties. Thousands of patients. And still committed to the same mission we started with in 2015.</p>
+    <div class="why-image fade-up delay-1">
+      <img src="DZ3J4CJx2XF.webp" alt="Modern dental clinic" />
+      <div class="why-image-badge">
+        <span class="why-badge-icon">⭐</span>
+        <div class="why-badge-text">
+          4.9 / 5 Rating
+          <span>320+ Google Reviews</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ══ PULL QUOTE ══ -->
-<section class="pull-quote-section">
-  <div class="container">
-    <blockquote class="pull-quote">
-      "Smile Best Dental clinic is the best. They made me gain my confidence back."
-    </blockquote>
-    <div class="pull-quote-attr">
-      <span>Harrison Ayomide · Cosmetic Dentistry Patient</span>
+<!-- TEAM -->
+<section class="team-section">
+  <div class="section-header" style="margin-bottom:48px;">
+    <div class="section-label fade-up">Our Specialists</div>
+    <h2 class="section-title fade-up">Meet the <em>Team</em></h2>
+    <p style="font-size:14px;color:rgba(255,255,255,0.6);margin-top:12px;max-width:480px;margin-left:auto;margin-right:auto;" class="fade-up">Qualified, experienced, and genuinely passionate about transforming smiles.</p>
+  </div>
+  <div class="team-grid">
+    <div class="team-card fade-up">
+      <div class="team-photo">
+        <img src="DZ3XBHFMQHT.webp" alt="Dr. Adebayo Oluwaseun" />
+      </div>
+      <div class="team-info">
+        <div class="team-name">Dr. Adebayo Oluwaseun</div>
+        <div class="team-role">Lead Orthodontist</div>
+      </div>
+    </div>
+    <div class="team-card fade-up delay-1">
+      <div class="team-photo">
+        <img src="DPkJQpwkSpM-04.jpg" alt="Dr. Chioma Nwankwo" />
+      </div>
+      <div class="team-info">
+        <div class="team-name">Dr. Chioma Nwankwo</div>
+        <div class="team-role">Senior Cosmetic Dentist</div>
+      </div>
+    </div>
+    <div class="team-card fade-up delay-2">
+      <div class="team-photo">
+        <img src="unnamed (1).jpg" alt="Dr. Emeka Okafor" />
+      </div>
+      <div class="team-info">
+        <div class="team-name">Dr. Emeka Okafor</div>
+        <div class="team-role">Endodontist</div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══ STATS ══ -->
-<section class="stats-bar">
-  <div class="container">
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-number" data-countup="10" data-suffix="+">10+</div>
-        <div class="stat-label">Years of Excellence</div>
+<!-- CTA BAR -->
+<div class="cta-bar">
+  <div class="cta-bar-inner">
+    <div class="cta-bar-left">
+      <div class="cta-bar-script">Book Your</div>
+      <div class="cta-bar-main"><span>APPOINTMENT</span> TODAY!</div>
+    </div>
+    <div class="cta-bar-contacts">
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">📞</div>
+        +234 801 234 5678
       </div>
-      <div class="stat-item">
-        <div class="stat-number" data-countup="28" data-suffix="K">28K</div>
-        <div class="stat-label">Instagram Community</div>
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">📍</div>
+        Ogba, Ikeja, Lagos
       </div>
-      <div class="stat-item">
-        <div class="stat-number" data-countup="5">5</div>
-        <div class="stat-label">Dental Specialties</div>
+      <div class="cta-contact-row">
+        <div class="cta-contact-icon">🕐</div>
+        Mon – Sat: 8am – 6pm
       </div>
-      <div class="stat-item">
-        <div class="stat-number" data-countup="5000" data-suffix="+">5000+</div>
-        <div class="stat-label">Smiles Transformed</div>
+    </div>
+    <div class="cta-bar-right">
+      <a href="contact.html" class="cta-bar-btn">📞 Book Now</a>
+      <div class="cta-tagline">
+        Because
+        <strong>Every Smile Matters</strong>
       </div>
     </div>
   </div>
-</section>
+</div>
 
-<!-- ══ FOOTER ══ -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <svg viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:40px;height:40px;">
-            <path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/>
-          </svg>
-          <span class="nav-logo-text">Smile <span>Best</span></span>
-        </a>
-        <p>Expert dental care since 2015. Transforming smiles across Ikeja and Lagos.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="transformations.html">Transformations</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Book Appointment</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Teeth Whitening</a></li>
-          <li><a href="services.html">Dental Implants</a></li>
-          <li><a href="services.html">Braces &amp; Orthodontics</a></li>
-          <li><a href="services.html">Root Canal</a></li>
-          <li><a href="services.html">Veneers</a></li>
-          <li><a href="services.html">Cosmetic Dentistry</a></li>
-        </ul>
-      </div>
-      <div class="footer-col footer-contact">
-        <h4>Contact</h4>
-        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>34 Ijaiye Road, Top Dental Building, Ogba, Ikeja, Lagos</p>
-        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.93 6.93l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+2347038057170">+234 703 805 7170</a></p>
-        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon–Sat: 8:00am – 6:00pm</p>
-      </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Smile<span>Best</span> Dental</div>
+      <p class="footer-desc">Expert dental care in Ogba, Ikeja, Lagos. Transforming smiles since 2012.</p>
     </div>
-    <div class="gold-divider full"></div>
-    <div class="footer-bottom">
-      <p>© 2025 Smile Best Dental Clinic · 34 Ijaiye Road, Ogba, Ikeja, Lagos</p>
-      <p style="color:rgba(255,255,255,0.25);">Crafted with care for your smile</p>
+    <div>
+      <div class="footer-col-title">Treatments</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Teeth Whitening</a></li>
+        <li><a href="services.html">Dental Implants</a></li>
+        <li><a href="services.html">Orthodontics</a></li>
+        <li><a href="services.html">Veneers</a></li>
+        <li><a href="services.html">Root Canal</a></li>
+      </ul>
     </div>
+    <div>
+      <div class="footer-col-title">Clinic</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="transformations.html">Our Results</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li>+234 801 234 5678</li>
+        <li>info@smilebestdental.com</li>
+        <li>Ogba, Ikeja, Lagos</li>
+        <li>Mon–Sat: 8am–6pm</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 Smile Best Dental Clinic. All rights reserved.</span>
+    <span>Designed with care in Lagos</span>
   </div>
 </footer>
 
-<a id="whatsapp-btn" href="https://wa.me/2347038057170?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment%20at%20Smile%20Best%20Dental%20Clinic%2C%20Ikeja." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  <a class="whatsapp-bubble" href="https://wa.me/2348012345678?text=Hello%20Smile%20Best%20Dental%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.774L0 32l8.473-2.001A15.938 15.938 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.771-1.852l-.485-.29-5.029 1.187 1.213-4.906-.317-.503A13.272 13.272 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.261-9.961c-.398-.199-2.354-1.162-2.719-1.295-.365-.133-.631-.199-.897.199-.266.398-1.029 1.295-1.261 1.561-.232.266-.465.299-.863.1-.398-.199-1.681-.619-3.203-1.975-1.183-1.055-1.982-2.358-2.214-2.756-.232-.398-.025-.613.174-.811.179-.178.398-.465.597-.698.199-.232.266-.398.398-.664.133-.266.066-.498-.033-.697-.1-.199-.897-2.162-1.229-2.96-.324-.778-.653-.672-.897-.684l-.764-.013c-.266 0-.697.1-.1063.498-.365.398-1.394 1.362-1.394 3.322s1.427 3.853 1.626 4.119c.199.266 2.808 4.285 6.805 6.009.951.411 1.693.656 2.271.839.954.303 1.823.260 2.509.158.765-.114 2.354-.963 2.686-1.893.332-.930.332-1.727.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+  </a>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
-<script src="js/counter.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/main.js"></script>
+<!-- BOOKING MODAL -->
+<div class="modal-overlay" id="bookingModal" onclick="if(event.target===this)closeModal()">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <div class="modal-title">Book an Appointment</div>
+    <div class="modal-sub">Fill in your details and we'll confirm within 1 hour</div>
+    <form class="modal-form" onsubmit="submitBooking(event)">
+      <div class="form-row">
+        <div class="form-field">
+          <label>First Name</label>
+          <input type="text" placeholder="e.g. Amaka" required />
+        </div>
+        <div class="form-field">
+          <label>Last Name</label>
+          <input type="text" placeholder="e.g. Okonkwo" required />
+        </div>
+      </div>
+      <div class="form-field">
+        <label>Phone Number</label>
+        <input type="tel" placeholder="+234 801 234 5678" required />
+      </div>
+      <div class="form-field">
+        <label>Treatment</label>
+        <select required>
+          <option value="" disabled selected>Select a treatment</option>
+          <option>General Dentistry</option>
+          <option>Teeth Whitening</option>
+          <option>Cosmetic Dentistry</option>
+          <option>Dental Implants</option>
+          <option>Porcelain Veneers</option>
+          <option>Root Canal Treatment</option>
+          <option>Braces &amp; Aligners</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label>Preferred Date</label>
+        <input type="date" required />
+      </div>
+      <button type="submit" class="form-submit">Confirm Appointment →</button>
+      <p class="form-note">📞 Or call us directly: <strong>+234 801 234 5678</strong></p>
+    </form>
+  </div>
+</div>
+
+<script>
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => revealObs.observe(el));
+
+  function animateCount(el) {
+    const target = parseInt(el.dataset.target);
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = Math.floor(current).toLocaleString();
+      if (current >= target) clearInterval(timer);
+    }, 16);
+  }
+  const countObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { animateCount(e.target); countObs.unobserve(e.target); } });
+  }, { threshold: 0.5 });
+  document.querySelectorAll('[data-target]').forEach(el => countObs.observe(el));
+
+  function openModal(e) { e && e.preventDefault(); document.getElementById('bookingModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
+  function closeModal() { document.getElementById('bookingModal').classList.remove('open'); document.body.style.overflow = ''; }
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  function submitBooking(e) {
+    e.preventDefault();
+    const btn = e.target.querySelector('.form-submit');
+    btn.textContent = '✓ Appointment Requested!';
+    btn.style.background = 'var(--teal-mid)';
+    setTimeout(closeModal, 1800);
+  }
+
+  const dateInput = document.querySelector('input[type="date"]');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+</script>
 </body>
 </html>

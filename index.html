@@ -4,27 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#0B3830" />
-
-  <!-- SEO -->
   <title>Smile Best Dental Clinic | Teeth Whitening, Implants &amp; Braces in Ogba, Lagos</title>
   <meta name="description" content="Smile Best Dental Clinic in Ogba, Ikeja, Lagos. Expert teeth whitening, dental implants, veneers, braces and orthodontics. Book your appointment today — open Mon-Sat." />
   <meta name="keywords" content="dental clinic Lagos, teeth whitening Ikeja, dental implants Ogba, veneers Lagos, orthodontics Ikeja, braces Lagos, dentist near me Lagos" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://zaddyjohn-cyber.github.io/Smile-Best-Dental/" />
-
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Smile Best Dental Clinic | Ogba, Ikeja, Lagos" />
   <meta property="og:description" content="Advanced dental care in the heart of Ikeja. Whitening, implants, veneers, braces and general dentistry. Open Mon-Sat." />
   <meta property="og:url" content="https://zaddyjohn-cyber.github.io/Smile-Best-Dental/" />
   <meta property="og:image" content="DGwxJEJIN9Y-01.jpg" />
-
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Smile Best Dental Clinic | Ogba, Lagos" />
   <meta name="twitter:description" content="Advanced dental care in the heart of Ikeja. Whitening, implants, veneers, braces." />
-
-  <!-- Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,1442 +40,26 @@
     "image": "DGwxJEJIN9Y-01.jpg"
   }
   </script>
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
-
-<style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --cream:      #F5F3EE;
-    --cream-dark: #EAE6DE;
-    --dark:       #0B3830;
-    --teal:       #0F5247;
-    --teal-mid:   #2A9D8F;
-    --gold:       #C9963A;
-    --gold-light: #DEB05A;
-    --white:      #FFFFFF;
-    --text:       #0A2E28;
-    --text-muted: #557068;
-    --r: 16px;
-  }
-
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Inter', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
-  }
-  img { display: block; max-width: 100%; }
-  a { text-decoration: none; color: inherit; }
-
-  /* ── NAV ── */
-  .nav {
-    position: fixed;
-    top: 0; left: 0; right: 0;
-    z-index: 100;
-    background: rgba(245,243,238,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(11,56,48,0.1);
-    padding: 0 40px;
-    height: 68px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  .nav-logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-  }
-  .nav-logo-icon {
-    width: 38px;
-    height: 38px;
-    background: var(--dark);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-  }
-  .nav-logo-text {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 18px;
-    color: var(--dark);
-    line-height: 1;
-  }
-  .nav-logo-text span { color: var(--gold); }
-  .nav-links {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    list-style: none;
-  }
-  .nav-links a {
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--text-muted);
-    transition: color .2s;
-  }
-  .nav-links a:hover { color: var(--dark); }
-  .nav-cta {
-    background: var(--dark);
-    color: var(--white) !important;
-    padding: 10px 22px;
-    border-radius: 40px;
-    font-size: 13px !important;
-    font-weight: 600 !important;
-    transition: background .2s !important;
-  }
-  .nav-cta:hover { background: var(--teal) !important; }
-
-  /* hamburger */
-  .nav-burger {
-    display: none;
-    flex-direction: column;
-    gap: 5px;
-    cursor: pointer;
-    padding: 6px;
-    background: none;
-    border: none;
-  }
-  .nav-burger span {
-    display: block;
-    width: 24px;
-    height: 2px;
-    background: var(--dark);
-    border-radius: 2px;
-    transition: .3s;
-  }
-  .mobile-menu {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: var(--dark);
-    z-index: 200;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 32px;
-  }
-  .mobile-menu.open { display: flex; }
-  .mobile-menu a {
-    color: var(--white);
-    font-size: 24px;
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-  }
-  .mobile-close {
-    position: absolute;
-    top: 24px; right: 24px;
-    background: none;
-    border: none;
-    color: var(--white);
-    font-size: 32px;
-    cursor: pointer;
-  }
-
-  /* ── HERO ── */
-  .hero {
-    min-height: 100dvh;
-    padding-top: 68px;
-    background: var(--cream);
-    position: relative;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: stretch;
-  }
-
-  /* botanical leaf decorations */
-  .hero::before {
-    content: '';
-    position: absolute;
-    top: -60px; left: -60px;
-    width: 300px; height: 300px;
-    background: radial-gradient(ellipse, rgba(42,157,143,0.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero::after {
-    content: '';
-    position: absolute;
-    bottom: -80px; right: 40%;
-    width: 200px; height: 200px;
-    background: radial-gradient(ellipse, rgba(201,150,58,0.1) 0%, transparent 70%);
-    pointer-events: none;
-  }
-
-  /* LEFT column */
-  .hero-left {
-    padding: 60px 50px 60px 60px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-tagline-top {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--teal-mid);
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .hero-tagline-top::before {
-    content: '';
-    display: block;
-    width: 28px;
-    height: 2px;
-    background: var(--gold);
-    border-radius: 2px;
-  }
-
-  .hero-headline {
-    margin-bottom: 20px;
-    line-height: 1.0;
-  }
-  .hero-headline .line1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: clamp(2.4rem, 4vw, 3.4rem);
-    color: var(--dark);
-    font-weight: 600;
-    display: block;
-  }
-  .hero-headline .line2 {
-    font-family: 'Syne', sans-serif;
-    font-size: clamp(3.8rem, 6.5vw, 5.8rem);
-    font-weight: 800;
-    color: var(--dark);
-    letter-spacing: -0.03em;
-    display: block;
-    line-height: 0.9;
-  }
-  .hero-headline .line3 {
-    font-family: 'Dancing Script', cursive;
-    font-size: clamp(3rem, 5vw, 4.8rem);
-    color: var(--gold);
-    font-weight: 700;
-    display: block;
-    line-height: 1.1;
-  }
-
-  .hero-sub {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.7;
-    max-width: 340px;
-    margin-bottom: 32px;
-  }
-  .hero-sub strong { color: var(--dark); font-weight: 600; }
-
-  .hero-heartbeat {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 28px;
-  }
-  .hero-heartbeat svg { width: 120px; opacity: 0.5; }
-
-  .hero-btns {
-    display: flex;
-    gap: 14px;
-    flex-wrap: wrap;
-    margin-bottom: 48px;
-  }
-  .btn-primary {
-    background: var(--dark);
-    color: var(--white);
-    padding: 14px 28px;
-    border-radius: 40px;
-    font-size: 14px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: background .2s, transform .2s;
-  }
-  .btn-primary:hover { background: var(--teal); transform: translateY(-1px); }
-  .btn-secondary {
-    border: 1.5px solid var(--dark);
-    color: var(--dark);
-    padding: 14px 28px;
-    border-radius: 40px;
-    font-size: 14px;
-    font-weight: 600;
-    transition: all .2s;
-  }
-  .btn-secondary:hover { background: var(--dark); color: var(--white); }
-
-  /* circular patient photo */
-  .hero-photo-wrap {
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-    gap: 20px;
-  }
-  .hero-circle-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 4px solid var(--gold);
-    overflow: hidden;
-    flex-shrink: 0;
-    box-shadow: 0 8px 32px rgba(201,150,58,0.25);
-  }
-  .hero-circle-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .hero-priority-badge {
-    background: var(--dark);
-    color: var(--white);
-    border-radius: 16px;
-    padding: 14px 18px;
-    line-height: 1.3;
-    box-shadow: 0 4px 20px rgba(11,56,48,0.3);
-  }
-  .hero-priority-badge .b1 {
-    font-size: 13px;
-    opacity: 0.75;
-  }
-  .hero-priority-badge .b2 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 22px;
-    color: var(--gold);
-    font-weight: 700;
-  }
-
-  /* RIGHT column */
-  .hero-right {
-    display: grid;
-    grid-template-rows: 1fr auto;
-    gap: 0;
-    position: relative;
-    z-index: 1;
-  }
-
-  .hero-clinic-photo {
-    overflow: hidden;
-    position: relative;
-  }
-  .hero-clinic-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .hero-clinic-logo {
-    position: absolute;
-    top: 24px; right: 24px;
-    background: rgba(255,255,255,0.92);
-    backdrop-filter: blur(8px);
-    border-radius: 16px;
-    padding: 16px 20px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  .hero-clinic-logo .logo-icon {
-    font-size: 28px;
-  }
-  .hero-clinic-logo .logo-text {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 13px;
-    color: var(--dark);
-    line-height: 1.3;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-  .hero-clinic-logo .logo-text span {
-    display: block;
-    font-weight: 400;
-    font-size: 11px;
-    color: var(--text-muted);
-    letter-spacing: 0.12em;
-  }
-
-  /* services card */
-  .hero-services-card {
-    background: var(--white);
-    padding: 28px 32px;
-    border-top: 1px solid var(--cream-dark);
-  }
-  .services-card-title {
-    font-family: 'Dancing Script', cursive;
-    font-size: 26px;
-    font-weight: 700;
-    color: var(--dark);
-    margin-bottom: 18px;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-  }
-  .services-card-title::after {
-    content: '♡';
-    color: var(--gold);
-    font-size: 20px;
-  }
-  .services-list {
-    list-style: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px 20px;
-  }
-  .services-list li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
-  }
-  .service-icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 10px;
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 1.5px solid var(--cream-dark);
-  }
-  .service-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: none;
-  }
-
-  /* ── TRUST STRIP ── */
-  .trust-strip {
-    background: var(--white);
-    border-top: 1px solid var(--cream-dark);
-    border-bottom: 1px solid var(--cream-dark);
-    padding: 32px 60px;
-  }
-  .trust-grid {
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 16px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .trust-item {
-    position: relative;
-    border-radius: 16px;
-    overflow: hidden;
-    height: 160px;
-  }
-  .trust-item-media {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .trust-item-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(160deg, rgba(11,56,48,0.72) 0%, rgba(11,56,48,0.55) 100%);
-  }
-  .trust-item-content {
-    position: relative;
-    z-index: 1;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
-    gap: 10px;
-  }
-  .trust-item-icon {
-    width: 44px;
-    height: 44px;
-    background: rgba(255,255,255,0.15);
-    border: 1.5px solid rgba(255,255,255,0.35);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(4px);
-  }
-  .trust-item-label {
-    font-size: 12px;
-    font-weight: 700;
-    color: var(--white);
-    line-height: 1.4;
-    text-align: center;
-    letter-spacing: 0.02em;
-  }
-
-  /* ── ABOUT ── */
-  .about-section {
-    padding: 100px 60px;
-    background: var(--cream);
-  }
-  .about-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .about-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 14px;
-  }
-  .about-title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(2rem, 3vw, 2.8rem);
-    color: var(--dark);
-    line-height: 1.15;
-    letter-spacing: -0.02em;
-    margin-bottom: 20px;
-  }
-  .about-title em {
-    font-style: italic;
-    color: var(--gold);
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.1em;
-  }
-  .about-body {
-    font-size: 15px;
-    color: var(--text-muted);
-    line-height: 1.8;
-    margin-bottom: 32px;
-  }
-  .about-stats {
-    display: flex;
-    gap: 36px;
-    margin-bottom: 36px;
-  }
-  .about-stat-n {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 2.4rem;
-    color: var(--dark);
-    line-height: 1;
-  }
-  .about-stat-n span { color: var(--gold); }
-  .about-stat-l {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
-  .about-photos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: 12px;
-    height: 500px;
-  }
-  .about-photo {
-    border-radius: var(--r);
-    overflow: hidden;
-  }
-  .about-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .about-photo.ap-1 { grid-row: span 2; }
-
-  /* ── BEFORE/AFTER ── */
-  .results-section {
-    padding: 100px 60px;
-    background: var(--white);
-  }
-  .section-header {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-  .section-label {
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--gold);
-    margin-bottom: 12px;
-  }
-  .section-title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(2rem, 3vw, 2.6rem);
-    color: var(--dark);
-    letter-spacing: -0.02em;
-  }
-  .section-title em {
-    font-style: italic;
-    color: var(--gold);
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.15em;
-  }
-  .ba-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .ba-card {
-    background: var(--cream);
-    border-radius: var(--r);
-    overflow: hidden;
-    border: 1px solid var(--cream-dark);
-  }
-  .ba-photos {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 200px;
-  }
-  .ba-img-wrap {
-    position: relative;
-    overflow: hidden;
-  }
-  .ba-img-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .ba-img-wrap::after {
-    content: attr(data-label);
-    position: absolute;
-    top: 8px; left: 8px;
-    background: rgba(11,56,48,0.85);
-    color: #fff;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    padding: 3px 8px;
-    border-radius: 4px;
-    text-transform: uppercase;
-  }
-  .ba-img-wrap.after-img::after {
-    background: rgba(201,150,58,0.9);
-    color: var(--dark);
-  }
-  .ba-info {
-    padding: 16px 18px;
-  }
-  .ba-treatment {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--dark);
-    margin-bottom: 4px;
-  }
-  .ba-desc {
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-bottom: 10px;
-  }
-  .ba-tag {
-    display: inline-block;
-    background: var(--dark);
-    color: var(--white);
-    font-size: 10px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    padding: 3px 10px;
-    border-radius: 20px;
-    text-transform: uppercase;
-  }
-
-  /* ── WHY US ── */
-  .why-section {
-    padding: 100px 60px;
-    background: var(--cream);
-  }
-  .why-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  .why-features {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-    margin-top: 40px;
-  }
-  .why-feature {
-    display: flex;
-    gap: 16px;
-    align-items: flex-start;
-  }
-  .why-feature-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--dark);
-    border-radius: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-  .why-feature-text h4 {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--dark);
-    margin-bottom: 4px;
-  }
-  .why-feature-text p {
-    font-size: 13px;
-    color: var(--text-muted);
-    line-height: 1.6;
-  }
-  .why-image {
-    border-radius: 24px;
-    overflow: hidden;
-    height: 500px;
-    position: relative;
-  }
-  .why-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .why-image-badge {
-    position: absolute;
-    bottom: 24px;
-    left: 24px;
-    background: rgba(255,255,255,0.95);
-    border-radius: 14px;
-    padding: 14px 18px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-  }
-  .why-badge-icon { font-size: 24px; }
-  .why-badge-text {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    color: var(--dark);
-    line-height: 1.3;
-  }
-  .why-badge-text span {
-    display: block;
-    font-weight: 400;
-    font-size: 11px;
-    color: var(--text-muted);
-    font-family: 'Inter', sans-serif;
-  }
-
-  /* ── MARQUEE ── */
-  .marquee-wrap {
-    background: var(--dark);
-    padding: 18px 0;
-    overflow: hidden;
-  }
-  .marquee-track {
-    display: flex;
-    gap: 0;
-    animation: marquee 28s linear infinite;
-    white-space: nowrap;
-  }
-  .marquee-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 16px;
-    padding: 0 32px;
-    font-family: 'Syne', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
-    flex-shrink: 0;
-  }
-  .marquee-dot {
-    width: 5px;
-    height: 5px;
-    background: var(--gold);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-
-  /* ── GALLERY ── */
-  .gallery-section {
-    padding: 100px 60px;
-    background: var(--white);
-  }
-  .gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 200px 200px;
-    gap: 12px;
-    max-width: 1100px;
-    margin: 48px auto 0;
-  }
-  .gallery-item {
-    border-radius: var(--r);
-    overflow: hidden;
-  }
-  .gallery-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .5s;
-  }
-  .gallery-item:hover img { transform: scale(1.04); }
-  .gallery-item.tall { grid-row: span 2; }
-  .gallery-item.wide { grid-column: span 2; }
-
-  /* ── CTA BAR (matches flyer bottom) ── */
-  .cta-bar {
-    background: var(--dark);
-    padding: 52px 60px;
-  }
-  .cta-bar-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    gap: 40px;
-  }
-  .cta-bar-left {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-  }
-  .cta-bar-script {
-    font-family: 'Dancing Script', cursive;
-    font-size: 22px;
-    font-weight: 600;
-    color: rgba(255,255,255,0.7);
-    line-height: 1;
-  }
-  .cta-bar-main {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
-    color: var(--white);
-    letter-spacing: -0.02em;
-    line-height: 1.1;
-  }
-  .cta-bar-main span { color: var(--gold); }
-  .cta-bar-contacts {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .cta-contact-row {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: rgba(255,255,255,0.75);
-  }
-  .cta-contact-icon {
-    width: 30px;
-    height: 30px;
-    background: rgba(255,255,255,0.1);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 13px;
-    flex-shrink: 0;
-  }
-  .cta-bar-right {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 16px;
-  }
-  .cta-bar-btn {
-    background: var(--gold);
-    color: var(--dark);
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 15px;
-    padding: 16px 32px;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background .2s, transform .2s;
-    white-space: nowrap;
-  }
-  .cta-bar-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
-  .cta-tagline {
-    font-family: 'Dancing Script', cursive;
-    font-size: 20px;
-    color: rgba(255,255,255,0.6);
-    text-align: right;
-  }
-  .cta-tagline strong {
-    color: var(--white);
-    font-family: 'Syne', sans-serif;
-    font-size: 14px;
-    font-weight: 700;
-    display: block;
-    font-style: normal;
-  }
-
-  /* ── FOOTER ── */
-  .footer {
-    background: #071C17;
-    padding: 60px;
-    color: rgba(255,255,255,0.5);
-    font-size: 13px;
-  }
-  .footer-inner {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr 1fr;
-    gap: 48px;
-  }
-  .footer-brand {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .footer-logo {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    color: var(--white);
-  }
-  .footer-logo span { color: var(--gold); }
-  .footer-desc { line-height: 1.7; max-width: 220px; }
-  .footer-col-title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 11px;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: rgba(255,255,255,0.35);
-    margin-bottom: 16px;
-  }
-  .footer-links {
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .footer-links a {
-    color: rgba(255,255,255,0.5);
-    font-size: 13px;
-    transition: color .2s;
-  }
-  .footer-links a:hover { color: var(--white); }
-  .footer-bottom {
-    max-width: 1100px;
-    margin: 40px auto 0;
-    padding-top: 24px;
-    border-top: 1px solid rgba(255,255,255,0.08);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 12px;
-    color: rgba(255,255,255,0.3);
-  }
-
-  /* ── FADE UP ── */
-  .fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity .6s ease, transform .6s ease;
-  }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
-  .delay-1 { transition-delay: .1s; }
-  .delay-2 { transition-delay: .2s; }
-  .delay-3 { transition-delay: .3s; }
-
-  /* ── DRAG SLIDER (Before/After) ── */
-  .ba-slider-section {
-    padding: 100px 60px;
-    background: var(--white);
-  }
-  .ba-sliders-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .ba-slider-card {
-    border-radius: var(--r);
-    overflow: hidden;
-    border: 1px solid var(--cream-dark);
-    background: var(--cream);
-  }
-  .ba-slider-wrap {
-    position: relative;
-    height: 240px;
-    overflow: hidden;
-    cursor: col-resize;
-    user-select: none;
-  }
-  .ba-slider-after,
-  .ba-slider-before {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .ba-slider-after img,
-  .ba-slider-before img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    pointer-events: none;
-    max-width: none;
-  }
-  .ba-slider-before {
-    clip-path: inset(0 50% 0 0);
-  }
-  .ba-slider-handle {
-    position: absolute;
-    top: 0; bottom: 0;
-    left: 50%;
-    width: 3px;
-    background: var(--white);
-    transform: translateX(-50%);
-    z-index: 10;
-    pointer-events: none;
-  }
-  .ba-slider-handle::before {
-    content: '';
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    width: 36px; height: 36px;
-    background: var(--white);
-    border-radius: 50%;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
-  }
-  .ba-slider-handle::after {
-    content: '◀ ▶';
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 9px;
-    color: var(--dark);
-    letter-spacing: -1px;
-    font-weight: 700;
-    pointer-events: none;
-  }
-  .ba-label {
-    position: absolute;
-    top: 10px;
-    font-size: 9px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 4px;
-    z-index: 5;
-    pointer-events: none;
-  }
-  .ba-label-before {
-    left: 10px;
-    background: rgba(11,56,48,0.85);
-    color: #fff;
-  }
-  .ba-label-after {
-    right: 10px;
-    background: rgba(201,150,58,0.9);
-    color: var(--dark);
-  }
-  .result-photo {
-    position: relative;
-    height: 260px;
-    overflow: hidden;
-  }
-  .result-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: none;
-    transition: transform .5s;
-  }
-  .ba-slider-card:hover .result-photo img { transform: scale(1.04); }
-  .result-badge {
-    position: absolute;
-    top: 12px; right: 12px;
-    background: rgba(201,150,58,0.92);
-    color: var(--dark);
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    padding: 4px 10px;
-    border-radius: 20px;
-  }
-  .ba-slider-info {
-    padding: 16px 18px;
-  }
-
-  /* ── VIDEO REEL ── */
-  .reel-section {
-    padding: 100px 0 100px 60px;
-    background: var(--cream);
-    overflow: hidden;
-  }
-  .reel-header {
-    padding-right: 60px;
-    margin-bottom: 40px;
-  }
-  .reel-scroll {
-    display: flex;
-    gap: 16px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 16px;
-    scrollbar-width: none;
-  }
-  .reel-scroll::-webkit-scrollbar { display: none; }
-  .reel-item {
-    flex-shrink: 0;
-    width: 220px;
-    height: 380px;
-    border-radius: 20px;
-    overflow: hidden;
-    scroll-snap-align: start;
-    position: relative;
-    cursor: pointer;
-  }
-  .reel-item video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform .4s;
-  }
-  .reel-item:hover video { transform: scale(1.04); }
-  .reel-item-overlay {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(11,56,48,0.7) 0%, transparent 50%);
-    pointer-events: none;
-  }
-  .reel-item-label {
-    position: absolute;
-    bottom: 16px; left: 16px;
-    color: #fff;
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    pointer-events: none;
-  }
-
-  /* ── TESTIMONIALS ── */
-  .testimonials-section {
-    padding: 100px 60px;
-    background: var(--dark);
-  }
-  .testimonials-section .section-label { color: var(--gold); }
-  .testimonials-section .section-title { color: var(--white); }
-  .testimonials-section .section-title em { color: var(--gold); }
-  .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  .testimonial-card {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-radius: 20px;
-    padding: 28px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    transition: background .3s;
-  }
-  .testimonial-card:hover { background: rgba(255,255,255,0.1); }
-  .testimonial-stars {
-    display: flex;
-    gap: 3px;
-    color: var(--gold);
-    font-size: 16px;
-  }
-  .testimonial-text {
-    font-size: 14px;
-    color: rgba(255,255,255,0.8);
-    line-height: 1.7;
-    flex: 1;
-    font-style: italic;
-  }
-  .testimonial-author {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-  .testimonial-avatar {
-    width: 44px; height: 44px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid var(--gold);
-    flex-shrink: 0;
-  }
-  .testimonial-avatar img {
-    width: 100%; height: 100%;
-    object-fit: cover;
-    max-width: none;
-  }
-  .testimonial-name {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 14px;
-    color: var(--white);
-  }
-  .testimonial-treatment {
-    font-size: 12px;
-    color: var(--gold);
-    margin-top: 2px;
-  }
-
-  /* ── WHATSAPP FLOAT ── */
-  .whatsapp-float {
-    position: fixed;
-    bottom: 28px; right: 28px;
-    z-index: 999;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-  }
-  .whatsapp-bubble {
-    width: 58px; height: 58px;
-    background: #25D366;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-    cursor: pointer;
-    transition: transform .2s, box-shadow .2s;
-    text-decoration: none;
-  }
-  .whatsapp-bubble:hover { transform: scale(1.1); box-shadow: 0 6px 28px rgba(37,211,102,0.55); }
-  .whatsapp-bubble svg { width: 30px; height: 30px; fill: #fff; }
-  .whatsapp-tooltip {
-    background: var(--dark);
-    color: var(--white);
-    font-size: 12px;
-    font-weight: 600;
-    padding: 7px 14px;
-    border-radius: 20px;
-    white-space: nowrap;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.2);
-    animation: wa-pop .3s ease;
-    display: none;
-  }
-  .whatsapp-float:hover .whatsapp-tooltip { display: block; }
-  @keyframes wa-pop { from { opacity:0; transform:translateY(6px); } to { opacity:1; transform:translateY(0); } }
-
-  /* ── BOOKING MODAL ── */
-  .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(7,28,23,0.75);
-    backdrop-filter: blur(6px);
-    z-index: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity .3s;
-  }
-  .modal-overlay.open { opacity: 1; pointer-events: all; }
-  .modal-box {
-    background: var(--white);
-    border-radius: 24px;
-    padding: 48px;
-    width: 100%;
-    max-width: 520px;
-    position: relative;
-    transform: translateY(20px);
-    transition: transform .3s;
-  }
-  .modal-overlay.open .modal-box { transform: translateY(0); }
-  .modal-close {
-    position: absolute;
-    top: 20px; right: 20px;
-    background: var(--cream);
-    border: none;
-    width: 36px; height: 36px;
-    border-radius: 50%;
-    font-size: 18px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--dark);
-    transition: background .2s;
-  }
-  .modal-close:hover { background: var(--cream-dark); }
-  .modal-title {
-    font-family: 'Syne', sans-serif;
-    font-weight: 800;
-    font-size: 1.6rem;
-    color: var(--dark);
-    margin-bottom: 6px;
-  }
-  .modal-sub {
-    font-size: 14px;
-    color: var(--text-muted);
-    margin-bottom: 28px;
-  }
-  .modal-form {
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-  }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-  .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-  .form-field label {
-    font-size: 12px;
-    font-weight: 600;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .form-field input,
-  .form-field select {
-    border: 1.5px solid var(--cream-dark);
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-family: 'Inter', sans-serif;
-    font-size: 14px;
-    color: var(--text);
-    background: var(--cream);
-    outline: none;
-    transition: border-color .2s;
-    appearance: none;
-  }
-  .form-field input:focus,
-  .form-field select:focus { border-color: var(--teal); background: var(--white); }
-  .form-submit {
-    background: var(--dark);
-    color: var(--white);
-    border: none;
-    border-radius: 40px;
-    padding: 15px;
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
-    margin-top: 6px;
-    transition: background .2s, transform .2s;
-  }
-  .form-submit:hover { background: var(--teal); transform: translateY(-1px); }
-  .form-note {
-    text-align: center;
-    font-size: 12px;
-    color: var(--text-muted);
-    margin-top: 4px;
-  }
-
-  /* ── FAQ ── */
-  .faq-list { display:flex; flex-direction:column; gap:12px; }
-  .faq-item { border:1.5px solid var(--cream-dark); border-radius:14px; overflow:hidden; background:var(--white); }
-  .faq-q {
-    width:100%; text-align:left; background:none; border:none; padding:20px 24px;
-    font-family:'Syne',sans-serif; font-weight:700; font-size:15px; color:var(--dark);
-    cursor:pointer; display:flex; justify-content:space-between; align-items:center; gap:16px;
-  }
-  .faq-q:hover { color:var(--teal); }
-  .faq-arrow { font-size:18px; transition:transform .3s; flex-shrink:0; color:var(--gold); }
-  .faq-item.open .faq-arrow { transform:rotate(180deg); }
-  .faq-a {
-    max-height:0; overflow:hidden; transition:max-height .4s ease, padding .3s;
-    font-size:14px; color:var(--text-muted); line-height:1.8; padding:0 24px;
-  }
-  .faq-item.open .faq-a { max-height:200px; padding:0 24px 20px; }
-
-  /* ── RESPONSIVE ── */
-  @media (max-width: 1024px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; }
-    .hero-left { padding: 48px 32px 40px; }
-    .hero-right { height: 460px; grid-template-rows: 1fr auto; }
-    .about-grid, .why-grid { grid-template-columns: 1fr; gap: 48px; }
-    .about-photos { height: 360px; }
-    .ba-sliders-grid { grid-template-columns: 1fr 1fr; }
-    .testimonials-grid { grid-template-columns: 1fr 1fr; }
-    .gallery-grid { grid-template-columns: repeat(3,1fr); }
-    .footer-inner { grid-template-columns: 1fr 1fr; gap: 36px; }
-    .cta-bar-inner { grid-template-columns: 1fr; gap: 28px; }
-    .cta-bar-right { align-items: flex-start; }
-  }
-  @media (max-width: 768px) {
-    .nav { padding: 0 20px; }
-    .nav-links { display: none; }
-    .nav-burger { display: flex; }
-    .hero-left { padding: 36px 20px 32px; }
-    .hero-circle-photo { width: 140px; height: 140px; }
-    .hero-services-card { padding: 20px; }
-    .services-list { grid-template-columns: 1fr; }
-    .trust-strip { padding: 24px 20px; }
-    .trust-grid { grid-template-columns: repeat(2,1fr); gap: 12px; }
-    .trust-item { height: 130px; }
-    .about-section, .why-section, .gallery-section { padding: 60px 20px; }
-    .ba-slider-section, .testimonials-section, .reel-section { padding: 60px 20px; }
-    .reel-section { padding: 60px 0 60px 20px; }
-    .ba-sliders-grid { grid-template-columns: 1fr; }
-    .testimonials-grid { grid-template-columns: 1fr; }
-    .gallery-grid { grid-template-columns: 1fr 1fr; grid-template-rows: repeat(4,160px); }
-    .gallery-item.wide { grid-column: span 1; }
-    .cta-bar { padding: 40px 20px; }
-    .footer { padding: 48px 20px; }
-    .footer-inner { grid-template-columns: 1fr; gap: 28px; }
-    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-    .modal-box { padding: 32px 24px; }
-    .form-row { grid-template-columns: 1fr; }
-    .whatsapp-float { bottom: 20px; right: 20px; }
-  }
-</style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav">
-  <div class="nav-logo">
+  <a class="nav-logo" href="index.html">
     <div class="nav-logo-icon">🦷</div>
     <div class="nav-logo-text">Smile<span>Best</span></div>
-  </div>
+  </a>
   <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#services">Services</a></li>
-    <li><a href="#results">Results</a></li>
-    <li><a href="#gallery">Gallery</a></li>
-    <li><a href="#" class="nav-cta" onclick="openModal(event)">Book Appointment</a></li>
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="transformations.html">Transformations</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html" class="nav-cta">Book Now</a></li>
   </ul>
   <button class="nav-burger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Menu">
     <span></span><span></span><span></span>
@@ -1492,36 +68,30 @@
 
 <div class="mobile-menu">
   <button class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">✕</button>
-  <a href="#about" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
-  <a href="#services" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
-  <a href="#results" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Results</a>
-  <a href="#gallery" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Gallery</a>
-  <a href="#" onclick="document.querySelector('.mobile-menu').classList.remove('open'); openModal(event)">Book Appointment</a>
+  <a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
+  <a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
+  <a href="transformations.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Transformations</a>
+  <a href="testimonials.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Testimonials</a>
+  <a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Book Now</a>
 </div>
 
 <!-- HERO -->
 <section class="hero" id="home">
-
-  <!-- LEFT -->
   <div class="hero-left">
     <div class="hero-tagline-top">Smile Best Dental Clinic · Ogba, Ikeja, Lagos</div>
-
     <div class="hero-headline">
       <span class="line1">Healthy Smile,</span>
       <span class="line2">Brighter</span>
       <span class="line3">Life</span>
     </div>
-
     <p class="hero-sub">
       Lagos's most trusted dental clinic. We combine modern technology with genuine care to give you a smile you're proud of — <strong>painlessly and affordably.</strong>
     </p>
-
     <div class="hero-btns">
       <a href="#" class="btn-primary" onclick="openModal(event)">📞 Book Free Consultation</a>
-      <a href="#results" class="btn-secondary">See Results</a>
+      <a href="transformations.html" class="btn-secondary">See Results</a>
     </div>
-
-    <!-- inline trust proof -->
     <div style="display:flex;gap:24px;margin-bottom:32px;flex-wrap:wrap;">
       <div style="display:flex;align-items:center;gap:8px;font-size:13px;color:var(--text-muted);">
         <span style="color:var(--gold);font-size:16px;">★</span> <strong style="color:var(--dark);">4.9</strong> Google Rating
@@ -1533,7 +103,6 @@
         <span style="color:var(--teal);">✓</span> <strong style="color:var(--dark);">12+</strong> Years in Lagos
       </div>
     </div>
-
     <div class="hero-photo-wrap">
       <div class="hero-circle-photo">
         <img src="unnamed.jpg" alt="Happy patient at Smile Best Dental" loading="eager" />
@@ -1545,8 +114,7 @@
     </div>
   </div>
 
-  <!-- RIGHT -->
-  <div class="hero-right" id="services">
+  <div class="hero-right">
     <div class="hero-clinic-photo">
       <img src="unnamed (2).jpg" alt="Smile Best Dental Clinic interior" loading="eager" />
       <div class="hero-clinic-logo">
@@ -1557,7 +125,6 @@
         </div>
       </div>
     </div>
-
     <div class="hero-services-card">
       <div class="services-card-title">Our Services</div>
       <ul class="services-list">
@@ -1588,7 +155,6 @@
       </ul>
     </div>
   </div>
-
 </section>
 
 <!-- TRUST STRIP -->
@@ -1640,7 +206,6 @@
 <!-- MARQUEE -->
 <div class="marquee-wrap">
   <div class="marquee-track">
-    <!-- doubled for seamless loop -->
     <span class="marquee-item">General Dentistry<span class="marquee-dot"></span></span>
     <span class="marquee-item">Cosmetic Dentistry<span class="marquee-dot"></span></span>
     <span class="marquee-item">Teeth Whitening<span class="marquee-dot"></span></span>
@@ -1658,52 +223,387 @@
   </div>
 </div>
 
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-grid">
-    <div class="about-content">
-      <div class="about-label fade-up">About Us</div>
-      <h2 class="about-title fade-up">
-        Lagos's Most Trusted <em>Dental Clinic</em>
-      </h2>
-      <p class="about-body fade-up">
-        Founded in 2012, Smile Best Dental Clinic has grown into one of Ikeja's most respected dental practices — built on a simple belief: every patient deserves a healthy, beautiful smile without fear or financial stress.
-      </p>
-      <p class="about-body fade-up" style="margin-top:-10px;">
-        Our team of qualified, experienced dentists use the latest digital X-ray technology, LED whitening systems and precision implant tools to deliver world-class results right here in Ogba, Lagos. Whether it's your first checkup or a full smile makeover, we treat every patient like family.
-      </p>
-      <div class="about-stats fade-up">
-        <div>
-          <div class="about-stat-n"><span data-target="8000">0</span><span>+</span></div>
-          <div class="about-stat-l">Patients Treated</div>
-        </div>
-        <div>
-          <div class="about-stat-n"><span data-target="12">0</span><span>+</span></div>
-          <div class="about-stat-l">Years Experience</div>
-        </div>
-        <div>
-          <div class="about-stat-n"><span data-target="320">0</span><span>+</span></div>
-          <div class="about-stat-l">Google Reviews</div>
-        </div>
+<!-- SERVICES TEASER -->
+<section class="services-teaser" id="services">
+  <div class="section-header">
+    <div class="section-label fade-up">What We Offer</div>
+    <h2 class="section-title fade-up">Our <em>Services</em></h2>
+    <p style="font-size:14px;color:var(--text-muted);margin-top:12px;max-width:500px;margin-left:auto;margin-right:auto;" class="fade-up">From routine checkups to complete smile makeovers — expert care for every need.</p>
+  </div>
+  <div class="services-grid">
+    <div class="service-card fade-up">
+      <div class="service-card-photo">
+        <img src="unnamed (2).jpg" alt="General Dentistry" />
       </div>
-      <a href="#" class="btn-primary fade-up" style="display:inline-flex;" onclick="openModal(event)">Book a Consultation</a>
+      <div class="service-card-body">
+        <div class="service-card-name">General Dentistry</div>
+        <p class="service-card-desc">Routine checkups, fillings, extractions and cleaning to keep your teeth healthy all year round.</p>
+        <a href="services.html" class="service-card-link">Learn More →</a>
+      </div>
     </div>
-    <div class="about-photos fade-up delay-2">
-      <div class="about-photo ap-1"><img src="DPkJQpwkSpM-01.jpg" alt="Dental procedure" /></div>
-      <div class="about-photo ap-2"><img src="unnamed (1).jpg" alt="Clinic reception" /></div>
-      <div class="about-photo ap-3"><img src="DGwxJEJIN9Y-01.jpg" alt="Smile results" /></div>
+    <div class="service-card fade-up delay-1">
+      <div class="service-card-photo">
+        <img src="DPkJQpwkSpM-04.jpg" alt="Cosmetic Dentistry" />
+      </div>
+      <div class="service-card-body">
+        <div class="service-card-name">Cosmetic Dentistry</div>
+        <p class="service-card-desc">Veneers, bonding and full smile design tailored to your face. Transform your confidence completely.</p>
+        <a href="services.html" class="service-card-link">Learn More →</a>
+      </div>
     </div>
+    <div class="service-card fade-up delay-2">
+      <div class="service-card-photo">
+        <img src="DGwxJEJIN9Y-01.jpg" alt="Teeth Whitening" />
+      </div>
+      <div class="service-card-body">
+        <div class="service-card-name">Teeth Whitening</div>
+        <p class="service-card-desc">Professional LED whitening that brightens your smile 6–10 shades. Safe, fast and long-lasting.</p>
+        <a href="services.html" class="service-card-link">Learn More →</a>
+      </div>
+    </div>
+    <div class="service-card fade-up">
+      <div class="service-card-photo">
+        <img src="DPkJQpwkSpM-03.jpg" alt="Dental Implants" />
+      </div>
+      <div class="service-card-body">
+        <div class="service-card-name">Dental Implants</div>
+        <p class="service-card-desc">Permanent titanium tooth replacements that look and feel completely natural. Built to last a lifetime.</p>
+        <a href="services.html" class="service-card-link">Learn More →</a>
+      </div>
+    </div>
+    <div class="service-card fade-up delay-1">
+      <div class="service-card-photo">
+        <img src="DPkJQpwkSpM-02.jpg" alt="Root Canal" />
+      </div>
+      <div class="service-card-body">
+        <div class="service-card-name">Root Canal</div>
+        <p class="service-card-desc">Pain-free nerve treatment that saves your natural tooth. Most patients feel relief immediately after.</p>
+        <a href="services.html" class="service-card-link">Learn More →</a>
+      </div>
+    </div>
+    <div class="service-card fade-up delay-2">
+      <div class="service-card-photo">
+        <img src="DGwxJEJIN9Y-02.jpg" alt="Braces &amp; Aligners" />
+      </div>
+      <div class="service-card-body">
+        <div class="service-card-name">Braces &amp; Aligners</div>
+        <p class="service-card-desc">Clear and traditional braces for teens and adults. Precise alignment achieved in 12–24 months.</p>
+        <a href="services.html" class="service-card-link">Learn More →</a>
+      </div>
+    </div>
+  </div>
+  <div class="view-all-wrap fade-up">
+    <a href="services.html" class="view-all-link">View All Services →</a>
   </div>
 </section>
 
-<!-- RESULTS -->
+<!-- HOW IT WORKS — ANIMATED -->
+<section class="journey-section" id="how-it-works">
+  <!-- ambient glows -->
+  <div class="journey-glow journey-glow-1"></div>
+  <div class="journey-glow journey-glow-2"></div>
+  <div class="journey-glow journey-glow-3"></div>
+
+  <div class="section-header">
+    <div class="section-label fade-up" style="color:rgba(201,150,58,.85);">Simple Process</div>
+    <h2 class="section-title fade-up" style="color:#fff;">Your Smile Journey in <em>3 Steps</em></h2>
+    <p class="fade-up" style="font-size:14px;color:rgba(255,255,255,.55);margin-top:12px;max-width:480px;margin-left:auto;margin-right:auto;line-height:1.7;">Getting started is easy. From first contact to confident smile — we handle everything.</p>
+  </div>
+
+  <div class="journey-steps-wrap">
+    <!-- animated connector line -->
+    <div class="journey-connector"><div class="journey-connector-fill" id="journeyLine"></div></div>
+
+    <!-- STEP 1 -->
+    <div class="journey-step fade-up" data-step="1">
+      <div class="journey-circle-wrap">
+        <span class="journey-pulse"></span>
+        <span class="journey-pulse journey-pulse-2"></span>
+        <div class="journey-circle jc-1">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span class="journey-step-num">1</span>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-card-tag">Step 01</div>
+        <h3>Book Online or Call</h3>
+        <p>Use our booking form, WhatsApp, or call us directly. We'll confirm your slot within <strong>1 hour</strong> — no long waits.</p>
+        <div class="journey-card-detail">
+          <span>⚡ 1-hour confirmation</span>
+          <span>📱 WhatsApp booking</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 2 -->
+    <div class="journey-step fade-up delay-1" data-step="2">
+      <div class="journey-circle-wrap">
+        <span class="journey-pulse jp-gold"></span>
+        <span class="journey-pulse journey-pulse-2 jp-gold"></span>
+        <div class="journey-circle jc-2">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          <span class="journey-step-num">2</span>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-card-tag jct-gold">Step 02</div>
+        <h3>Free Consultation</h3>
+        <p>Meet your dentist, discuss your goals, and get a personalised treatment plan. <strong>No pressure, no hidden fees.</strong></p>
+        <div class="journey-card-detail">
+          <span>🦷 Expert assessment</span>
+          <span>💬 No hidden fees</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 3 -->
+    <div class="journey-step fade-up delay-2" data-step="3">
+      <div class="journey-circle-wrap">
+        <span class="journey-pulse jp-teal"></span>
+        <span class="journey-pulse journey-pulse-2 jp-teal"></span>
+        <div class="journey-circle jc-3">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          <span class="journey-step-num">3</span>
+        </div>
+      </div>
+      <div class="journey-card">
+        <div class="journey-card-tag jct-teal">Step 03</div>
+        <h3>Leave Smiling</h3>
+        <p>Experience comfortable treatment and walk out with visible results. We follow up to ensure you're <strong>100% happy.</strong></p>
+        <div class="journey-card-detail">
+          <span>✨ Same-day results</span>
+          <span>🔄 Follow-up care</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:56px;" class="fade-up">
+    <a href="#" class="btn-journey" onclick="openModal(event)">Start Your Journey Today →</a>
+  </div>
+</section>
+
+<style>
+/* ── JOURNEY SECTION ── */
+.journey-section {
+  position: relative;
+  padding: 110px 40px 100px;
+  background: var(--dark);
+  overflow: hidden;
+}
+.journey-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+}
+.journey-glow-1 {
+  width: 500px; height: 500px;
+  background: rgba(15,82,71,.55);
+  top: -120px; left: -100px;
+}
+.journey-glow-2 {
+  width: 400px; height: 400px;
+  background: rgba(201,150,58,.18);
+  top: 40%; left: 50%; transform: translate(-50%,-50%);
+}
+.journey-glow-3 {
+  width: 500px; height: 500px;
+  background: rgba(42,157,143,.25);
+  bottom: -150px; right: -100px;
+}
+.journey-section .section-title em { color: var(--gold); }
+
+/* ── STEP WRAPPER ── */
+.journey-steps-wrap {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  max-width: 1040px;
+  margin: 64px auto 0;
+}
+
+/* ── CONNECTOR LINE ── */
+.journey-connector {
+  position: absolute;
+  top: 44px;
+  left: calc(16.666% + 36px);
+  right: calc(16.666% + 36px);
+  height: 2px;
+  background: rgba(255,255,255,.1);
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.journey-connector-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--gold), var(--teal-mid));
+  transition: width 1.6s cubic-bezier(.4,0,.2,1);
+  border-radius: 2px;
+}
+
+/* ── INDIVIDUAL STEP ── */
+.journey-step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* ── CIRCLES ── */
+.journey-circle-wrap {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin-bottom: 24px;
+}
+.journey-pulse {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  opacity: 0;
+  animation: jpulse 2.4s ease-out infinite;
+}
+.journey-pulse-2 { animation-delay: 1.2s; }
+.journey-pulse         { background: rgba(11,56,48,.6); }
+.jp-gold               { background: rgba(201,150,58,.4); }
+.jp-teal               { background: rgba(42,157,143,.45); }
+
+@keyframes jpulse {
+  0%   { transform: scale(1);   opacity: .7; }
+  100% { transform: scale(2.2); opacity: 0;  }
+}
+
+.journey-circle {
+  position: absolute;
+  inset: 8px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+  transition: transform .3s;
+}
+.journey-step:hover .journey-circle { transform: scale(1.08); }
+
+.jc-1 { background: linear-gradient(135deg, #0B3830, #1a5c50); box-shadow: 0 0 0 2px rgba(201,150,58,.5), 0 8px 32px rgba(11,56,48,.6); }
+.jc-2 { background: linear-gradient(135deg, #a67820, #C9963A); box-shadow: 0 0 0 2px rgba(201,150,58,.7), 0 8px 32px rgba(201,150,58,.35); }
+.jc-3 { background: linear-gradient(135deg, #0F5247, #2A9D8F); box-shadow: 0 0 0 2px rgba(42,157,143,.6), 0 8px 32px rgba(42,157,143,.4); }
+
+.jc-1 svg, .jc-3 svg { color: rgba(255,255,255,.25); width:22px; height:22px; }
+.jc-2 svg             { color: rgba(11,56,48,.3);     width:22px; height:22px; }
+.journey-step-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 1;
+  color: #fff;
+}
+.jc-2 .journey-step-num { color: var(--dark); }
+
+/* ── CARDS ── */
+.journey-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 20px;
+  padding: 28px 22px 24px;
+  backdrop-filter: blur(10px);
+  transition: background .3s, border-color .3s, transform .3s;
+}
+.journey-step:hover .journey-card {
+  background: rgba(255,255,255,.08);
+  border-color: rgba(255,255,255,.18);
+  transform: translateY(-4px);
+}
+.journey-card-tag {
+  display: inline-block;
+  font-family: 'Syne', sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: rgba(11,56,48,.9);
+  background: rgba(201,150,58,.18);
+  border: 1px solid rgba(201,150,58,.3);
+  padding: 3px 10px;
+  border-radius: 20px;
+  margin-bottom: 14px;
+}
+.jct-gold { background: rgba(201,150,58,.25); border-color: rgba(201,150,58,.5); color: #7a5200; }
+.jct-teal { background: rgba(42,157,143,.18); border-color: rgba(42,157,143,.4); color: #083f38; }
+
+.journey-card h3 {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: 18px;
+  color: #fff;
+  margin-bottom: 10px;
+}
+.journey-card p {
+  font-size: 13px;
+  color: rgba(255,255,255,.55);
+  line-height: 1.75;
+  margin-bottom: 18px;
+}
+.journey-card p strong { color: rgba(255,255,255,.85); font-weight: 600; }
+.journey-card-detail {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.journey-card-detail span {
+  font-size: 11px;
+  color: rgba(255,255,255,.45);
+  background: rgba(255,255,255,.07);
+  padding: 4px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+/* ── CTA BUTTON ── */
+.btn-journey {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--gold), #b8851f);
+  color: var(--dark);
+  font-family: 'Syne', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+  padding: 16px 38px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: transform .25s, box-shadow .25s, filter .25s;
+  box-shadow: 0 6px 28px rgba(201,150,58,.4);
+}
+.btn-journey:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(201,150,58,.55);
+  filter: brightness(1.05);
+}
+.btn-journey:active { transform: translateY(0) scale(.98); }
+
+/* ── MOBILE ── */
+@media (max-width: 768px) {
+  .journey-section { padding: 80px 20px; }
+  .journey-steps-wrap { grid-template-columns: 1fr; gap: 24px; }
+  .journey-connector { display: none; }
+}
+</style>
+
+<!-- RESULTS PREVIEW -->
 <section class="ba-slider-section" id="results">
   <div class="section-header">
     <div class="section-label fade-up">Real Patient Results</div>
     <h2 class="section-title fade-up">Our <em>Transformations</em></h2>
   </div>
   <div class="ba-sliders-grid">
-
     <div class="ba-slider-card fade-up">
       <div class="result-photo">
         <img src="DGwxJEJIN9Y-01.jpg" alt="Teeth Whitening Result" />
@@ -1715,7 +615,6 @@
         <span class="ba-tag">Whitening</span>
       </div>
     </div>
-
     <div class="ba-slider-card fade-up delay-1">
       <div class="result-photo">
         <img src="DPkJQpwkSpM-04.jpg" alt="Porcelain Veneers Result" />
@@ -1727,7 +626,6 @@
         <span class="ba-tag">Veneers</span>
       </div>
     </div>
-
     <div class="ba-slider-card fade-up delay-2">
       <div class="result-photo">
         <img src="DPkJQpwkSpM-01.jpg" alt="Braces Result" />
@@ -1739,138 +637,9 @@
         <span class="ba-tag">Orthodontics</span>
       </div>
     </div>
-
   </div>
-</section>
-
-<!-- WHY US -->
-<section class="why-section">
-  <div class="why-grid">
-    <div>
-      <div class="about-label fade-up">Why Choose Us</div>
-      <h2 class="about-title fade-up">
-        Dentistry You Can <em>Trust</em>
-      </h2>
-      <div class="why-features">
-        <div class="why-feature fade-up">
-          <div class="why-feature-icon">🛡️</div>
-          <div class="why-feature-text">
-            <h4>Safe &amp; Painless Treatments</h4>
-            <p>Modern anaesthesia and gentle techniques ensure every visit is comfortable and stress-free.</p>
-          </div>
-        </div>
-        <div class="why-feature fade-up delay-1">
-          <div class="why-feature-icon">🔬</div>
-          <div class="why-feature-text">
-            <h4>Modern Technology</h4>
-            <p>Digital X-rays, LED whitening systems, and advanced implant tools for precise, lasting results.</p>
-          </div>
-        </div>
-        <div class="why-feature fade-up delay-2">
-          <div class="why-feature-icon">❤️</div>
-          <div class="why-feature-text">
-            <h4>Patient Care &amp; Comfort</h4>
-            <p>From first consultation to follow-up, we put your comfort and confidence first — always.</p>
-          </div>
-        </div>
-        <div class="why-feature fade-up delay-3">
-          <div class="why-feature-icon">📍</div>
-          <div class="why-feature-text">
-            <h4>Conveniently Located</h4>
-            <p>Easily accessible in Ogba, Ikeja — open Monday to Saturday, 8am–6pm.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="why-image fade-up delay-1">
-      <img src="DZ3J4CJx2XF.webp" alt="Modern dental clinic" />
-      <div class="why-image-badge">
-        <span class="why-badge-icon">⭐</span>
-        <div class="why-badge-text">
-          4.9 / 5 Rating
-          <span>320+ Google Reviews</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section style="padding:100px 60px;background:var(--white);">
-  <div class="section-header">
-    <div class="section-label fade-up">Simple Process</div>
-    <h2 class="section-title fade-up">Your Smile Journey in <em>3 Steps</em></h2>
-    <p style="font-size:14px;color:var(--text-muted);margin-top:12px;max-width:500px;margin-left:auto;margin-right:auto;" class="fade-up">Getting started is easy. From first contact to confident smile — we handle everything.</p>
-  </div>
-  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:32px;max-width:900px;margin:56px auto 0;position:relative;">
-    <!-- connector line -->
-    <div style="position:absolute;top:36px;left:17%;right:17%;height:2px;background:var(--cream-dark);z-index:0;"></div>
-    <div class="fade-up" style="text-align:center;position:relative;z-index:1;">
-      <div style="width:72px;height:72px;background:var(--dark);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;border:4px solid var(--white);box-shadow:0 0 0 2px var(--dark);">
-        <span style="color:var(--gold);font-family:'Syne',sans-serif;font-weight:800;font-size:22px;">1</span>
-      </div>
-      <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:17px;color:var(--dark);margin-bottom:10px;">Book Online or Call</h3>
-      <p style="font-size:13px;color:var(--text-muted);line-height:1.7;">Use our booking form, WhatsApp, or call us directly. We'll confirm your slot within 1 hour — no long waits.</p>
-    </div>
-    <div class="fade-up delay-1" style="text-align:center;position:relative;z-index:1;">
-      <div style="width:72px;height:72px;background:var(--gold);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;border:4px solid var(--white);box-shadow:0 0 0 2px var(--gold);">
-        <span style="color:var(--dark);font-family:'Syne',sans-serif;font-weight:800;font-size:22px;">2</span>
-      </div>
-      <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:17px;color:var(--dark);margin-bottom:10px;">Free Consultation</h3>
-      <p style="font-size:13px;color:var(--text-muted);line-height:1.7;">Meet your dentist, discuss your goals, and get a personalised treatment plan. No pressure, no hidden fees.</p>
-    </div>
-    <div class="fade-up delay-2" style="text-align:center;position:relative;z-index:1;">
-      <div style="width:72px;height:72px;background:var(--teal-mid);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;border:4px solid var(--white);box-shadow:0 0 0 2px var(--teal-mid);">
-        <span style="color:var(--white);font-family:'Syne',sans-serif;font-weight:800;font-size:22px;">3</span>
-      </div>
-      <h3 style="font-family:'Syne',sans-serif;font-weight:700;font-size:17px;color:var(--dark);margin-bottom:10px;">Leave Smiling</h3>
-      <p style="font-size:13px;color:var(--text-muted);line-height:1.7;">Experience comfortable treatment and walk out with visible results. We follow up to ensure you're 100% happy.</p>
-    </div>
-  </div>
-  <div style="text-align:center;margin-top:48px;" class="fade-up">
-    <a href="#" class="btn-primary" style="display:inline-flex;" onclick="openModal(event)">Start Your Journey Today →</a>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section style="padding:100px 60px;background:var(--cream);">
-  <div style="max-width:750px;margin:0 auto;">
-    <div class="section-header" style="text-align:left;margin-bottom:48px;">
-      <div class="section-label fade-up">Common Questions</div>
-      <h2 class="section-title fade-up">Frequently Asked <em>Questions</em></h2>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item fade-up">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Is teeth whitening painful? <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Our professional LED whitening is completely safe and virtually painless. Some patients experience mild sensitivity for 24 hours after treatment, which passes quickly. We use a protective gel on your gums to keep you comfortable throughout.</div>
-      </div>
-      <div class="faq-item fade-up delay-1">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          How long do dental implants last? <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">With proper care, dental implants can last a lifetime. The titanium post fuses permanently with your jawbone, making it the most durable tooth replacement option available. Regular checkups and good oral hygiene are all you need.</div>
-      </div>
-      <div class="faq-item fade-up delay-2">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          How much does treatment cost at Smile Best? <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Our pricing is transparent and competitive for Lagos. Costs vary by treatment — teeth whitening starts from ₦35,000, veneers from ₦60,000 per tooth, and implants from ₦250,000. We offer flexible payment plans so cost is never a barrier to your smile.</div>
-      </div>
-      <div class="faq-item fade-up delay-3">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          How long do braces or aligners take? <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Treatment time depends on the complexity of your case. Most patients complete their orthodontic journey in 12–24 months. Clear aligners can sometimes be faster for mild to moderate cases. We'll give you a precise timeline at your free consultation.</div>
-      </div>
-      <div class="faq-item fade-up">
-        <button class="faq-q" onclick="toggleFaq(this)">
-          Do you accept walk-ins? <span class="faq-arrow">▾</span>
-        </button>
-        <div class="faq-a">Yes! We welcome walk-ins Monday to Saturday, 8am–6pm, though we recommend booking ahead to guarantee your preferred time slot. You can book instantly via our website, WhatsApp, or phone call.</div>
-      </div>
-    </div>
+  <div class="view-all-wrap fade-up">
+    <a href="transformations.html" class="view-all-link">See All Transformations →</a>
   </div>
 </section>
 
@@ -1892,67 +661,32 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
+<!-- FEATURED TESTIMONIAL -->
 <section class="testimonials-section">
   <div class="section-header" style="margin-bottom:48px;">
     <div class="section-label fade-up">Patient Stories</div>
     <h2 class="section-title fade-up">What Our Patients <em>Say</em></h2>
   </div>
-  <div class="testimonials-grid">
-    <div class="testimonial-card fade-up">
-      <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-text">"I was so nervous about my first visit but the team made me feel completely at ease. My teeth whitening results were incredible — I couldn't stop smiling for weeks!"</div>
+  <div style="max-width:700px;margin:0 auto;" class="fade-up">
+    <div class="testimonial-card" style="font-size:16px;padding:40px;">
+      <div class="testimonial-stars" style="font-size:22px;">★★★★★</div>
+      <div class="testimonial-text" style="font-size:16px;line-height:1.8;">"From the moment I walked in, I felt like royalty. The clinic is beautiful, the staff are so friendly and my teeth are 8 shades whiter. The transformation completely changed how I carry myself. Absolutely worth every kobo — I tell everyone I know about Smile Best."</div>
       <div class="testimonial-author">
-        <div class="testimonial-avatar"><img src="unnamed.jpg" alt="Amaka O." /></div>
+        <div class="testimonial-avatar"><img src="unnamed (1).jpg" alt="Funke B." /></div>
         <div>
-          <div class="testimonial-name">Amaka O.</div>
-          <div class="testimonial-treatment">Teeth Whitening</div>
+          <div class="testimonial-name">Funke B.</div>
+          <div class="testimonial-treatment">Teeth Whitening · Ikeja, Lagos</div>
         </div>
       </div>
     </div>
-    <div class="testimonial-card fade-up delay-1">
-      <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-text">"Got my veneers done here and the transformation is absolutely stunning. The dentist was professional, detailed and explained every step. Best dental clinic in Lagos!"</div>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar"><img src="DPkJQpwkSpM-01.jpg" alt="Chidi M." /></div>
-        <div>
-          <div class="testimonial-name">Chidi M.</div>
-          <div class="testimonial-treatment">Porcelain Veneers</div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-card fade-up delay-2">
-      <div class="testimonial-stars">★★★★★</div>
-      <div class="testimonial-text">"My braces journey at Smile Best was seamless from start to finish. The staff are warm, the clinic is spotless and modern. Highly recommend to anyone in Ikeja!"</div>
-      <div class="testimonial-author">
-        <div class="testimonial-avatar"><img src="DGwxJEJIN9Y-01.jpg" alt="Tolu A." /></div>
-        <div>
-          <div class="testimonial-name">Tolu A.</div>
-          <div class="testimonial-treatment">Braces &amp; Aligners</div>
-        </div>
-      </div>
-    </div>
+  </div>
+  <div class="view-all-wrap fade-up" style="margin-top:36px;">
+    <a href="testimonials.html" class="view-all-link" style="border-color:rgba(255,255,255,0.3);color:rgba(255,255,255,0.8);">Read All Reviews →</a>
   </div>
 </section>
 
-<!-- GALLERY -->
-<section class="gallery-section" id="gallery">
-  <div class="section-header">
-    <div class="section-label fade-up">Our Clinic &amp; Work</div>
-    <h2 class="section-title fade-up">A Glimpse of <em>Smiles</em></h2>
-  </div>
-  <div class="gallery-grid">
-    <div class="gallery-item tall fade-up"><img src="unnamed (1).jpg" alt="Clinic" /></div>
-    <div class="gallery-item fade-up delay-1"><img src="DPkJQpwkSpM-01.jpg" alt="Whitening result" /></div>
-    <div class="gallery-item fade-up delay-2"><img src="DGwxJEJIN9Y-01.jpg" alt="Smile" /></div>
-    <div class="gallery-item fade-up delay-3"><img src="unnamed (3).jpg" alt="Patient care" /></div>
-    <div class="gallery-item wide fade-up delay-1"><img src="DPkJQpwkSpM-02.jpg" alt="Result" /></div>
-    <div class="gallery-item fade-up delay-2"><img src="DPkJQpwkSpM-04.jpg" alt="Veneers" /></div>
-  </div>
-</section>
-
-<!-- CTA BAR (matches flyer footer) -->
-<div class="cta-bar" id="contact">
+<!-- CTA BAR -->
+<div class="cta-bar">
   <div class="cta-bar-inner">
     <div class="cta-bar-left">
       <div class="cta-bar-script">Book Your</div>
@@ -1977,7 +711,7 @@
       </div>
     </div>
     <div class="cta-bar-right">
-      <a href="tel:+2348012345678" class="cta-bar-btn">📞 Call Now</a>
+      <a href="contact.html" class="cta-bar-btn">📞 Book Now</a>
       <div class="cta-tagline">
         Because
         <strong>Every Smile Matters</strong>
@@ -1996,20 +730,20 @@
     <div>
       <div class="footer-col-title">Treatments</div>
       <ul class="footer-links">
-        <li><a href="#services">Teeth Whitening</a></li>
-        <li><a href="#services">Dental Implants</a></li>
-        <li><a href="#services">Orthodontics</a></li>
-        <li><a href="#services">Veneers</a></li>
-        <li><a href="#services">Root Canal</a></li>
+        <li><a href="services.html">Teeth Whitening</a></li>
+        <li><a href="services.html">Dental Implants</a></li>
+        <li><a href="services.html">Orthodontics</a></li>
+        <li><a href="services.html">Veneers</a></li>
+        <li><a href="services.html">Root Canal</a></li>
       </ul>
     </div>
     <div>
       <div class="footer-col-title">Clinic</div>
       <ul class="footer-links">
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#results">Our Results</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="transformations.html">Our Results</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
     <div>
@@ -2081,13 +815,24 @@
 </div>
 
 <script>
-  // ── Scroll reveal
   const revealObs = new IntersectionObserver(entries => {
     entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
   }, { threshold: 0.12 });
   document.querySelectorAll('.fade-up').forEach(el => revealObs.observe(el));
 
-  // ── Counting stats animation
+  // Journey connector line — draws when the steps section enters view
+  const journeyLine = document.getElementById('journeyLine');
+  if (journeyLine) {
+    const lineObs = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting) {
+        setTimeout(() => { journeyLine.style.width = '100%'; }, 300);
+        lineObs.disconnect();
+      }
+    }, { threshold: 0.3 });
+    lineObs.observe(document.querySelector('.journey-steps-wrap'));
+  }
+
+  // Count-up for stats bar
   function animateCount(el) {
     const target = parseInt(el.dataset.target);
     const duration = 1800;
@@ -2101,38 +846,11 @@
   }
   const countObs = new IntersectionObserver(entries => {
     entries.forEach(e => {
-      if (e.isIntersecting) {
-        animateCount(e.target);
-        countObs.unobserve(e.target);
-      }
+      if (e.isIntersecting) { e.target.querySelectorAll('[data-target]').forEach(animateCount); countObs.unobserve(e.target); }
     });
-  }, { threshold: 0.5 });
-  document.querySelectorAll('[data-target]').forEach(el => countObs.observe(el));
+  }, { threshold: 0.4 });
+  document.querySelectorAll('.stats-bar').forEach(el => countObs.observe(el));
 
-  // ── Before/After drag sliders
-  document.querySelectorAll('[data-slider]').forEach(slider => {
-    const before = slider.querySelector('.ba-slider-before');
-    const handle = slider.querySelector('.ba-slider-handle');
-    let dragging = false;
-
-    function setPos(x) {
-      const rect = slider.getBoundingClientRect();
-      let pct = Math.max(0, Math.min(1, (x - rect.left) / rect.width));
-      const leftPct = pct * 100;
-      before.style.clipPath = `inset(0 ${100 - leftPct}% 0 0)`;
-      handle.style.left = leftPct + '%';
-    }
-
-    slider.addEventListener('mousedown', e => { dragging = true; setPos(e.clientX); });
-    window.addEventListener('mousemove', e => { if (dragging) setPos(e.clientX); });
-    window.addEventListener('mouseup', () => { dragging = false; });
-
-    slider.addEventListener('touchstart', e => { dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('touchmove', e => { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
-    window.addEventListener('touchend', () => { dragging = false; });
-  });
-
-  // ── Modal
   function openModal(e) { e && e.preventDefault(); document.getElementById('bookingModal').classList.add('open'); document.body.style.overflow = 'hidden'; }
   function closeModal() { document.getElementById('bookingModal').classList.remove('open'); document.body.style.overflow = ''; }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
@@ -2145,18 +863,8 @@
     setTimeout(closeModal, 1800);
   }
 
-  // ── FAQ accordion
-  function toggleFaq(btn) {
-    const item = btn.closest('.faq-item');
-    const isOpen = item.classList.contains('open');
-    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
-    if (!isOpen) item.classList.add('open');
-  }
-
-  // ── Set min date for date picker to today
   const dateInput = document.querySelector('input[type="date"]');
   if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
 </script>
-
 </body>
 </html>

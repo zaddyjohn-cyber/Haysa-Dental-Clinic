@@ -3,445 +3,239 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Book Appointment | Smile Best Dental Clinic Ikeja Lagos</title>
-  <meta name="description" content="Book your dental appointment at Smile Best Dental Clinic, 34 Ijaiye Road, Ogba, Ikeja, Lagos. Same-day appointments available. Call +234 703 805 7170." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🦷</text></svg>" />
+  <meta name="theme-color" content="#0B3830" />
+  <title>Book Appointment | Smile Best Dental Clinic — Ogba, Ikeja, Lagos</title>
+  <meta name="description" content="Book your dental appointment at Smile Best Dental Clinic in Ogba, Ikeja, Lagos. Free consultation for new patients. We confirm within 1 hour. Call +234 801 234 5678." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/global.css" />
-  <link rel="stylesheet" href="css/hero.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/animations.css" />
-  <style>
-    /* Contact page specific overrides */
-    .contact-form-side h2 {
-      font-family: var(--font-heading);
-      font-size: clamp(1.8rem, 3vw, 2.8rem);
-      color: var(--text-dark);
-      margin-bottom: 8px;
-    }
-    .contact-form-side .subtext {
-      color: var(--text-muted);
-      font-size: 0.95rem;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-    .contact-info-side h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 3vw, 3rem);
-      color: var(--white);
-      font-weight: 300;
-      margin-bottom: 8px;
-      line-height: 1.1;
-    }
-    .contact-info-side .subtext {
-      color: rgba(255,255,255,0.5);
-      font-size: 0.9rem;
-      margin-bottom: 40px;
-      line-height: 1.6;
-    }
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0 32px;
-    }
-    @media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } }
-
-    /* Hours table */
-    .hours-table { width: 100%; margin-top: 8px; }
-    .hours-table tr td {
-      padding: 6px 0;
-      font-size: 0.88rem;
-      color: rgba(255,255,255,0.55);
-      border-bottom: 1px solid rgba(255,255,255,0.05);
-    }
-    .hours-table tr td:last-child { text-align: right; color: rgba(255,255,255,0.7); }
-    .hours-table tr.today td { color: var(--gold); }
-    .hours-table tr.today td:last-child { color: var(--gold-light); }
-
-    /* Social links in contact */
-    .social-link {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      color: rgba(255,255,255,0.6);
-      font-size: 0.9rem;
-      margin-bottom: 12px;
-      transition: color 0.25s ease;
-    }
-    .social-link:hover { color: var(--white); }
-    .social-link svg { color: var(--gold); flex-shrink: 0; }
-
-    /* Map overlay */
-    .map-wrap {
-      position: relative;
-      height: 440px;
-      overflow: hidden;
-    }
-    .map-wrap iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-      filter: grayscale(0.9) contrast(0.85) brightness(0.9);
-    }
-    .map-overlay-badge {
-      position: absolute;
-      bottom: 24px;
-      left: 24px;
-      background: var(--bg-dark);
-      border: 1px solid rgba(201,150,58,0.3);
-      border-left: 3px solid var(--gold);
-      padding: 16px 20px;
-      border-radius: var(--radius);
-      backdrop-filter: blur(12px);
-    }
-    .map-overlay-badge h4 {
-      font-family: var(--font-heading);
-      color: var(--white);
-      font-size: 0.95rem;
-      margin-bottom: 4px;
-    }
-    .map-overlay-badge p {
-      color: rgba(255,255,255,0.5);
-      font-size: 0.8rem;
-    }
-    .map-overlay-badge span { color: var(--gold); }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-<div id="cursor-dot"></div>
-<div id="cursor-ring"></div>
-<div id="scroll-progress"></div>
-
-<nav id="navbar">
-  <a href="index.html" class="nav-logo">
-    <svg viewBox="0 0 36 36" fill="none">
-      <path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/>
-    </svg>
-    <span class="nav-logo-text">Smile <span>Best</span></span>
+<!-- NAV -->
+<nav class="nav">
+  <a class="nav-logo" href="index.html">
+    <div class="nav-logo-icon">🦷</div>
+    <div class="nav-logo-text">Smile<span>Best</span></div>
   </a>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="transformations.html">Transformations</a>
-    <a href="testimonials.html">Testimonials</a>
-    <a href="contact.html" class="nav-cta active">Book Now</a>
-  </div>
-  <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="transformations.html">Transformations</a></li>
+    <li><a href="testimonials.html">Testimonials</a></li>
+    <li><a href="contact.html" class="nav-cta active" style="background:var(--teal);">Book Now</a></li>
+  </ul>
+  <button class="nav-burger" onclick="document.querySelector('.mobile-menu').classList.add('open')" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
-<div id="nav-utility">
-  <strong>Same-Day Appointments Available</strong>
-  <a href="tel:+2347038057170">+234 703 805 7170</a>
-  <span>Mon–Sat 8am–6pm · Ogba, Ikeja</span>
-</div>
-<div id="mobile-nav">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="services.html">Services</a>
-  <a href="transformations.html">Transformations</a>
-  <a href="testimonials.html">Testimonials</a>
-  <a href="contact.html">Book Now</a>
+
+<div class="mobile-menu">
+  <button class="mobile-close" onclick="document.querySelector('.mobile-menu').classList.remove('open')">✕</button>
+  <a href="index.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Home</a>
+  <a href="about.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">About</a>
+  <a href="services.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Services</a>
+  <a href="transformations.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Transformations</a>
+  <a href="testimonials.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Testimonials</a>
+  <a href="contact.html" onclick="document.querySelector('.mobile-menu').classList.remove('open')">Book Now</a>
 </div>
 
-<!-- ══ CONTACT HERO ══ -->
-<section class="inner-hero" style="padding:calc(var(--section-pad) + 100px) 0 60px;">
-  <div class="inner-hero-bg-text">CONTACT</div>
-  <div class="container inner-hero-content" style="text-align:center;">
-    <div class="section-label gsap-fade-up" style="justify-content:center;"><span class="label-tag gold">Get In Touch</span></div>
-    <h1 class="display-large text-white gsap-fade-up" style="margin-bottom:16px;" data-split="words">
-      Let's Start Your<br>Transformation
-    </h1>
-    <p class="body-lg gsap-fade-up" style="color:rgba(255,255,255,0.5);max-width:480px;margin:0 auto;">
-      Book your appointment today — same-day slots available. We'll see you soon.
-    </p>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-inner">
+    <div class="page-hero-label">Get In Touch</div>
+    <h1>Book Your<br>Appointment</h1>
+    <p class="page-hero-sub">We confirm within 1 hour. Free consultation for new patients. Open Monday to Saturday, 8am–6pm.</p>
   </div>
 </section>
 
-<!-- ══ CONTACT SPLIT FORM ══ -->
-<section class="contact-section" style="padding-top:0;">
-  <div class="contact-split">
-
-    <!-- LEFT: Form -->
-    <div class="contact-form-side gsap-fade-left">
-      <h2>Book Your Appointment</h2>
-      <p class="subtext">Fill in your details and we'll confirm your slot within the hour. Same-day appointments available Monday–Saturday.</p>
-
-      <form id="contact-form" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" novalidate>
-
+<!-- CONTACT SPLIT -->
+<section class="contact-section">
+  <div class="contact-grid">
+    <!-- LEFT: Booking Form -->
+    <div class="contact-form-wrap">
+      <h2 class="fade-up">Send a Booking Request</h2>
+      <p class="sub fade-up">Fill in the form and we'll get back to you within 1 hour to confirm your slot.</p>
+      <form class="contact-form fade-up delay-1" id="contactForm" onsubmit="submitContactForm(event)">
         <div class="form-row">
-          <div class="form-group">
-            <input type="text" id="name" name="name" placeholder=" " required autocomplete="name" />
-            <label for="name">Full Name</label>
-            <div class="underline"></div>
+          <div class="form-field">
+            <label>First Name</label>
+            <input type="text" placeholder="e.g. Amaka" required />
           </div>
-          <div class="form-group">
-            <input type="tel" id="phone" name="phone" placeholder=" " required autocomplete="tel" />
-            <label for="phone">Phone Number</label>
-            <div class="underline"></div>
+          <div class="form-field">
+            <label>Last Name</label>
+            <input type="text" placeholder="e.g. Okonkwo" required />
           </div>
         </div>
-
-        <div class="form-group">
-          <input type="email" id="email" name="email" placeholder=" " autocomplete="email" />
-          <label for="email">Email Address (optional)</label>
-          <div class="underline"></div>
+        <div class="form-field">
+          <label>Phone Number</label>
+          <input type="tel" placeholder="+234 801 234 5678" required />
         </div>
-
-        <div class="form-group">
-          <select id="service" name="service" required>
-            <option value="" disabled selected></option>
-            <option value="Teeth Whitening">Teeth Whitening</option>
-            <option value="Dental Implants">Dental Implants</option>
-            <option value="Braces & Orthodontics">Braces &amp; Orthodontics</option>
-            <option value="Root Canal Treatment">Root Canal Treatment</option>
-            <option value="Crowns & Bridges">Crowns &amp; Bridges</option>
-            <option value="Scaling & Polishing">Scaling &amp; Polishing</option>
-            <option value="Veneers">Veneers</option>
-            <option value="Cosmetic Dentistry">Cosmetic Dentistry / Smile Makeover</option>
-            <option value="Family Dentistry">Family Dentistry</option>
-            <option value="General Check-up">General Check-up</option>
-            <option value="Other">Other / Not Sure Yet</option>
+        <div class="form-field">
+          <label>Treatment</label>
+          <select required>
+            <option value="" disabled selected>Select a treatment</option>
+            <option>General Dentistry</option>
+            <option>Teeth Whitening</option>
+            <option>Cosmetic Dentistry</option>
+            <option>Dental Implants</option>
+            <option>Porcelain Veneers</option>
+            <option>Root Canal Treatment</option>
+            <option>Braces &amp; Aligners</option>
+            <option>Not sure — need advice</option>
           </select>
-          <label for="service">Service Interested In</label>
-          <div class="underline"></div>
         </div>
-
-        <div class="form-group">
-          <input type="date" id="date" name="preferred_date" placeholder=" " />
-          <label for="date" style="top:-8px;font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--gold);">Preferred Date</label>
-          <div class="underline"></div>
+        <div class="form-field">
+          <label>Preferred Date</label>
+          <input type="date" id="prefDate" required />
         </div>
-
-        <div class="form-group">
-          <textarea id="message" name="message" placeholder=" " rows="3"></textarea>
-          <label for="message">Additional Message (optional)</label>
-          <div class="underline"></div>
+        <div class="form-field">
+          <label>Message (Optional)</label>
+          <textarea placeholder="Tell us anything you'd like us to know — concerns, questions, or specific goals for your smile."></textarea>
         </div>
-
-        <input type="hidden" name="_subject" value="New Appointment Request — Smile Best Dental" />
-        <input type="text" name="_gotcha" style="display:none" />
-
-        <button type="submit" class="btn btn-gold magnetic" style="width:100%;justify-content:center;padding:20px;">
-          <span>Book My Appointment</span>
-        </button>
-
-        <p style="margin-top:16px;font-size:12px;color:var(--text-muted);text-align:center;">
-          Or call us directly: <a href="tel:+2347038057170" style="color:var(--gold);font-weight:600;">+234 703 805 7170</a>
-        </p>
+        <button type="submit" class="form-submit">Send Booking Request →</button>
+        <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:8px;">🔒 Your details are kept private and never shared.</p>
       </form>
-    </div>
-
-    <!-- RIGHT: Info -->
-    <div class="contact-info-side gsap-fade-right">
-      <h2>Come See Us</h2>
-      <p class="subtext">We're in Ogba, Ikeja — easy to find, easy to park. Walk-ins welcome, appointments preferred.</p>
-
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
-            <circle cx="12" cy="10" r="3"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>Address</h4>
-          <p>34, Ijaiye Road, Top Dental Building<br>By Caterpillar Bus Stop<br>Ogba, Ikeja, Lagos</p>
-        </div>
-      </div>
-
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.93 6.93l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>Phone</h4>
-          <p><a href="tel:+2347038057170">+234 703 805 7170</a></p>
-          <p><a href="tel:+2349064694484">+234 906 469 4484</a></p>
-        </div>
-      </div>
-
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-            <polyline points="22,6 12,13 2,6"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>Email</h4>
-          <p><a href="mailto:contact@sbdentalclinic.com">contact@sbdentalclinic.com</a></p>
-        </div>
-      </div>
-
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>Instagram</h4>
-          <p><a href="https://www.instagram.com/smilebestdental" target="_blank" rel="noopener">@smilebestdental · 28K followers</a></p>
-        </div>
-      </div>
-
-      <div class="contact-info-item">
-        <div class="contact-info-icon">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
-        </div>
-        <div class="contact-info-text">
-          <h4>Opening Hours</h4>
-          <table class="hours-table">
-            <tr class="today"><td>Monday – Friday</td><td>8:00am – 6:00pm</td></tr>
-            <tr><td>Saturday</td><td>8:00am – 6:00pm</td></tr>
-            <tr><td>Sunday</td><td>Closed</td></tr>
-          </table>
-        </div>
-      </div>
-
-      <!-- WhatsApp direct link -->
-      <div style="margin-top:32px;padding-top:32px;border-top:1px solid rgba(255,255,255,0.08);">
-        <p style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.35);margin-bottom:12px;">Quick Contact</p>
-        <a href="https://wa.me/2347038057170?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment%20at%20Smile%20Best%20Dental%20Clinic%2C%20Ikeja."
-           target="_blank" rel="noopener"
-           class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-          </svg>
-          WhatsApp Us on +234 703 805 7170
-        </a>
-        <a href="tel:+2347038057170" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.93 6.93l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
-          </svg>
-          Call +234 703 805 7170
-        </a>
-        <a href="https://www.instagram.com/smilebestdental" target="_blank" rel="noopener" class="social-link">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-          </svg>
-          DM us @smilebestdental
-        </a>
+      <div class="form-success" id="formSuccess">
+        ✓ Thank you! We've received your request and will confirm your appointment within 1 hour.
       </div>
     </div>
 
+    <!-- RIGHT: Contact Info -->
+    <div class="contact-info-wrap fade-up delay-1">
+      <h2>Contact &amp; Location</h2>
+      <div class="contact-info-cards">
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📞</div>
+          <div>
+            <div class="contact-info-label">Phone</div>
+            <div class="contact-info-value"><a href="tel:+2348012345678">+234 801 234 5678</a></div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">💬</div>
+          <div>
+            <div class="contact-info-label">WhatsApp</div>
+            <div class="contact-info-value"><a href="https://wa.me/2348012345678?text=Hello%20Smile%20Best%20Dental%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener">+234 801 234 5678</a></div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">✉️</div>
+          <div>
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value"><a href="mailto:info@smilebestdental.com">info@smilebestdental.com</a></div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">📍</div>
+          <div>
+            <div class="contact-info-label">Address</div>
+            <div class="contact-info-value">Ogba, Ikeja, Lagos</div>
+          </div>
+        </div>
+        <div class="contact-info-card">
+          <div class="contact-info-icon">🕐</div>
+          <div>
+            <div class="contact-info-label">Opening Hours</div>
+            <div class="contact-info-value">Monday – Saturday: 8am – 6pm</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-walkin">
+        Walk-ins Welcome<br>
+        <span style="font-size:13px;font-weight:400;color:var(--teal-mid);">Same-day appointments often available</span>
+      </div>
+
+      <!-- Mini trust block -->
+      <div style="margin-top:24px;background:var(--dark);border-radius:16px;padding:24px 20px;color:var(--white);">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+          <span style="font-size:22px;color:var(--gold);">★★★★★</span>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-weight:800;font-size:1.4rem;">4.9 / 5</div>
+            <div style="font-size:12px;color:rgba(255,255,255,0.6);">320+ Google Reviews</div>
+          </div>
+        </div>
+        <p style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.7;font-style:italic;">"From the moment I walked in, I felt like royalty. My teeth are 8 shades whiter — absolutely worth every kobo."</p>
+        <p style="font-size:12px;color:var(--gold);margin-top:8px;font-weight:600;">— Funke B., Teeth Whitening Patient</p>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ══ MAP ══ -->
-<div class="map-wrap">
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.3217!2d3.3529!3d6.6219!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b93f32b!2sOgba%2C%20Ikeja%2C%20Lagos!5e0!3m2!1sen!2sng!4v1700000000000"
-    allowfullscreen=""
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    title="Smile Best Dental Clinic location map"
-  ></iframe>
-  <div class="map-overlay-badge">
-    <h4>Smile Best Dental Clinic</h4>
-    <p>34 Ijaiye Road, Top Dental Building</p>
-    <p>By Caterpillar Bus Stop, Ogba, Ikeja</p>
-    <p style="margin-top:6px;"><span>Mon–Sat: 8am – 6pm</span></p>
-  </div>
+<!-- CTA BAR SIMPLE -->
+<div class="cta-bar-simple">
+  <div class="cta-bar-simple-text">Because</div>
+  <div class="cta-bar-simple-main"><span>Every Smile</span> Matters</div>
 </div>
 
-<!-- ══ MINI TRUST SECTION ══ -->
-<section style="background:var(--primary);padding:60px 0;">
-  <div class="container">
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center;" class="stagger-children">
-      <div>
-        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:300;" data-countup="10" data-suffix="+">10+</div>
-        <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:6px;">Years Experience</div>
-      </div>
-      <div>
-        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:300;" data-countup="28" data-suffix="K">28K</div>
-        <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:6px;">IG Followers</div>
-      </div>
-      <div>
-        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:300;" data-countup="4.9">4.9</div>
-        <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:6px;">Star Rating</div>
-      </div>
-      <div>
-        <div style="font-family:var(--font-display);font-size:2.5rem;color:var(--gold);font-weight:300;">Same<br><span style="font-size:1.5rem;">Day</span></div>
-        <div style="font-size:12px;letter-spacing:0.1em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-top:6px;">Appointments</div>
-      </div>
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="footer-logo">Smile<span>Best</span> Dental</div>
+      <p class="footer-desc">Expert dental care in Ogba, Ikeja, Lagos. Transforming smiles since 2012.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Treatments</div>
+      <ul class="footer-links">
+        <li><a href="services.html">Teeth Whitening</a></li>
+        <li><a href="services.html">Dental Implants</a></li>
+        <li><a href="services.html">Orthodontics</a></li>
+        <li><a href="services.html">Veneers</a></li>
+        <li><a href="services.html">Root Canal</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Clinic</div>
+      <ul class="footer-links">
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="transformations.html">Our Results</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li>+234 801 234 5678</li>
+        <li>info@smilebestdental.com</li>
+        <li>Ogba, Ikeja, Lagos</li>
+        <li>Mon–Sat: 8am–6pm</li>
+      </ul>
     </div>
   </div>
-</section>
-
-<!-- ══ FOOTER ══ -->
-<footer id="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <a href="index.html" class="nav-logo">
-          <svg viewBox="0 0 36 36" fill="none" style="width:40px;height:40px;">
-            <path d="M18 3C12 3 6 7 6 13C6 17 7.5 21 7 26C6.2 31 4 37 8 40C11 42.5 14 39 16.5 35.5C17 34.5 17.5 33 18 33C18.5 33 19 34.5 19.5 35.5C22 39 25 42.5 28 40C32 37 29.8 31 29 26C28.5 21 30 17 30 13C30 7 24 3 18 3Z" fill="#C9963A"/>
-          </svg>
-          <span class="nav-logo-text">Smile <span>Best</span></span>
-        </a>
-        <p>Expert dental care since 2015. Transforming smiles across Ikeja and Lagos — one patient at a time.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Navigate</h4>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="transformations.html">Transformations</a></li>
-          <li><a href="testimonials.html">Testimonials</a></li>
-          <li><a href="contact.html">Book Appointment</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Services</h4>
-        <ul>
-          <li><a href="services.html">Teeth Whitening</a></li>
-          <li><a href="services.html">Dental Implants</a></li>
-          <li><a href="services.html">Braces &amp; Orthodontics</a></li>
-          <li><a href="services.html">Root Canal</a></li>
-          <li><a href="services.html">Veneers</a></li>
-          <li><a href="services.html">Cosmetic Dentistry</a></li>
-        </ul>
-      </div>
-      <div class="footer-col footer-contact">
-        <h4>Contact</h4>
-        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>34 Ijaiye Road, Top Dental Building, Ogba, Ikeja, Lagos</p>
-        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.93 6.93l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+2347038057170">+234 703 805 7170</a></p>
-        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.67A2 2 0 012.18 1h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 8.16a16 16 0 006.93 6.93l1.52-1.52a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg><a href="tel:+2349064694484">+234 906 469 4484</a></p>
-        <p><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Mon–Sat: 8:00am – 6:00pm</p>
-      </div>
-    </div>
-    <div class="gold-divider full"></div>
-    <div class="footer-bottom">
-      <p>© 2025 Smile Best Dental Clinic · 34 Ijaiye Road, Ogba, Ikeja, Lagos</p>
-      <p style="color:rgba(255,255,255,0.25);">Crafted with care for your smile</p>
-    </div>
+  <div class="footer-bottom">
+    <span>© 2025 Smile Best Dental Clinic. All rights reserved.</span>
+    <span>Designed with care in Lagos</span>
   </div>
 </footer>
 
-<a id="whatsapp-btn" href="https://wa.me/2347038057170?text=Hi%2C%20I'd%20like%20to%20book%20an%20appointment%20at%20Smile%20Best%20Dental%20Clinic%2C%20Ikeja." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-  </svg>
-</a>
+<!-- WHATSAPP FLOAT -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat on WhatsApp</span>
+  <a class="whatsapp-bubble" href="https://wa.me/2348012345678?text=Hello%20Smile%20Best%20Dental%2C%20I%20would%20like%20to%20book%20an%20appointment." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16 0C7.163 0 0 7.163 0 16c0 2.822.737 5.469 2.027 7.774L0 32l8.473-2.001A15.938 15.938 0 0 0 16 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.333a13.27 13.27 0 0 1-6.771-1.852l-.485-.29-5.029 1.187 1.213-4.906-.317-.503A13.272 13.272 0 0 1 2.667 16C2.667 8.636 8.636 2.667 16 2.667S29.333 8.636 29.333 16 23.364 29.333 16 29.333zm7.261-9.961c-.398-.199-2.354-1.162-2.719-1.295-.365-.133-.631-.199-.897.199-.266.398-1.029 1.295-1.261 1.561-.232.266-.465.299-.863.1-.398-.199-1.681-.619-3.203-1.975-1.183-1.055-1.982-2.358-2.214-2.756-.232-.398-.025-.613.174-.811.179-.178.398-.465.597-.698.199-.232.266-.398.398-.664.133-.266.066-.498-.033-.697-.1-.199-.897-2.162-1.229-2.96-.324-.778-.653-.672-.897-.684l-.764-.013c-.266 0-.697.1-.1063.498-.365.398-1.394 1.362-1.394 3.322s1.427 3.853 1.626 4.119c.199.266 2.808 4.285 6.805 6.009.951.411 1.693.656 2.271.839.954.303 1.823.260 2.509.158.765-.114 2.354-.963 2.686-1.893.332-.930.332-1.727.232-1.893-.099-.166-.365-.266-.763-.465z"/></svg>
+  </a>
+</div>
 
-<script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/bundled/lenis.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-<script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/countup.js/2.8.0/countUp.umd.js"></script>
-<script src="js/counter.js"></script>
-<script src="js/animations.js"></script>
-<script src="js/main.js"></script>
+<script>
+  const revealObs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => revealObs.observe(el));
+
+  function submitContactForm(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const success = document.getElementById('formSuccess');
+    form.style.display = 'none';
+    success.style.display = 'block';
+  }
+
+  const dateInput = document.getElementById('prefDate');
+  if (dateInput) dateInput.min = new Date().toISOString().split('T')[0];
+</script>
 </body>
 </html>
