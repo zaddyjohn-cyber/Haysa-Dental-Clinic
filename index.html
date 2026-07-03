@@ -709,47 +709,92 @@
       background: var(--white);
       border-radius: var(--r-lg);
       overflow: hidden;
+      box-shadow: 0 4px 24px rgba(9,26,21,0.08);
     }
     .ba-imgs {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      height: 260px;
+      height: 280px;
+      position: relative;
     }
-    .ba-imgs img {
+    .ba-img-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+    .ba-img-wrap img {
       width: 100%; height: 100%;
       object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
     }
+    .ba-img-wrap:hover img { transform: scale(1.04); }
+
+    /* Before / After photo labels */
+    .ba-img-wrap::after {
+      content: attr(data-label);
+      position: absolute;
+      top: 10px; left: 10px;
+      background: rgba(9,26,21,0.78);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+    }
+    .ba-img-wrap.after-img::after {
+      background: rgba(201,150,58,0.92);
+      color: var(--dark);
+    }
+
+    /* Vertical divider between before/after */
+    .ba-imgs::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: var(--white);
+      transform: translateX(-50%);
+      z-index: 2;
+    }
+
     .ba-info {
-      padding: 20px 22px;
-      border-top: 1px solid var(--mint-mid);
+      padding: 18px 22px 20px;
+      border-top: 3px solid var(--mint);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
     }
+    .ba-info-left {}
     .ba-treatment {
       font-family: 'Syne', sans-serif;
-      font-weight: 700;
-      font-size: 15px;
+      font-weight: 800;
+      font-size: 16px;
       color: var(--text);
-      letter-spacing: -0.01em;
+      letter-spacing: -0.02em;
+      line-height: 1.1;
     }
     .ba-detail {
-      font-size: 13px;
+      font-size: 12.5px;
       color: var(--text-muted);
-      margin-top: 4px;
+      margin-top: 5px;
+      font-weight: 400;
     }
-    .ba-divider {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
+    .ba-tag {
+      background: var(--mint);
+      color: var(--teal);
       font-size: 11px;
       font-weight: 600;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
-      color: var(--text-muted);
-      margin: 4px 0 0;
-    }
-    .ba-divider span {
-      display: inline-block;
-      width: 1px; height: 12px;
-      background: var(--mint-mid);
+      padding: 6px 12px;
+      border-radius: var(--r-xl);
+      white-space: nowrap;
+      flex-shrink: 0;
     }
 
     /* ── TESTIMONIALS ── */
@@ -1387,37 +1432,55 @@
 
         <div class="ba-card fade-up delay-1">
           <div class="ba-imgs">
-            <img src="DPkJQpwkSpM-01.jpg" alt="Before treatment" />
-            <img src="DPkJQpwkSpM-02.jpg" alt="After treatment" />
+            <div class="ba-img-wrap" data-label="Before">
+              <img src="DPkJQpwkSpM-01.jpg" alt="Before teeth whitening" loading="lazy" />
+            </div>
+            <div class="ba-img-wrap after-img" data-label="After">
+              <img src="DPkJQpwkSpM-02.jpg" alt="After teeth whitening" loading="lazy" />
+            </div>
           </div>
           <div class="ba-info">
-            <div class="ba-treatment">Teeth Whitening</div>
-            <div class="ba-divider">Before <span></span> After</div>
-            <div class="ba-detail">3 sessions · Professional bleaching</div>
+            <div class="ba-info-left">
+              <div class="ba-treatment">Teeth Whitening</div>
+              <div class="ba-detail">3 sessions · Professional bleaching</div>
+            </div>
+            <div class="ba-tag">Whitening</div>
           </div>
         </div>
 
         <div class="ba-card fade-up delay-2">
           <div class="ba-imgs">
-            <img src="DPkJQpwkSpM-03.jpg" alt="Before veneers" />
-            <img src="DPkJQpwkSpM-04.jpg" alt="After veneers" />
+            <div class="ba-img-wrap" data-label="Before">
+              <img src="DPkJQpwkSpM-03.jpg" alt="Before porcelain veneers" loading="lazy" />
+            </div>
+            <div class="ba-img-wrap after-img" data-label="After">
+              <img src="DPkJQpwkSpM-04.jpg" alt="After porcelain veneers" loading="lazy" />
+            </div>
           </div>
           <div class="ba-info">
-            <div class="ba-treatment">Porcelain Veneers</div>
-            <div class="ba-divider">Before <span></span> After</div>
-            <div class="ba-detail">8 veneers · Full smile design</div>
+            <div class="ba-info-left">
+              <div class="ba-treatment">Porcelain Veneers</div>
+              <div class="ba-detail">8 veneers · Full smile design</div>
+            </div>
+            <div class="ba-tag">Veneers</div>
           </div>
         </div>
 
         <div class="ba-card fade-up delay-3">
           <div class="ba-imgs">
-            <img src="DGwxJEJIN9Y-01.jpg" alt="Before orthodontics" />
-            <img src="DGwxJEJIN9Y-02.jpg" alt="After orthodontics" />
+            <div class="ba-img-wrap" data-label="Before">
+              <img src="DGwxJEJIN9Y-01.jpg" alt="Before orthodontic treatment" loading="lazy" />
+            </div>
+            <div class="ba-img-wrap after-img" data-label="After">
+              <img src="DGwxJEJIN9Y-02.jpg" alt="After orthodontic treatment" loading="lazy" />
+            </div>
           </div>
           <div class="ba-info">
-            <div class="ba-treatment">Orthodontic Treatment</div>
-            <div class="ba-divider">Before <span></span> After</div>
-            <div class="ba-detail">18 months · Clear aligner therapy</div>
+            <div class="ba-info-left">
+              <div class="ba-treatment">Orthodontic Treatment</div>
+              <div class="ba-detail">18 months · Clear aligner therapy</div>
+            </div>
+            <div class="ba-tag">Braces</div>
           </div>
         </div>
 
