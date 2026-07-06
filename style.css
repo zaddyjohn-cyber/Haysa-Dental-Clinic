@@ -483,7 +483,7 @@ a { text-decoration: none; color: inherit; }
   position: relative;
   border-radius: 16px;
   overflow: hidden;
-  height: 160px;
+  height: 220px;
 }
 .trust-item-media {
   position: absolute;
@@ -491,6 +491,7 @@ a { text-decoration: none; color: inherit; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 .trust-item-overlay {
   position: absolute;
@@ -1758,7 +1759,7 @@ a { text-decoration: none; color: inherit; }
   .services-list { grid-template-columns: 1fr; }
   .trust-strip { padding: 24px 20px; }
   .trust-grid { grid-template-columns: repeat(2,1fr); gap: 12px; }
-  .trust-item { height: 130px; }
+  .trust-item { height: 180px; }
   .about-section, .why-section, .gallery-section { padding: 60px 20px; }
   .ba-slider-section, .testimonials-section, .reel-section { padding: 60px 20px; }
   .reel-section { padding: 60px 0 60px 20px; }
